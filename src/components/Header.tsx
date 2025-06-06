@@ -36,18 +36,18 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-sm shadow-lg py-2'
-          : 'bg-white/70 backdrop-blur-sm py-3'
+          : 'bg-white/70 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Link alla homepage - DIMENSIONI CORRETTE */}
+          {/* Logo - Link alla homepage - DIMENSIONI ORIGINALI RIPRISTINATE */}
           <Link to="/" className="flex items-center">
             <img 
               src="/images/Logo.png" 
               alt="Cooperativa Sociale Emmanuel" 
               className={`object-contain transition-all duration-300 hover:scale-105 ${
-                isScrolled ? 'h-14 w-14' : 'h-16 w-16'
+                isScrolled ? 'h-12 w-12' : 'h-16 w-16'
               }`}
             />
           </Link>
