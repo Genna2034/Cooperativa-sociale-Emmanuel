@@ -21,9 +21,13 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <img src="/images/Logo.png" alt="Logo Emmanuel" className="h-8 w-8 object-contain" />
-          <span className="text-xl font-bold text-blue-700">
+        <div className="flex items-center gap-3">
+          <img 
+            src="/images/Logo.png" 
+            alt="Logo Emmanuel" 
+            className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
+          />
+          <span className="text-2xl font-bold text-blue-700">
             Emmanuel
           </span>
         </div>

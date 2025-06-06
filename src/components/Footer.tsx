@@ -9,9 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Heart className="h-6 w-6 text-blue-400" fill="#60A5FA" />
-              <span className="text-xl font-bold text-white">Emmanuel</span>
+            <div className="flex items-center gap-3 mb-6">
+              <img 
+                src="/images/Logo.png" 
+                alt="Logo Emmanuel" 
+                className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
+              />
+              <span className="text-2xl font-bold text-white">Emmanuel</span>
             </div>
             <p className="text-gray-400 mb-4">
               Cooperativa Sociale al servizio di chi ha più bisogno, da oltre 13 anni a Napoli.
@@ -76,6 +80,14 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <img 
+              src="/images/Logo.png" 
+              alt="Logo Emmanuel" 
+              className="h-6 w-6 object-contain" 
+            />
+            <span>Emmanuel</span>
+          </div>
           <p>© {new Date().getFullYear()} Cooperativa Sociale Emmanuel. Tutti i diritti riservati.</p>
         </div>
       </div>
