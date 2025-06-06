@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
 
@@ -36,12 +37,12 @@ const HeroSection = () => {
 
           <FadeInSection direction="up" delay={600}>
             <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-              <a
-                href="#contatti"
+              <Link
+                to="/contatti"
                 className="w-full md:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-medium transition-colors shadow-lg"
               >
                 Richiedi un consulto gratuito
-              </a>
+              </Link>
               
               <div className="flex flex-col gap-3 mt-6 md:mt-0">
                 <div className="flex items-center gap-2">

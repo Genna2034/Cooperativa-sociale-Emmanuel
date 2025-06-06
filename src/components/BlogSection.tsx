@@ -1,6 +1,8 @@
 import React from 'react';
 import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import FadeInSection from './FadeInSection';
+import { sendEmail } from '../services/emailService';
 
 const HEALTH_ARTICLES = [
   {
@@ -64,6 +66,23 @@ const BlogSection = () => {
     } else {
       // Per articoli interni, potresti aprire un modal o navigare a una pagina dedicata
       console.log('Apertura articolo interno:', article.title);
+    }
+  };
+
+  const handleNewsletterSignup = async () => {
+    try {
+      await sendEmail({
+        type: 'newsletter',
+        data: {
+          email: 'richiesta-newsletter@cooperativa-emmanuel.it',
+          subscriptionDate: new Date().toLocaleDateString('it-IT')
+        }
+      });
+      alert('Richiesta di iscrizione inviata! Ti contatteremo per completare l\'iscrizione.');
+    } catch (error) {
+      console.error('Errore iscrizione newsletter:', error);
+      // Fallback: apri client email
+      window.open('mailto:cooperativa.emmanuel@outlook.it?subject=Iscrizione Newsletter&body=Vorrei iscrivermi alla newsletter della Cooperativa Emmanuel.');
     }
   };
 
@@ -140,7 +159,10 @@ const BlogSection = () => {
               <p className="text-gray-600 mb-4">
                 Vuoi rimanere aggiornato sulle ultime novità in ambito sanitario?
               </p>
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+              <button 
+                onClick={handleNewsletterSignup}
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              >
                 Iscriviti alla Newsletter
               </button>
             </div>
