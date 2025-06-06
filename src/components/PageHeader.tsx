@@ -24,7 +24,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <Helmet>
         <title>{metaTitle || `${title} - Cooperativa Sociale Emmanuel`}</title>
         <meta name="description" content={metaDescription || description} />
-        {keywords && <meta name="keywords" content={keywords} />}
+        {keywords && <meta name="keywords\" content={keywords} />}
       </Helmet>
       
       {showBreadcrumb && <Breadcrumb />}
