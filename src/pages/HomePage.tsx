@@ -33,8 +33,8 @@ const HomePage = () => {
     },
     {
       icon: Award,
-      title: 'Qualità Certificata',
-      description: 'Servizi ADI autorizzati e conformi alle normative regionali della Campania.',
+      title: 'Qualità Certificata ISO',
+      description: 'Servizi ADI autorizzati e conformi alle normative regionali della Campania con certificazione ISO.',
       link: '/servizi',
       image: '/images/closeup-support-hands.jpg'
     }
@@ -60,9 +60,34 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Cooperativa Sociale Emmanuel - Assistenza Domiciliare a Napoli</title>
-        <meta name="description" content="Assistenza Domiciliare Integrata (ADI), supporto ad anziani e persone con disabilità. Servizi di qualità per il benessere dei tuoi cari a Napoli e in Campania." />
-        <meta name="keywords" content="assistenza domiciliare, ADI, anziani, disabilità, Napoli, Campania, cooperativa sociale" />
+        <title>Cooperativa Sociale Emmanuel | Assistenza Domiciliare Napoli | ADI Campania</title>
+        <meta name="description" content="Cooperativa Sociale Emmanuel: leader nell'assistenza domiciliare a Napoli. Servizi ADI autorizzati, assistenza anziani e disabilità in Campania. Certificazione ISO. Chiama +39 081 7877064" />
+        <meta name="keywords" content="cooperativa sociale emmanuel, emmanuel napoli, assistenza domiciliare napoli, ADI campania, assistenza anziani napoli, cooperativa emmanuel, luigi borriello emmanuel, certificazione iso" />
+        
+        {/* Schema.org per la homepage */}
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Cooperativa Sociale Emmanuel - Homepage",
+          "description": "Homepage ufficiale della Cooperativa Sociale Emmanuel, leader nell'assistenza domiciliare a Napoli e in Campania",
+          "url": "https://deluxe-kitten-b2c047.netlify.app/",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Cooperativa Sociale Emmanuel",
+            "alternateName": "Emmanuel Cooperativa Napoli"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://deluxe-kitten-b2c047.netlify.app/"
+            }]
+          }
+        })}
+        </script>
       </Helmet>
 
       <HeroSection />
@@ -74,10 +99,10 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Perché Scegliere Emmanuel
+                Perché Scegliere la Cooperativa Sociale Emmanuel
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                La nostra missione è portare conforto, dignità e sostegno a chi è in difficoltà
+                La nostra missione è portare conforto, dignità e sostegno a chi è in difficoltà con certificazione ISO di qualità
               </p>
             </div>
           </FadeInSection>
@@ -91,7 +116,7 @@ const HomePage = () => {
                 >
                   <img 
                     src={feature.image}
-                    alt={feature.title}
+                    alt={`${feature.title} - Cooperativa Emmanuel`}
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
@@ -115,10 +140,10 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                I Nostri Servizi Principali
+                I Nostri Servizi Principali ADI in Campania
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Soluzioni complete per l'assistenza domiciliare in Campania
+                Soluzioni complete per l'assistenza domiciliare integrata in Campania con certificazione ISO
               </p>
             </div>
           </FadeInSection>
@@ -129,7 +154,7 @@ const HomePage = () => {
                 <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
                   <img 
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - Cooperativa Emmanuel Napoli`}
                     className="w-full h-48 object-cover rounded-lg mb-6"
                   />
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
@@ -165,14 +190,14 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <img 
               src="/images/closeup-support-hands.jpg"
-              alt="Inizia il tuo percorso"
+              alt="Inizia il tuo percorso con Emmanuel"
               className="w-full max-w-md mx-auto h-48 object-cover rounded-lg mb-8"
             />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Inizia il Tuo Percorso di Assistenza
+              Inizia il Tuo Percorso di Assistenza con Emmanuel
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              La prima consulenza è sempre gratuita. Contattaci per scoprire come possiamo aiutarti.
+              La prima consulenza è sempre gratuita. Contatta la Cooperativa Sociale Emmanuel per scoprire come possiamo aiutarti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -185,7 +210,7 @@ const HomePage = () => {
                 to="/contatti"
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Contattaci Ora
+                Contatta Emmanuel Ora
               </Link>
             </div>
           </FadeInSection>

@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cooperativa-emmanuel.netlify.app/sitemap.xml
+# Priorità per i motori di ricerca
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Blocca accesso a file non necessari
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /manifest.json
+
+# Sitemap
+Sitemap: https://deluxe-kitten-b2c047.netlify.app/sitemap.xml
+
+# Informazioni aggiuntive per SEO
+# Cooperativa Sociale Emmanuel
+# Assistenza Domiciliare Integrata (ADI)
+# Napoli, Campania, Italia
+# Tel: +39 081 7877064
+# Email: cooperativa.emmanuel@outlook.it

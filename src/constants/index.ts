@@ -24,6 +24,11 @@ export const STATS = [
     value: '100%',
     label: 'Presente nel cuore di Napoli e attiva in tutta la regione',
   },
+  {
+    id: 5,
+    value: 'ISO',
+    label: 'Certificazione di qualità ISO ottenuta',
+  },
 ];
 
 export const ADI_SERVICES = [
@@ -42,4 +47,23 @@ export const EXTRA_SERVICES = [
   'Supporto per commissioni quotidiane',
   'Assistenza notturna e diurna continuativa',
   'Piani personalizzati per ogni esigenza familiare',
+];
+
+// SEO Keywords per indicizzazione
+export const SEO_KEYWORDS = [
+  'cooperativa sociale emmanuel',
+  'emmanuel napoli',
+  'assistenza domiciliare napoli',
+  'ADI campania',
+  'assistenza anziani napoli',
+  'cooperativa emmanuel',
+  'assistenza domiciliare integrata',
+  'fisioterapia domiciliare napoli',
+  'infermiere a domicilio napoli',
+  'assistenza disabilità campania',
+  'luigi borriello emmanuel',
+  'cooperativa sociale napoli',
+  'assistenza sanitaria domiciliare',
+  'servizi socio sanitari napoli',
+  'certificazione iso assistenza',
 ];

@@ -31,17 +31,20 @@ const Footer = () => {
               <Link to="/" className="flex items-center gap-3 mb-6">
                 <img 
                   src="/images/Logo.png" 
-                  alt="Logo Emmanuel" 
+                  alt="Logo Cooperativa Sociale Emmanuel" 
                   className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
                 />
                 <span className="text-2xl font-bold text-white">Emmanuel</span>
               </Link>
               <p className="text-gray-400 mb-4">
-                Cooperativa Sociale al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania.
+                Cooperativa Sociale Emmanuel al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania. Certificazione ISO di qualità.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
                 <Heart className="h-4 w-4 text-red-500" />
                 <span>Con amore e professionalità dal 2010</span>
+              </div>
+              <div className="text-sm text-blue-400 font-medium">
+                🏆 Certificazione ISO di Qualità
               </div>
             </div>
           </FadeInSection>
@@ -82,7 +85,7 @@ const Footer = () => {
           {/* Contact Info */}
           <FadeInSection direction="up" delay={400}>
             <div>
-              <h4 className="text-lg font-bold text-white mb-4">Contatti</h4>
+              <h4 className="text-lg font-bold text-white mb-4">Contatti Emmanuel</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
@@ -126,7 +129,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-gray-500 text-sm">
                 <img 
                   src="/images/Logo.png" 
-                  alt="Logo Emmanuel" 
+                  alt="Logo Cooperativa Sociale Emmanuel" 
                   className="h-6 w-6 object-contain" 
                 />
                 <span>© {new Date().getFullYear()} Cooperativa Sociale Emmanuel. Tutti i diritti riservati.</span>
