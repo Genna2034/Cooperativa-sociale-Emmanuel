@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,13 +16,20 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Chiudi menu mobile quando cambia la route
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
   const navItems = [
-    { href: '#servizi', label: 'Servizi' },
-    { href: '#chi-siamo', label: 'Chi Siamo' },
-    { href: '#recensioni', label: 'Recensioni' },
-    { href: '#prenotazioni', label: 'Prenota' },
-    { href: '#contatti', label: 'Contatti' }
+    { href: '/servizi', label: 'Servizi' },
+    { href: '/chi-siamo', label: 'Chi Siamo' },
+    { href: '/recensioni', label: 'Recensioni' },
+    { href: '/prenotazioni', label: 'Prenota' },
+    { href: '/contatti', label: 'Contatti' }
   ];
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header
@@ -32,8 +41,8 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Più grande e senza testo */}
-          <div className="flex items-center">
+          {/* Logo - Link alla homepage */}
+          <Link to="/" className="flex items-center">
             <img 
               src="/images/Logo.png" 
               alt="Cooperativa Sociale Emmanuel" 
@@ -41,31 +50,35 @@ const Header = () => {
                 isScrolled ? 'h-12 w-12' : 'h-16 w-16'
               }`}
             />
-          </div>
+          </Link>
           
           {/* Desktop Navigation - Centrata */}
           <nav className="hidden md:flex items-center justify-center flex-1 mx-8">
             <div className="flex items-center gap-8">
               {navItems.map((item) => (
-                <a 
+                <Link 
                   key={item.href}
-                  href={item.href} 
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+                  to={item.href} 
+                  className={`transition-colors font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:bg-blue-600 after:transition-all ${
+                    isActive(item.href)
+                      ? 'text-blue-600 after:w-full'
+                      : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'
+                  }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>
           
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <a 
-              href="#contatti" 
+            <Link 
+              to="/contatti" 
               className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-md active:scale-95 whitespace-nowrap"
             >
               Richiedi Consulto
-            </a>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -84,22 +97,24 @@ const Header = () => {
         <div className="md:hidden bg-white border-t shadow-lg">
           <nav className="container mx-auto px-4 py-4 space-y-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+                to={item.href}
+                className={`block transition-colors font-medium py-2 ${
+                  isActive(item.href)
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contatti"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <Link
+              to="/contatti"
               className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors hover:bg-blue-700 mt-4"
             >
               Richiedi Consulto
-            </a>
+            </Link>
           </nav>
         </div>
       )}

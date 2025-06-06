@@ -1,7 +1,7 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "cooperativa-emmanuel-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@emailjs/browser": "^4.3.3",
-    "react-helmet-async": "^2.0.4"
+    "react-helmet-async": "^2.0.4",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

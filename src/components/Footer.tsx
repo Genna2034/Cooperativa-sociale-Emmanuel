@@ -1,9 +1,26 @@
 import React from 'react';
 import { Heart, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
 
 const Footer = () => {
+  const footerLinks = [
+    { label: 'Servizi', href: '/servizi' },
+    { label: 'Chi Siamo', href: '/chi-siamo' },
+    { label: 'Recensioni', href: '/recensioni' },
+    { label: 'Prenotazioni', href: '/prenotazioni' },
+    { label: 'Contatti', href: '/contatti' }
+  ];
+
+  const services = [
+    'Assistenza Domiciliare Integrata',
+    'Assistenza Anziani',
+    'Supporto Disabilità',
+    'Fisioterapia Domiciliare',
+    'Assistenza Infermieristica'
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -11,17 +28,21 @@ const Footer = () => {
           {/* Logo and Description */}
           <FadeInSection direction="up" delay={100}>
             <div>
-              <div className="flex items-center gap-3 mb-6">
+              <Link to="/" className="flex items-center gap-3 mb-6">
                 <img 
                   src="/images/Logo.png" 
                   alt="Logo Emmanuel" 
                   className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
                 />
                 <span className="text-2xl font-bold text-white">Emmanuel</span>
-              </div>
+              </Link>
               <p className="text-gray-400 mb-4">
-                Cooperativa Sociale al servizio di chi ha più bisogno, da oltre 13 anni a Napoli.
+                Cooperativa Sociale al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania.
               </p>
+              <div className="flex items-center gap-2 text-sm text-gray-400">
+                <Heart className="h-4 w-4 text-red-500" />
+                <span>Con amore e professionalità dal 2010</span>
+              </div>
             </div>
           </FadeInSection>
           
@@ -30,15 +51,16 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold text-white mb-4">Link Rapidi</h4>
               <ul className="space-y-2">
-                <li>
-                  <a href="#servizi" className="text-gray-400 hover:text-blue-400 transition-colors">I Nostri Servizi</a>
-                </li>
-                <li>
-                  <a href="#chi-siamo" className="text-gray-400 hover:text-blue-400 transition-colors">Chi Siamo</a>
-                </li>
-                <li>
-                  <a href="#contatti" className="text-gray-400 hover:text-blue-400 transition-colors">Contattaci</a>
-                </li>
+                {footerLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link 
+                      to={link.href} 
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </FadeInSection>
@@ -46,12 +68,13 @@ const Footer = () => {
           {/* Services */}
           <FadeInSection direction="up" delay={300}>
             <div>
-              <h4 className="text-lg font-bold text-white mb-4">Servizi</h4>
+              <h4 className="text-lg font-bold text-white mb-4">I Nostri Servizi</h4>
               <ul className="space-y-2">
-                <li className="text-gray-400">Assistenza Domiciliare Integrata</li>
-                <li className="text-gray-400">Assistenza Anziani</li>
-                <li className="text-gray-400">Supporto Disabilità</li>
-                <li className="text-gray-400">Piani Personalizzati</li>
+                {services.map((service, index) => (
+                  <li key={index} className="text-gray-400 text-sm">
+                    {service}
+                  </li>
+                ))}
               </ul>
             </div>
           </FadeInSection>
@@ -74,31 +97,53 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
                   <a
                     href={`mailto:${CONTACT_INFO.email}`}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors break-all"
                   >
                     {CONTACT_INFO.email}
                   </a>
                 </li>
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                  <span className="text-gray-400">Napoli, Italia</span>
+                  <span className="text-gray-400">Napoli, Campania - Italia</span>
                 </li>
               </ul>
+              
+              <div className="mt-6">
+                <h5 className="text-white font-medium mb-2">Orari di Apertura</h5>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Lun-Ven: 9:00-18:00</div>
+                  <div>Sabato: 9:00-13:00</div>
+                  <div>Domenica: Chiuso</div>
+                </div>
+              </div>
             </div>
           </FadeInSection>
         </div>
         
         <FadeInSection direction="fade" delay={500}>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <img 
-                src="/images/Logo.png" 
-                alt="Logo Emmanuel" 
-                className="h-6 w-6 object-contain" 
-              />
-              <span>Emmanuel</span>
+          <div className="border-t border-gray-800 pt-8 mt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-2 text-gray-500 text-sm">
+                <img 
+                  src="/images/Logo.png" 
+                  alt="Logo Emmanuel" 
+                  className="h-6 w-6 object-contain" 
+                />
+                <span>© {new Date().getFullYear()} Cooperativa Sociale Emmanuel. Tutti i diritti riservati.</span>
+              </div>
+              
+              <div className="flex items-center gap-4 text-sm text-gray-500">
+                <Link to="/privacy" className="hover:text-blue-400 transition-colors">
+                  Privacy Policy
+                </Link>
+                <span>•</span>
+                <Link to="/cookie" className="hover:text-blue-400 transition-colors">
+                  Cookie Policy
+                </Link>
+                <span>•</span>
+                <span>P.IVA: IT123456789</span>
+              </div>
             </div>
-            <p>© {new Date().getFullYear()} Cooperativa Sociale Emmanuel. Tutti i diritti riservati.</p>
           </div>
         </FadeInSection>
       </div>
