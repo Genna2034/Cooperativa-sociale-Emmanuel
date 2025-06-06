@@ -26,7 +26,7 @@ const StatsSection = () => {
           
           <div className="order-1 lg:order-2 animate-slide-in-right">
             <img 
-              src="https://images.pexels.com/photos/7551838/pexels-photo-7551838.jpeg"
+              src="/images/medium-shot-women-posing-together.jpg"
               alt="Assistenza domiciliare qualificata"
               className="rounded-lg shadow-xl w-full h-auto object-cover max-h-[500px] transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
             />

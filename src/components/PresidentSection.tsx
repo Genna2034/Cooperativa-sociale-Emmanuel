@@ -7,9 +7,9 @@ const PresidentSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.pexels.com/photos/7551754/pexels-photo-7551754.jpeg"
+              src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
               alt="Assistenza domiciliare professionale"
-              className="rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px]"
+              className="rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
             />
           </div>
           
