@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cooperativa-emmanuel.netlify.app/sitemap.xml
