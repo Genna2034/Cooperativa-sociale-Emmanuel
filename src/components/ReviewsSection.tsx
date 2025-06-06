@@ -9,6 +9,7 @@ interface Review {
   comment: string;
   date: string;
   service: string;
+  image?: string;
 }
 
 const INITIAL_REVIEWS: Review[] = [
@@ -18,7 +19,8 @@ const INITIAL_REVIEWS: Review[] = [
     rating: 5,
     comment: "Servizio eccellente per mia madre anziana. Gli operatori sono professionali, gentili e sempre disponibili. Consiglio vivamente la Cooperativa Emmanuel.",
     date: "2024-01-10",
-    service: "Assistenza Domiciliare"
+    service: "Assistenza Domiciliare",
+    image: "/images/medium-shot-women-posing-together.jpg"
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const INITIAL_REVIEWS: Review[] = [
     rating: 5,
     comment: "Dopo l'intervento di mio padre, l'assistenza domiciliare è stata fondamentale. Personale qualificato e grande umanità. Grazie di cuore.",
     date: "2024-01-05",
-    service: "Fisioterapia Domiciliare"
+    service: "Fisioterapia Domiciliare",
+    image: "/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
   },
   {
     id: 3,
@@ -34,7 +37,8 @@ const INITIAL_REVIEWS: Review[] = [
     rating: 5,
     comment: "La professionalità e la dedizione del team Emmanuel hanno fatto la differenza per la cura di mia nonna. Servizio di altissima qualità.",
     date: "2023-12-28",
-    service: "Assistenza Infermieristica"
+    service: "Assistenza Infermieristica",
+    image: "/images/closeup-support-hands.jpg"
   }
 ];
 
@@ -57,7 +61,8 @@ const ReviewsSection = () => {
       rating: newReview.rating,
       comment: newReview.comment,
       date: new Date().toISOString().split('T')[0],
-      service: newReview.service
+      service: newReview.service,
+      image: "/images/closeup-support-hands.jpg" // Immagine di default
     };
 
     setReviews([review, ...reviews]);
@@ -109,8 +114,16 @@ const ReviewsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {reviews.slice(0, 6).map((review, index) => (
             <FadeInSection key={review.id} direction="up" delay={index * 150}>
-              <div className="bg-gray-50 rounded-xl p-6 relative">
+              <div className="bg-gray-50 rounded-xl p-6 relative hover:shadow-lg transition-all duration-300">
                 <Quote className="h-8 w-8 text-blue-200 absolute top-4 right-4" />
+                
+                {review.image && (
+                  <img 
+                    src={review.image}
+                    alt="Testimonianza"
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
+                )}
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex">

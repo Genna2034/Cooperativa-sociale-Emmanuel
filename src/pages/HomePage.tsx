@@ -14,25 +14,29 @@ const HomePage = () => {
       icon: Heart,
       title: 'Assistenza Personalizzata',
       description: 'Ogni piano di cura è studiato sulle specifiche esigenze della persona e della famiglia.',
-      link: '/servizi'
+      link: '/servizi',
+      image: '/images/closeup-support-hands.jpg'
     },
     {
       icon: Users,
       title: 'Team Qualificato',
       description: 'Professionisti sanitari esperti e formati per garantire il massimo livello di assistenza.',
-      link: '/chi-siamo'
+      link: '/chi-siamo',
+      image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       icon: Shield,
       title: 'Sicurezza e Affidabilità',
       description: 'Oltre 15 anni di esperienza nel settore sociosanitario in Campania.',
-      link: '/recensioni'
+      link: '/recensioni',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       icon: Award,
       title: 'Qualità Certificata',
       description: 'Servizi ADI autorizzati e conformi alle normative regionali della Campania.',
-      link: '/servizi'
+      link: '/servizi',
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -41,13 +45,15 @@ const HomePage = () => {
       title: 'Assistenza Domiciliare Integrata (ADI)',
       description: 'Servizi sanitari e socio-assistenziali a domicilio per anziani e persone con disabilità.',
       features: ['Visite mediche specialistiche', 'Assistenza infermieristica', 'Fisioterapia domiciliare'],
-      link: '/servizi'
+      link: '/servizi',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       title: 'Supporto Familiare',
       description: 'Accompagnamento e sostegno per le famiglie nel percorso di cura dei propri cari.',
       features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto 24/7'],
-      link: '/prenotazioni'
+      link: '/prenotazioni',
+      image: '/images/medium-shot-women-posing-together.jpg'
     }
   ];
 
@@ -81,8 +87,13 @@ const HomePage = () => {
               <FadeInSection key={index} direction="up" delay={index * 150}>
                 <Link 
                   to={feature.link}
-                  className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all duration-300"
+                  className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all duration-300 block"
                 >
+                  <img 
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
                     <feature.icon className="h-8 w-8 text-blue-600" />
                   </div>
@@ -116,6 +127,11 @@ const HomePage = () => {
             {quickServices.map((service, index) => (
               <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
                 <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover rounded-lg mb-6"
+                  />
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
@@ -147,6 +163,11 @@ const HomePage = () => {
       <section className="py-16 md:py-24 bg-blue-600">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeInSection direction="up">
+            <img 
+              src="/images/closeup-support-hands.jpg"
+              alt="Inizia il tuo percorso"
+              className="w-full max-w-md mx-auto h-48 object-cover rounded-lg mb-8"
+            />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Inizia il Tuo Percorso di Assistenza
             </h2>

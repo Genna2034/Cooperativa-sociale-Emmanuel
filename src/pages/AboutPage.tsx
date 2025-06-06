@@ -31,22 +31,26 @@ const AboutPage = () => {
     {
       icon: Heart,
       title: 'Compassione',
-      description: 'Ogni intervento è guidato dall\'amore e dal rispetto per la dignità umana.'
+      description: 'Ogni intervento è guidato dall\'amore e dal rispetto per la dignità umana.',
+      image: '/images/closeup-support-hands.jpg'
     },
     {
       icon: Users,
       title: 'Professionalità',
-      description: 'Team qualificato e costantemente aggiornato sulle migliori pratiche assistenziali.'
+      description: 'Team qualificato e costantemente aggiornato sulle migliori pratiche assistenziali.',
+      image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       icon: Award,
       title: 'Qualità',
-      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania.'
+      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania.',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       icon: Target,
       title: 'Personalizzazione',
-      description: 'Ogni piano di assistenza è studiato sulle specifiche esigenze della persona.'
+      description: 'Ogni piano di assistenza è studiato sulle specifiche esigenze della persona.',
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -61,7 +65,8 @@ const AboutPage = () => {
         'Fisioterapia e riabilitazione',
         'Supporto psicologico',
         'Coordinamento con medici di famiglia'
-      ]
+      ],
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       icon: Heart,
@@ -73,7 +78,8 @@ const AboutPage = () => {
         'Controllo parametri vitali',
         'Gestione terapie farmacologiche',
         'Supporto nutrizionale'
-      ]
+      ],
+      image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       icon: Shield,
@@ -85,7 +91,8 @@ const AboutPage = () => {
         'Supporto educativo',
         'Integrazione sociale',
         'Formazione familiari'
-      ]
+      ],
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -93,32 +100,38 @@ const AboutPage = () => {
     {
       year: '2010',
       title: 'Fondazione della Cooperativa',
-      description: 'Nasce la Cooperativa Sociale Emmanuel con la missione di assistere anziani e persone con disabilità.'
+      description: 'Nasce la Cooperativa Sociale Emmanuel con la missione di assistere anziani e persone con disabilità.',
+      image: '/images/Logo.png'
     },
     {
       year: '2012',
       title: 'Autorizzazione ADI',
-      description: 'Ottenimento dell\'autorizzazione per i servizi di Assistenza Domiciliare Integrata dalla Regione Campania.'
+      description: 'Ottenimento dell\'autorizzazione per i servizi di Assistenza Domiciliare Integrata dalla Regione Campania.',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       year: '2015',
       title: 'Espansione Territoriale',
-      description: 'Estensione dei servizi a tutta la provincia di Napoli e aree limitrofe della Campania.'
+      description: 'Estensione dei servizi a tutta la provincia di Napoli e aree limitrofe della Campania.',
+      image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       year: '2018',
       title: '1000 Famiglie Assistite',
-      description: 'Raggiungimento del traguardo di 1000 famiglie assistite con servizi di qualità.'
+      description: 'Raggiungimento del traguardo di 1000 famiglie assistite con servizi di qualità.',
+      image: '/images/closeup-support-hands.jpg'
     },
     {
       year: '2020',
       title: 'Servizi COVID-19',
-      description: 'Adattamento dei servizi durante la pandemia, garantendo continuità assistenziale in sicurezza.'
+      description: 'Adattamento dei servizi durante la pandemia, garantendo continuità assistenziale in sicurezza.',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       year: '2024',
       title: 'Oltre 5000 Persone Assistite',
-      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare in Campania.'
+      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare in Campania.',
+      image: '/images/medium-shot-women-posing-together.jpg'
     }
   ];
 
@@ -151,8 +164,15 @@ const AboutPage = () => {
             {missionAreas.map((area, index) => (
               <FadeInSection key={index} direction="up" delay={index * 200}>
                 <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 mx-auto">
-                    <area.icon className="h-8 w-8 text-blue-600" />
+                  <div className="mb-6">
+                    <img 
+                      src={area.image}
+                      alt={area.title}
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+                    <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto">
+                      <area.icon className="h-8 w-8 text-blue-600" />
+                    </div>
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{area.title}</h3>
@@ -337,7 +357,12 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <FadeInSection key={index} direction="up" delay={index * 150}>
-                <div className="text-center">
+                <div className="text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                  <img 
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full h-32 object-cover rounded-lg mb-4"
+                  />
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                     <value.icon className="h-8 w-8 text-blue-600" />
                   </div>
@@ -400,9 +425,16 @@ const AboutPage = () => {
                       {milestone.year}
                     </span>
                   </div>
-                  <div className="flex-grow bg-gray-50 rounded-lg shadow-md p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
+                  <div className="flex-grow bg-gray-50 rounded-lg shadow-md p-6 flex items-center gap-6">
+                    <img 
+                      src={milestone.image}
+                      alt={milestone.title}
+                      className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">{milestone.title}</h3>
+                      <p className="text-gray-600">{milestone.description}</p>
+                    </div>
                   </div>
                 </div>
               </FadeInSection>

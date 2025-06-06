@@ -32,11 +32,28 @@ const StatsSection = () => {
           
           <div className="order-1 lg:order-2">
             <FadeInSection direction="right">
-              <img 
-                src="/images/medium-shot-women-posing-together.jpg"
-                alt="Assistenza domiciliare qualificata"
-                className="rounded-lg shadow-xl w-full h-auto object-cover max-h-[500px] transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
-              />
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/images/medium-shot-women-posing-together.jpg"
+                  alt="Team professionale Emmanuel"
+                  className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+                />
+                <img 
+                  src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
+                  alt="Assistenza domiciliare qualificata"
+                  className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] mt-8"
+                />
+                <img 
+                  src="/images/closeup-support-hands.jpg"
+                  alt="Supporto e cura"
+                  className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] -mt-8"
+                />
+                <img 
+                  src="/images/Logo.png"
+                  alt="Logo Emmanuel"
+                  className="rounded-lg shadow-xl w-full h-48 object-contain bg-white p-4 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+                />
+              </div>
             </FadeInSection>
           </div>
         </div>

@@ -11,7 +11,8 @@ const HEALTH_ARTICLES = [
     category: "Servizi Sanitari",
     readTime: "5 min",
     external: true,
-    url: "https://www.regione.campania.it/regione/it/tematiche/sanita-e-sociale/assistenza-domiciliare"
+    url: "https://www.regione.campania.it/regione/it/tematiche/sanita-e-sociale/assistenza-domiciliare",
+    image: "/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const HEALTH_ARTICLES = [
     category: "Normative",
     readTime: "7 min",
     external: true,
-    url: "https://www.regione.campania.it/regione/it/tematiche/sanita-e-sociale/anziani"
+    url: "https://www.regione.campania.it/regione/it/tematiche/sanita-e-sociale/anziani",
+    image: "/images/medium-shot-women-posing-together.jpg"
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const HEALTH_ARTICLES = [
     category: "Benessere",
     readTime: "4 min",
     external: false,
+    image: "/images/closeup-support-hands.jpg",
     content: `
       <h3>Importanza della Prevenzione</h3>
       <p>La prevenzione è fondamentale nell'assistenza domiciliare. Ecco alcuni consigli pratici:</p>
@@ -82,6 +85,11 @@ const BlogSection = () => {
           {HEALTH_ARTICLES.map((article, index) => (
             <FadeInSection key={article.id} direction="up" delay={index * 200}>
               <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <img 
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
@@ -123,12 +131,19 @@ const BlogSection = () => {
 
         <FadeInSection direction="up" delay={600}>
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              Vuoi rimanere aggiornato sulle ultime novità in ambito sanitario?
-            </p>
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
-              Iscriviti alla Newsletter
-            </button>
+            <div className="bg-white rounded-xl p-8 shadow-md max-w-2xl mx-auto">
+              <img 
+                src="/images/medium-shot-women-posing-together.jpg"
+                alt="Newsletter"
+                className="w-full h-32 object-cover rounded-lg mb-6"
+              />
+              <p className="text-gray-600 mb-4">
+                Vuoi rimanere aggiornato sulle ultime novità in ambito sanitario?
+              </p>
+              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+                Iscriviti alla Newsletter
+              </button>
+            </div>
           </div>
         </FadeInSection>
       </div>
