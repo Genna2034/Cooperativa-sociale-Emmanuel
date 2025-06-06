@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone } from 'lucide-react';
+import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { STATS } from '../constants';
@@ -50,6 +50,45 @@ const AboutPage = () => {
     }
   ];
 
+  const missionAreas = [
+    {
+      icon: Stethoscope,
+      title: 'Assistenza Domiciliare Integrata (ADI)',
+      description: 'Servizi sanitari autorizzati dalla Regione Campania per garantire cure mediche e infermieristiche professionali direttamente a domicilio.',
+      features: [
+        'Visite mediche specialistiche',
+        'Assistenza infermieristica 24/7',
+        'Fisioterapia e riabilitazione',
+        'Supporto psicologico',
+        'Coordinamento con medici di famiglia'
+      ]
+    },
+    {
+      icon: Heart,
+      title: 'Assistenza agli Anziani',
+      description: 'Supporto completo per persone anziane, garantendo dignità, autonomia e qualità della vita nel proprio ambiente familiare.',
+      features: [
+        'Assistenza nelle attività quotidiane',
+        'Compagnia e socializzazione',
+        'Controllo parametri vitali',
+        'Gestione terapie farmacologiche',
+        'Supporto nutrizionale'
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Supporto alle Persone con Disabilità',
+      description: 'Servizi specializzati per persone con disabilità fisiche, cognitive o sensoriali, promuovendo inclusione e autonomia.',
+      features: [
+        'Assistenza personalizzata',
+        'Programmi di riabilitazione',
+        'Supporto educativo',
+        'Integrazione sociale',
+        'Formazione familiari'
+      ]
+    }
+  ];
+
   const milestones = [
     {
       year: '2010',
@@ -93,8 +132,79 @@ const AboutPage = () => {
         keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, team sanitario"
       />
 
-      {/* Sezione Presidente */}
+      {/* La Nostra Mission */}
       <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                La Nostra Mission
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Portare conforto, dignità e sostegno a chi è in difficoltà, trasformando la cura 
+                in un atto d'amore quotidiano attraverso servizi di assistenza domiciliare di eccellenza.
+              </p>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {missionAreas.map((area, index) => (
+              <FadeInSection key={index} direction="up" delay={index * 200}>
+                <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 mx-auto">
+                    <area.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{area.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{area.description}</p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-800 text-sm">Servizi Inclusi:</h4>
+                    <ul className="space-y-1">
+                      {area.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-600 flex items-center">
+                          <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 flex-shrink-0"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection direction="up" delay={600}>
+            <div className="mt-12 bg-blue-50 rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Il Nostro Impegno Quotidiano
+              </h3>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+                Da oltre 15 anni ci occupiamo non solo di assistenza sanitaria, ma anche di supporto umano 
+                e sociale. Crediamo che ogni persona meriti di vivere con dignità nel proprio ambiente familiare, 
+                circondato dall'affetto dei propri cari e supportato da professionisti competenti e compassionevoli.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
+                  <div className="text-sm text-gray-600">Anni di Esperienza</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">5000+</div>
+                  <div className="text-sm text-gray-600">Persone Assistite</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                  <div className="text-sm text-gray-600">Campania Coperta</div>
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Sezione Presidente */}
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInSection direction="left">
@@ -145,7 +255,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
@@ -211,7 +321,7 @@ const AboutPage = () => {
       </section>
 
       {/* Valori */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
@@ -268,7 +378,7 @@ const AboutPage = () => {
       </section>
 
       {/* Storia e Milestones */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
@@ -290,7 +400,7 @@ const AboutPage = () => {
                       {milestone.year}
                     </span>
                   </div>
-                  <div className="flex-grow bg-white rounded-lg shadow-md p-6">
+                  <div className="flex-grow bg-gray-50 rounded-lg shadow-md p-6">
                     <h3 className="text-xl font-bold text-gray-800 mb-2">{milestone.title}</h3>
                     <p className="text-gray-600">{milestone.description}</p>
                   </div>
@@ -302,7 +412,7 @@ const AboutPage = () => {
       </section>
 
       {/* Contatti e Sede */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <FadeInSection direction="left">

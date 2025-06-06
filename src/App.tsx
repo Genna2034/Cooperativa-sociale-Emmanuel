@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage';
 import ReviewsPage from './pages/ReviewsPage';
 import BookingPage from './pages/BookingPage';
 import ContactPage from './pages/ContactPage';
+import CareersPage from './pages/CareersPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <Route path="/recensioni" element={<ReviewsPage />} />
               <Route path="/prenotazioni" element={<BookingPage />} />
               <Route path="/contatti" element={<ContactPage />} />
+              <Route path="/lavora-con-noi" element={<CareersPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

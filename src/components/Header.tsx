@@ -74,10 +74,10 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Link 
-              to="/contatti" 
+              to="/lavora-con-noi" 
               className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-md active:scale-95 whitespace-nowrap"
             >
-              Richiedi Consulto
+              Sei un Professionista?
             </Link>
           </div>
           
@@ -110,10 +110,10 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              to="/contatti"
+              to="/lavora-con-noi"
               className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors hover:bg-blue-700 mt-4"
             >
-              Richiedi Consulto
+              Sei un Professionista?
             </Link>
           </nav>
         </div>

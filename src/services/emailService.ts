@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 const EMAILJS_SERVICE_ID = 'service_emmanuel'; // ⚠️ SOSTITUISCI con il tuo Service ID
 const EMAILJS_TEMPLATE_ID_CONTACT = 'template_contact'; // ⚠️ SOSTITUISCI con il tuo Template ID per contatti
 const EMAILJS_TEMPLATE_ID_BOOKING = 'template_booking'; // ⚠️ SOSTITUISCI con il tuo Template ID per prenotazioni
+const EMAILJS_TEMPLATE_ID_CAREER = 'template_career'; // ⚠️ SOSTITUISCI con il tuo Template ID per candidature
 const EMAILJS_PUBLIC_KEY = 'WDkpZib98mtjthirk'; // ✅ LA TUA PUBLIC KEY È GIÀ INSERITA
 
 // Inizializza EmailJS
@@ -25,14 +26,41 @@ interface BookingData {
   notes: string;
 }
 
+interface CareerData {
+  name: string;
+  email: string;
+  phone: string;
+  profession: string;
+  experience: string;
+  availability: string;
+  motivation: string;
+  hasLicense: string;
+  hasTransport: string;
+  cvAttached: string;
+}
+
 interface EmailParams {
-  type: 'contact' | 'booking';
-  data: ContactData | BookingData;
+  type: 'contact' | 'booking' | 'career';
+  data: ContactData | BookingData | CareerData;
 }
 
 export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
   try {
-    const templateId = type === 'contact' ? EMAILJS_TEMPLATE_ID_CONTACT : EMAILJS_TEMPLATE_ID_BOOKING;
+    let templateId: string;
+    
+    switch (type) {
+      case 'contact':
+        templateId = EMAILJS_TEMPLATE_ID_CONTACT;
+        break;
+      case 'booking':
+        templateId = EMAILJS_TEMPLATE_ID_BOOKING;
+        break;
+      case 'career':
+        templateId = EMAILJS_TEMPLATE_ID_CAREER;
+        break;
+      default:
+        throw new Error('Tipo di email non supportato');
+    }
     
     // Parametri del template che verranno inviati a cooperativa.emmanuel@outlook.it
     const templateParams = {
@@ -41,11 +69,14 @@ export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
       to_name: 'Cooperativa Sociale Emmanuel',
       
       // Dati del mittente
-      from_name: data.name,
+      from_name: data.name || (data as any).firstName + ' ' + (data as any).lastName,
       from_phone: data.phone,
+      from_email: (data as any).email || 'Non fornita',
       
       // Tipo di richiesta
-      request_type: type === 'contact' ? 'Richiesta di Contatto' : 'Prenotazione Appuntamento',
+      request_type: type === 'contact' ? 'Richiesta di Contatto' : 
+                   type === 'booking' ? 'Prenotazione Appuntamento' : 
+                   'Candidatura Lavoro',
       
       // Tutti i dati del form
       ...data,
@@ -81,26 +112,48 @@ export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
 
 // Funzione di fallback per inviare email tramite mailto
 export const sendEmailFallback = ({ type, data }: EmailParams): void => {
-  const subject = type === 'contact' 
-    ? 'Richiesta di Contatto - Cooperativa Emmanuel'
-    : 'Prenotazione Appuntamento - Cooperativa Emmanuel';
+  let subject: string;
+  let body: string;
   
-  let body = `NUOVA ${type === 'contact' ? 'RICHIESTA DI CONTATTO' : 'PRENOTAZIONE'}\n\n`;
-  body += `Nome: ${data.name}\n`;
-  body += `Telefono: ${data.phone}\n`;
-  
-  if (type === 'contact') {
-    const contactData = data as ContactData;
-    body += `\nMessaggio:\n${contactData.message}\n`;
-  } else {
-    const bookingData = data as BookingData;
-    body += `Email: ${bookingData.email || 'Non fornita'}\n`;
-    body += `Servizio richiesto: ${bookingData.service}\n`;
-    body += `Data preferita: ${bookingData.preferredDate}\n`;
-    body += `Orario preferito: ${bookingData.preferredTime}\n`;
-    if (bookingData.notes) {
-      body += `\nNote aggiuntive:\n${bookingData.notes}\n`;
-    }
+  switch (type) {
+    case 'contact':
+      subject = 'Richiesta di Contatto - Cooperativa Emmanuel';
+      body = `NUOVA RICHIESTA DI CONTATTO\n\n`;
+      body += `Nome: ${data.name}\n`;
+      body += `Telefono: ${data.phone}\n`;
+      body += `\nMessaggio:\n${(data as ContactData).message}\n`;
+      break;
+      
+    case 'booking':
+      subject = 'Prenotazione Appuntamento - Cooperativa Emmanuel';
+      const bookingData = data as BookingData;
+      body = `NUOVA PRENOTAZIONE\n\n`;
+      body += `Nome: ${bookingData.name}\n`;
+      body += `Telefono: ${bookingData.phone}\n`;
+      body += `Email: ${bookingData.email || 'Non fornita'}\n`;
+      body += `Servizio richiesto: ${bookingData.service}\n`;
+      body += `Data preferita: ${bookingData.preferredDate}\n`;
+      body += `Orario preferito: ${bookingData.preferredTime}\n`;
+      if (bookingData.notes) {
+        body += `\nNote aggiuntive:\n${bookingData.notes}\n`;
+      }
+      break;
+      
+    case 'career':
+      subject = 'Nuova Candidatura - Cooperativa Emmanuel';
+      const careerData = data as CareerData;
+      body = `NUOVA CANDIDATURA\n\n`;
+      body += `Nome: ${careerData.name}\n`;
+      body += `Email: ${careerData.email}\n`;
+      body += `Telefono: ${careerData.phone}\n`;
+      body += `Professione: ${careerData.profession}\n`;
+      body += `Esperienza: ${careerData.experience}\n`;
+      body += `Disponibilità: ${careerData.availability}\n`;
+      body += `Patente: ${careerData.hasLicense}\n`;
+      body += `Mezzo proprio: ${careerData.hasTransport}\n`;
+      body += `CV allegato: ${careerData.cvAttached}\n`;
+      body += `\nLettera di motivazione:\n${careerData.motivation}\n`;
+      break;
   }
   
   body += `\n---\nInviato il: ${new Date().toLocaleString('it-IT')}\n`;
