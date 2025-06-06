@@ -30,47 +30,53 @@ const Header = () => {
           : 'bg-white/70 backdrop-blur-sm py-4'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img 
-            src="/images/Logo.png" 
-            alt="Logo Emmanuel" 
-            className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
-          />
-          <span className="text-2xl font-bold text-blue-700">
-            Emmanuel
-          </span>
-        </div>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
-          {navItems.map((item) => (
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo - Più grande e senza testo */}
+          <div className="flex items-center">
+            <img 
+              src="/images/Logo.png" 
+              alt="Cooperativa Sociale Emmanuel" 
+              className={`object-contain transition-all duration-300 hover:scale-105 ${
+                isScrolled ? 'h-12 w-12' : 'h-16 w-16'
+              }`}
+            />
+          </div>
+          
+          {/* Desktop Navigation - Centrata */}
+          <nav className="hidden md:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center gap-8">
+              {navItems.map((item) => (
+                <a 
+                  key={item.href}
+                  href={item.href} 
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+          
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
             <a 
-              key={item.href}
-              href={item.href} 
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+              href="#contatti" 
+              className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-md active:scale-95 whitespace-nowrap"
             >
-              {item.label}
+              Richiedi Consulto
             </a>
-          ))}
-        </nav>
-        
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-        
-        {/* Desktop CTA */}
-        <a 
-          href="#contatti" 
-          className="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-md active:scale-95"
-        >
-          Richiedi Consulto
-        </a>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -82,7 +88,7 @@ const Header = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
               >
                 {item.label}
               </a>
@@ -90,7 +96,7 @@ const Header = () => {
             <a
               href="#contatti"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors hover:bg-blue-700"
+              className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors hover:bg-blue-700 mt-4"
             >
               Richiedi Consulto
             </a>

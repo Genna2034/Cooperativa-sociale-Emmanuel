@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
 import { sendEmail } from '../services/emailService';
@@ -12,15 +12,19 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    // Rimuovi errore quando l'utente inizia a digitare
+    if (error) setError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     try {
       await sendEmail({
@@ -30,9 +34,15 @@ const ContactSection = () => {
 
       setIsSubmitted(true);
       setFormData({ name: '', phone: '', message: '' });
+      
+      // Reset automatico dopo 5 secondi
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+      
     } catch (error) {
       console.error('Errore invio contatto:', error);
-      alert('Errore durante l\'invio del messaggio. Riprova più tardi.');
+      setError('Si è verificato un errore durante l\'invio. Il tuo client email si aprirà come alternativa.');
     } finally {
       setIsSubmitting(false);
     }
@@ -43,7 +53,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <FadeInSection direction="up">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" role="heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Il primo passo verso un'assistenza sicura, amorevole e personalizzata
             </h2>
           </FadeInSection>
@@ -118,7 +128,7 @@ const ContactSection = () => {
                       Messaggio Inviato!
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Grazie per averci contattato. Ti risponderemo entro 24 ore.
+                      Grazie per averci contattato. Ti risponderemo entro 24 ore all'indirizzo cooperativa.emmanuel@outlook.it
                     </p>
                     <button
                       onClick={() => setIsSubmitted(false)}
@@ -130,6 +140,13 @@ const ContactSection = () => {
                 ) : (
                   <>
                     <h3 className="text-2xl font-bold text-gray-800 mb-6">Richiedi informazioni</h3>
+                    
+                    {error && (
+                      <div className="mb-4 p-4 bg-orange-50 border border-orange-200 rounded-md flex items-start gap-3">
+                        <AlertCircle className="h-5 w-5 text-orange-600 mt-0.5" />
+                        <p className="text-orange-700 text-sm">{error}</p>
+                      </div>
+                    )}
                     
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
@@ -184,9 +201,16 @@ const ContactSection = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-md font-medium transition-colors shadow-sm"
+                          className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-md font-medium transition-colors shadow-sm flex items-center justify-center gap-2"
                         >
-                          {isSubmitting ? 'Invio in corso...' : 'Invia richiesta'}
+                          {isSubmitting ? (
+                            <>
+                              <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></div>
+                              Invio in corso...
+                            </>
+                          ) : (
+                            'Invia richiesta'
+                          )}
                         </button>
                       </div>
                       
