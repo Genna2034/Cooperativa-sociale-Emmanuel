@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import MobileNavigation from './MobileNavigation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -12,14 +13,19 @@ const Header = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-  // Chiudi menu mobile quando cambia la route
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location]);
+    handleResize(); // Check initial size
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const navItems = [
     { href: '/servizi', label: 'Servizi' },
@@ -31,6 +37,11 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Usa la navigazione mobile su schermi piccoli
+  if (isMobile) {
+    return <MobileNavigation />;
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -41,7 +52,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Link alla homepage - DIMENSIONI ORIGINALI RIPRISTINATE */}
+          {/* Logo - DIMENSIONI ORIGINALI RIPRISTINATE */}
           <Link to="/" className="flex items-center">
             <img 
               src="/images/Logo.png" 
@@ -80,44 +91,8 @@ const Header = () => {
               Sei un Professionista Sanitario?
             </Link>
           </div>
-          
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
-          <nav className="container mx-auto px-4 py-4 space-y-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`block transition-colors font-medium py-2 ${
-                  isActive(item.href)
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/lavora-con-noi"
-              className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors hover:bg-blue-700 mt-4"
-            >
-              Sei un Professionista Sanitario?
-            </Link>
-          </nav>
-        </div>
-      )}
     </header>
   );
 };
