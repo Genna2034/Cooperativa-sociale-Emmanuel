@@ -15,6 +15,8 @@ import ReviewsPage from './pages/ReviewsPage';
 import BookingPage from './pages/BookingPage';
 import ContactPage from './pages/ContactPage';
 import CareersPage from './pages/CareersPage';
+import PrivacyPage from './pages/PrivacyPage';
+import CookiePage from './pages/CookiePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
               <Route path="/prenotazioni" element={<BookingPage />} />
               <Route path="/contatti" element={<ContactPage />} />
               <Route path="/lavora-con-noi" element={<CareersPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/cookie" element={<CookiePage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

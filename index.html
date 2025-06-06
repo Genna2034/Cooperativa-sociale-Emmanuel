@@ -66,8 +66,21 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
     </script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Emmanuel">
+    <link rel="apple-touch-icon" href="/images/Logo.png">
   </head>
   <body>
     <div id="root"></div>

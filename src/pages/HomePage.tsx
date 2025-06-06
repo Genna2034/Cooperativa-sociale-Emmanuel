@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Heart, Shield, Award } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
+import BlogSection from '../components/BlogSection';
+import NewsletterSection from '../components/NewsletterSection';
 import FadeInSection from '../components/FadeInSection';
 
 const HomePage = () => {
@@ -139,6 +141,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <BlogSection />
+
       {/* Call to Action */}
       <section className="py-16 md:py-24 bg-blue-600">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -166,6 +170,8 @@ const HomePage = () => {
           </FadeInSection>
         </div>
       </section>
+
+      <NewsletterSection />
     </>
   );
 };

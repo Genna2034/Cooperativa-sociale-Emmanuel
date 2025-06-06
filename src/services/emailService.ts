@@ -5,6 +5,7 @@ const EMAILJS_SERVICE_ID = 'service_emmanuel'; // ⚠️ SOSTITUISCI con il tuo 
 const EMAILJS_TEMPLATE_ID_CONTACT = 'template_contact'; // ⚠️ SOSTITUISCI con il tuo Template ID per contatti
 const EMAILJS_TEMPLATE_ID_BOOKING = 'template_booking'; // ⚠️ SOSTITUISCI con il tuo Template ID per prenotazioni
 const EMAILJS_TEMPLATE_ID_CAREER = 'template_career'; // ⚠️ SOSTITUISCI con il tuo Template ID per candidature
+const EMAILJS_TEMPLATE_ID_NEWSLETTER = 'template_newsletter'; // ⚠️ SOSTITUISCI con il tuo Template ID per newsletter
 const EMAILJS_PUBLIC_KEY = 'WDkpZib98mtjthirk'; // ✅ LA TUA PUBLIC KEY È GIÀ INSERITA
 
 // Inizializza EmailJS
@@ -39,9 +40,14 @@ interface CareerData {
   cvAttached: string;
 }
 
+interface NewsletterData {
+  email: string;
+  subscriptionDate: string;
+}
+
 interface EmailParams {
-  type: 'contact' | 'booking' | 'career';
-  data: ContactData | BookingData | CareerData;
+  type: 'contact' | 'booking' | 'career' | 'newsletter';
+  data: ContactData | BookingData | CareerData | NewsletterData;
 }
 
 export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
@@ -58,6 +64,9 @@ export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
       case 'career':
         templateId = EMAILJS_TEMPLATE_ID_CAREER;
         break;
+      case 'newsletter':
+        templateId = EMAILJS_TEMPLATE_ID_NEWSLETTER;
+        break;
       default:
         throw new Error('Tipo di email non supportato');
     }
@@ -69,14 +78,15 @@ export const sendEmail = async ({ type, data }: EmailParams): Promise<void> => {
       to_name: 'Cooperativa Sociale Emmanuel',
       
       // Dati del mittente
-      from_name: data.name || (data as any).firstName + ' ' + (data as any).lastName,
-      from_phone: data.phone,
+      from_name: data.name || (data as any).firstName + ' ' + (data as any).lastName || 'Newsletter Subscriber',
+      from_phone: (data as any).phone || 'Non fornito',
       from_email: (data as any).email || 'Non fornita',
       
       // Tipo di richiesta
       request_type: type === 'contact' ? 'Richiesta di Contatto' : 
                    type === 'booking' ? 'Prenotazione Appuntamento' : 
-                   'Candidatura Lavoro',
+                   type === 'career' ? 'Candidatura Lavoro' :
+                   'Iscrizione Newsletter',
       
       // Tutti i dati del form
       ...data,
@@ -120,7 +130,7 @@ export const sendEmailFallback = ({ type, data }: EmailParams): void => {
       subject = 'Richiesta di Contatto - Cooperativa Emmanuel';
       body = `NUOVA RICHIESTA DI CONTATTO\n\n`;
       body += `Nome: ${data.name}\n`;
-      body += `Telefono: ${data.phone}\n`;
+      body += `Telefono: ${(data as any).phone}\n`;
       body += `\nMessaggio:\n${(data as ContactData).message}\n`;
       break;
       
@@ -153,6 +163,14 @@ export const sendEmailFallback = ({ type, data }: EmailParams): void => {
       body += `Mezzo proprio: ${careerData.hasTransport}\n`;
       body += `CV allegato: ${careerData.cvAttached}\n`;
       body += `\nLettera di motivazione:\n${careerData.motivation}\n`;
+      break;
+      
+    case 'newsletter':
+      subject = 'Nuova Iscrizione Newsletter - Cooperativa Emmanuel';
+      const newsletterData = data as NewsletterData;
+      body = `NUOVA ISCRIZIONE NEWSLETTER\n\n`;
+      body += `Email: ${newsletterData.email}\n`;
+      body += `Data iscrizione: ${newsletterData.subscriptionDate}\n`;
       break;
   }
   

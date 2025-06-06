@@ -1,0 +1,27 @@
+{
+  "name": "Cooperativa Sociale Emmanuel",
+  "short_name": "Emmanuel",
+  "description": "Assistenza Domiciliare Integrata a Napoli e in Campania",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/Logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "social"],
+  "lang": "it",
+  "dir": "ltr"
+}
