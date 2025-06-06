@@ -1,10 +1,10 @@
 import emailjs from '@emailjs/browser';
 
-// Configurazione EmailJS - Sostituisci con i tuoi dati reali
-const EMAILJS_SERVICE_ID = 'service_emmanuel'; // Il tuo Service ID da EmailJS
-const EMAILJS_TEMPLATE_ID_CONTACT = 'template_contact'; // Template per contatti
-const EMAILJS_TEMPLATE_ID_BOOKING = 'template_booking'; // Template per prenotazioni
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE'; // La tua Public Key da EmailJS
+// Configurazione EmailJS - AGGIORNA QUESTI VALORI CON I TUOI DATI REALI
+const EMAILJS_SERVICE_ID = 'service_emmanuel'; // ⚠️ SOSTITUISCI con il tuo Service ID
+const EMAILJS_TEMPLATE_ID_CONTACT = 'template_contact'; // ⚠️ SOSTITUISCI con il tuo Template ID per contatti
+const EMAILJS_TEMPLATE_ID_BOOKING = 'template_booking'; // ⚠️ SOSTITUISCI con il tuo Template ID per prenotazioni
+const EMAILJS_PUBLIC_KEY = 'WDkpZib98mtjthirk'; // ✅ LA TUA PUBLIC KEY È GIÀ INSERITA
 
 // Inizializza EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
