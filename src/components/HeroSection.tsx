@@ -8,8 +8,8 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="Assistenza anziani"
+          src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg"
+          alt="Assistenza domiciliare"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
