@@ -99,7 +99,7 @@ const BookingSection = () => {
 
   if (isSubmitted) {
     return (
-      <section id="prenotazioni" className="py-16 md:py-24 bg-green-50">
+      <section id="prenotazioni\" className="py-16 md:py-24 bg-green-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="max-w-2xl mx-auto text-center">
