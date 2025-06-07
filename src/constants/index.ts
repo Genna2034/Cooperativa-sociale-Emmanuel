@@ -145,6 +145,13 @@ export const TEAM_INFO = {
     qualifications: 'Laureato in Economia',
     experience: 'Specializzazione in gestione organizzazioni sanitarie',
     specialties: ['Controllo di gestione', 'Pianificazione economica', 'Amministrazione sanitaria']
+  },
+  immaAngelone: {
+    name: 'Imma Angelone',
+    role: 'Coordinatrice Servizi Educativi e Assistenziali',
+    qualifications: 'Laureata in Scienze dell\'Educazione',
+    experience: 'Moglie del presidente, coordina tutti i servizi educativi e assistenziali',
+    specialties: ['Coordinamento servizi educativi', 'Progettazione educativa', 'Supporto familiare', 'Gestione équipe educative']
   }
 };
 
@@ -227,6 +234,7 @@ export const SEO_KEYWORDS = [
   'luigi borriello emmanuel presidente',
   'gennaro borriello infermiere coordinatore',
   'umberto borriello economia amministrativo',
+  'imma angelone educazione coordinatrice',
   'cooperativa sociale napoli',
   'assistenza sanitaria domiciliare',
   'servizi socio sanitari napoli',

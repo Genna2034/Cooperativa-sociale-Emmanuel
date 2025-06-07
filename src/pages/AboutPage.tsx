@@ -30,6 +30,14 @@ const AboutPage = () => {
       description: 'Laureato in Economia con specializzazione in gestione delle organizzazioni sanitarie. Si occupa della pianificazione economica, del controllo di gestione e dell\'ottimizzazione dei processi amministrativi della cooperativa.',
       specialties: ['Controllo di gestione', 'Pianificazione economica', 'Amministrazione sanitaria', 'Ottimizzazione processi'],
       image: '/images/closeup-support-hands.jpg'
+    },
+    {
+      name: 'Imma Angelone',
+      role: 'Coordinatrice Servizi Educativi e Assistenziali',
+      qualifications: 'Laureata in Scienze dell\'Educazione',
+      description: 'Moglie del presidente Luigi Borriello, laureata in Scienze dell\'Educazione, coordina tutti i servizi educativi e assistenziali della cooperativa. La sua esperienza nel campo educativo garantisce un approccio professionale e umano nell\'assistenza alle famiglie.',
+      specialties: ['Coordinamento servizi educativi', 'Progettazione educativa', 'Supporto familiare', 'Gestione équipe educative'],
+      image: '/images/medium-shot-women-posing-together.jpg'
     }
   ];
 
@@ -148,7 +156,7 @@ const AboutPage = () => {
         description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento per l'assistenza domiciliare e i servizi educativi in Campania"
         metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli"
         metaDescription="Scopri la storia della Cooperativa Emmanuel, i nostri principi cooperativi, il team qualificato e i valori che ci guidano nell'assistenza domiciliare e nei servizi educativi."
-        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, team sanitario, legge 381/91"
+        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, Imma Angelone educazione, team sanitario, legge 381/91"
       />
 
       {/* La Nostra Mission secondo la Legge 381/91 */}
@@ -350,7 +358,7 @@ const AboutPage = () => {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {teamMembers.map((member, index) => (
               <FadeInSection key={index} direction="up" delay={index * 200}>
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
@@ -364,6 +372,7 @@ const AboutPage = () => {
                       {member.qualifications.includes('Infermiere') && <Stethoscope className="h-5 w-5 text-blue-600 mr-2" />}
                       {member.qualifications.includes('Economia') && <Briefcase className="h-5 w-5 text-green-600 mr-2" />}
                       {member.qualifications.includes('Imprenditore') && <Users className="h-5 w-5 text-purple-600 mr-2" />}
+                      {member.qualifications.includes('Scienze dell\'Educazione') && <GraduationCap className="h-5 w-5 text-orange-600 mr-2" />}
                       <span className="text-sm font-medium text-gray-600">{member.qualifications}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
