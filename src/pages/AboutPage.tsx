@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon, GraduationCap, Briefcase } from 'lucide-react';
+import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon, GraduationCap, Briefcase, BookOpen, Scale } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
-import { STATS } from '../constants';
+import { STATS, COOPERATIVE_PRINCIPLES, COOPERATIVE_ACTIVITIES } from '../constants';
 
 const AboutPage = () => {
   const teamMembers = [
@@ -48,8 +48,8 @@ const AboutPage = () => {
     },
     {
       icon: Award,
-      title: 'Qualità Certificata',
-      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania con certificazione ISO.',
+      title: 'Qualità Certificata ISO 9001',
+      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania con certificazione ISO 9001:2015.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
@@ -76,8 +76,8 @@ const AboutPage = () => {
     },
     {
       icon: Heart,
-      title: 'Assistenza agli Anziani',
-      description: 'Supporto completo per persone anziane, garantendo dignità, autonomia e qualità della vita nel proprio ambiente familiare.',
+      title: 'Assistenza agli Anziani e Persone con Disabilità',
+      description: 'Supporto completo per persone anziane e con disabilità, garantendo dignità, autonomia e qualità della vita nel proprio ambiente familiare.',
       features: [
         'Assistenza nelle attività quotidiane',
         'Compagnia e socializzazione',
@@ -88,15 +88,15 @@ const AboutPage = () => {
       image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
-      icon: Shield,
-      title: 'Supporto alle Persone con Disabilità',
-      description: 'Servizi specializzati per persone con disabilità fisiche, cognitive o sensoriali, promuovendo inclusione e autonomia.',
+      icon: BookOpen,
+      title: 'Servizi Educativi e Assistenza Scolastica',
+      description: 'Servizi educativi specialistici, supporto scolastico e attività formative per contrastare la dispersione scolastica e la povertà educativa.',
       features: [
-        'Assistenza personalizzata',
-        'Programmi di riabilitazione',
-        'Supporto educativo',
-        'Integrazione sociale',
-        'Formazione familiari'
+        'Servizi pre e post scuola',
+        'Tutoraggio educativo e doposcuola',
+        'Supporto didattico personalizzato',
+        'Laboratori creativi e didattici',
+        'Mediazione culturale per stranieri'
       ],
       image: '/images/closeup-support-hands.jpg'
     }
@@ -106,7 +106,7 @@ const AboutPage = () => {
     {
       year: '2010',
       title: 'Fondazione della Cooperativa',
-      description: 'Nasce la Cooperativa Sociale Emmanuel con la missione di assistere anziani e persone con disabilità.',
+      description: 'Nasce la Cooperativa Sociale Emmanuel secondo la Legge 381/91, con la missione di assistere anziani, persone con disabilità e minori.',
       image: '/images/Logo.png'
     },
     {
@@ -129,14 +129,14 @@ const AboutPage = () => {
     },
     {
       year: '2020',
-      title: 'Certificazione ISO di Qualità',
-      description: 'Ottenimento della certificazione ISO 9001:2015 per il sistema di gestione qualità.',
+      title: 'Certificazione ISO 9001:2015',
+      description: 'Ottenimento della certificazione ISO 9001:2015 per il sistema di gestione qualità nei servizi socio-sanitari.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       year: '2024',
       title: 'Oltre 5000 Persone Assistite',
-      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare accreditata in Campania.',
+      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare e i servizi educativi in Campania.',
       image: '/images/medium-shot-women-posing-together.jpg'
     }
   ];
@@ -145,37 +145,31 @@ const AboutPage = () => {
     <>
       <PageHeader
         title="Chi Siamo"
-        description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento accreditato per l'assistenza domiciliare in Campania"
-        metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli Accreditata"
-        metaDescription="Scopri la storia della Cooperativa Emmanuel, accreditata con la Regione Campania per l'ADI. Il nostro team qualificato e i valori che ci guidano nell'assistenza domiciliare."
-        keywords="cooperativa sociale accreditata, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, team sanitario qualificato"
+        description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento per l'assistenza domiciliare e i servizi educativi in Campania"
+        metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli"
+        metaDescription="Scopri la storia della Cooperativa Emmanuel, i nostri principi cooperativi, il team qualificato e i valori che ci guidano nell'assistenza domiciliare e nei servizi educativi."
+        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, team sanitario, legge 381/91"
       />
 
-      {/* La Nostra Mission */}
+      {/* La Nostra Mission secondo la Legge 381/91 */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
-                <img 
-                  src="/images/regione-campania-logo.png"
-                  alt="Accreditamento Regione Campania"
-                  className="h-12 w-auto mr-4"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
+                <Scale className="h-10 w-10 text-blue-600 mr-4" />
                 <Shield className="h-10 w-10 text-blue-600" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 La Nostra Mission
               </h2>
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
-                🏆 Accreditati con la Regione Campania per l'ADI
+                🏛️ Cooperativa Sociale secondo la Legge 381/91
               </div>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Portare conforto, dignità e sostegno a chi è in difficoltà, trasformando la cura 
-                in un atto d'amore quotidiano attraverso servizi di assistenza domiciliare accreditati e certificati.
+                La Cooperativa Sociale Emmanuel opera senza scopo di lucro in conformità alla Legge 381/91. 
+                Il nostro obiettivo principale è perseguire l'interesse generale della comunità promuovendo 
+                l'integrazione sociale e umana dei cittadini.
               </p>
             </div>
           </FadeInSection>
@@ -199,7 +193,7 @@ const AboutPage = () => {
                   <p className="text-gray-600 mb-6 text-center">{area.description}</p>
                   
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800 text-sm">Servizi Accreditati:</h4>
+                    <h4 className="font-semibold text-gray-800 text-sm">Servizi Offerti:</h4>
                     <ul className="space-y-1">
                       {area.features.map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-600 flex items-center">
@@ -213,29 +207,128 @@ const AboutPage = () => {
               </FadeInSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Principi Cooperativi */}
+      <section className="py-16 md:py-24 bg-blue-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                I Nostri Principi Cooperativi
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                La Cooperativa si fonda sui principi cooperativi mondiali che guidano ogni nostra azione
+              </p>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {COOPERATIVE_PRINCIPLES.map((principle, index) => (
+              <FadeInSection key={index} direction="up" delay={index * 100}>
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3">{principle.title}</h3>
+                  <p className="text-gray-600 text-sm">{principle.description}</p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
 
           <FadeInSection direction="up" delay={600}>
-            <div className="mt-12 bg-blue-50 rounded-xl p-8 text-center">
+            <div className="mt-12 bg-white rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Accreditamento Ufficiale Regione Campania
+                Collaborazione e Autogestione
               </h3>
               <p className="text-gray-600 max-w-3xl mx-auto mb-6">
-                La Cooperativa Emmanuel è ufficialmente accreditata con la Regione Campania per l'erogazione 
-                di servizi di Assistenza Domiciliare Integrata (ADI) secondo le normative regionali. 
-                Questo accreditamento garantisce standard elevati di qualità e professionalità.
+                Per raggiungere i nostri scopi, la cooperativa coopera attivamente con altri enti del terzo settore. 
+                Intendiamo realizzare i nostri obiettivi coinvolgendo volontari ed enti con finalità di solidarietà sociale, 
+                promuovendo l'autogestione responsabile dell'impresa, anche grazie ai soci lavoratori che instaurano 
+                un ulteriore rapporto di lavoro con la cooperativa, regolato da un apposito statuto.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">2015</div>
-                  <div className="text-sm text-gray-600">Anno Accreditamento</div>
+              <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium">
+                🤝 Aderente alla Confederazione Cooperative Italiane
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Attività della Cooperativa */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Le Nostre Attività
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Servizi dedicati prioritariamente alla promozione di servizi sociali, sociosanitari, 
+                assistenziali ed educativi per diverse categorie di persone vulnerabili
+              </p>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {COOPERATIVE_ACTIVITIES.map((category, index) => (
+              <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={index * 200}>
+                <div className="bg-gray-50 rounded-xl p-8 h-full">
+                  <h3 className="text-xl font-bold text-gray-800 mb-6">{category.category}</h3>
+                  <ul className="space-y-3">
+                    {category.activities.map((activity, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-6 w-6 text-blue-600 font-medium text-xs mr-3 mt-0.5 flex-shrink-0">
+                          ✓
+                        </span>
+                        <span className="text-gray-700">{activity}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">ISO</div>
-                  <div className="text-sm text-gray-600">Certificazione Qualità</div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection direction="up" delay={800}>
+            <div className="mt-12 bg-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+                Categorie di Persone Assistite
+              </h3>
+              <p className="text-gray-600 text-center mb-6">
+                La cooperativa si dedica prioritariamente a diverse categorie di persone vulnerabili:
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">👴</div>
+                  <div className="text-sm font-medium text-gray-800">Anziani</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
-                  <div className="text-sm text-gray-600">Conformità Normative</div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">♿</div>
+                  <div className="text-sm font-medium text-gray-800">Disabili</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">👶</div>
+                  <div className="text-sm font-medium text-gray-800">Minori</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">👩</div>
+                  <div className="text-sm font-medium text-gray-800">Donne vittime di violenza</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">🌍</div>
+                  <div className="text-sm font-medium text-gray-800">Immigrati</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">🏥</div>
+                  <div className="text-sm font-medium text-gray-800">Tossicodipendenti</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">🏛️</div>
+                  <div className="text-sm font-medium text-gray-800">Detenuti</div>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <div className="text-2xl mb-2">🏠</div>
+                  <div className="text-sm font-medium text-gray-800">Rifugiati</div>
                 </div>
               </div>
             </div>
@@ -296,12 +389,12 @@ const AboutPage = () => {
           <FadeInSection direction="up" delay={600}>
             <div className="bg-blue-50 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Team di Professionisti Sanitari Qualificati
+                Team di Professionisti Qualificati
               </h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-                La Cooperativa Emmanuel si avvale di un team multidisciplinare di professionisti sanitari qualificati: 
-                medici specialisti, infermieri professionali, fisioterapisti, operatori socio-sanitari e psicologi, 
-                tutti formati e costantemente aggiornati per garantire il massimo livello di assistenza accreditata.
+                La Cooperativa Emmanuel si avvale di un team multidisciplinare di professionisti qualificati: 
+                medici specialisti, infermieri professionali, fisioterapisti, operatori socio-sanitari, psicologi 
+                ed educatori, tutti formati e costantemente aggiornati per garantire il massimo livello di assistenza.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
@@ -317,8 +410,8 @@ const AboutPage = () => {
                   <div className="text-sm text-gray-600">OSS Qualificati</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">5+</div>
-                  <div className="text-sm text-gray-600">Medici Specialisti</div>
+                  <div className="text-2xl font-bold text-blue-600">10+</div>
+                  <div className="text-sm text-gray-600">Educatori</div>
                 </div>
               </div>
             </div>
@@ -335,7 +428,7 @@ const AboutPage = () => {
                 I Nostri Valori
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Principi che guidano ogni nostra azione nell'assistenza domiciliare accreditata
+                Principi che guidano ogni nostra azione nell'assistenza domiciliare e nei servizi educativi
               </p>
             </div>
           </FadeInSection>
@@ -370,7 +463,7 @@ const AboutPage = () => {
                 I Nostri Numeri
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Oltre 15 anni di impegno accreditato nel territorio campano
+                Oltre 15 anni di impegno nel territorio campano secondo la Legge 381/91
               </p>
             </div>
           </FadeInSection>
@@ -397,7 +490,7 @@ const AboutPage = () => {
                 La Nostra Storia
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Un percorso di crescita e dedizione al servizio delle famiglie campane con accreditamento ufficiale
+                Un percorso di crescita e dedizione al servizio delle famiglie campane secondo i principi cooperativi
               </p>
             </div>
           </FadeInSection>
@@ -436,11 +529,11 @@ const AboutPage = () => {
             <FadeInSection direction="left">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  La Nostra Sede Accreditata
+                  La Nostra Sede
                 </h2>
                 <p className="text-gray-600 mb-6">
                   La Cooperativa Emmanuel ha sede nel cuore di Napoli, da dove coordina tutti i servizi 
-                  di assistenza domiciliare accreditati per la Campania. La nostra posizione strategica 
+                  di assistenza domiciliare e educativi per la Campania. La nostra posizione strategica 
                   ci permette di raggiungere rapidamente ogni zona della regione con servizi certificati.
                 </p>
                 
@@ -459,7 +552,7 @@ const AboutPage = () => {
                   </div>
                   <div className="flex items-center">
                     <Shield className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Accreditata Regione Campania dal 2015</span>
+                    <span className="text-gray-700">Certificazione ISO 9001:2015</span>
                   </div>
                 </div>
               </div>
@@ -472,7 +565,7 @@ const AboutPage = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Siamo sempre disponibili per raccontarti la nostra storia e spiegarti 
-                  come possiamo aiutarti con i nostri servizi accreditati.
+                  come possiamo aiutarti con i nostri servizi secondo i principi cooperativi.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 

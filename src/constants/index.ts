@@ -26,8 +26,8 @@ export const STATS = [
   },
   {
     id: 5,
-    value: 'ISO',
-    label: 'Certificazione di qualità ISO ottenuta',
+    value: 'ISO 9001',
+    label: 'Certificazione di qualità ottenuta',
   },
 ];
 
@@ -47,6 +47,23 @@ export const EXTRA_SERVICES = [
   'Supporto per commissioni quotidiane',
   'Assistenza notturna e diurna continuativa',
   'Piani personalizzati per ogni esigenza familiare',
+];
+
+// Servizi educativi e scolastici
+export const EDUCATIONAL_SERVICES = [
+  'Servizi educativi e specialistici scolastici',
+  'Servizi pre e post scuola',
+  'Tutoraggio educativo e doposcuola',
+  'Supporto didattico personalizzato',
+  'Formazione extrascolastica per prevenire la dispersione',
+  'Contrasto alla povertà educativa',
+  'Laboratori creativi, didattici e sportivi',
+  'Attività di animazione culturale e del tempo libero',
+  'Campi gioco e campi educativi',
+  'Supporto scolastico e mediazione culturale per stranieri',
+  'Assistenza linguistica per studenti stranieri',
+  'Gestione di spazi per bambini e ludoteche',
+  'Comunità educative e case famiglia'
 ];
 
 // Informazioni sull'accreditamento
@@ -69,6 +86,42 @@ export const ACCREDITATION_INFO = {
     scope: 'Sistema di gestione qualità per servizi socio-sanitari'
   }
 };
+
+// Principi cooperativi
+export const COOPERATIVE_PRINCIPLES = [
+  {
+    title: 'Mutualità',
+    description: 'Sostegno reciproco tra i soci per il raggiungimento degli obiettivi comuni'
+  },
+  {
+    title: 'Solidarietà',
+    description: 'Impegno verso chi ha più bisogno nella comunità'
+  },
+  {
+    title: 'Democraticità',
+    description: 'Partecipazione democratica di tutti i soci alle decisioni'
+  },
+  {
+    title: 'Impegno',
+    description: 'Dedizione costante verso la missione sociale'
+  },
+  {
+    title: 'Equilibrio delle responsabilità',
+    description: 'Distribuzione equa di doveri e responsabilità'
+  },
+  {
+    title: 'Spirito comunitario',
+    description: 'Senso di appartenenza e collaborazione'
+  },
+  {
+    title: 'Legame con il territorio',
+    description: 'Radicamento e servizio alla comunità locale'
+  },
+  {
+    title: 'Rapporto equilibrato con lo Stato',
+    description: 'Collaborazione costruttiva con le istituzioni pubbliche'
+  }
+];
 
 // Informazioni team dirigenziale
 export const TEAM_INFO = {
@@ -95,24 +148,93 @@ export const TEAM_INFO = {
   }
 };
 
+// Attività della cooperativa secondo la Legge 381/91
+export const COOPERATIVE_ACTIVITIES = [
+  {
+    category: 'Servizi Residenziali e Domiciliari',
+    activities: [
+      'Gestione di servizi residenziali, semiresidenziali e domiciliari',
+      'Case alloggio e comunità',
+      'Centri sociali',
+      'Assistenza domiciliare integrata con servizi sanitari o socio-assistenziali'
+    ]
+  },
+  {
+    category: 'Servizi Educativi e Scolastici',
+    activities: [
+      'Servizi educativi e specialistici scolastici',
+      'Servizi pre e post scuola',
+      'Tutoraggio educativo e doposcuola',
+      'Supporto didattico personalizzato',
+      'Formazione extrascolastica per prevenire la dispersione',
+      'Contrasto alla povertà educativa',
+      'Supporto scolastico e mediazione culturale per stranieri',
+      'Assistenza linguistica per studenti stranieri'
+    ]
+  },
+  {
+    category: 'Servizi Terapeutici e Riabilitativi',
+    activities: [
+      'Progetti terapeutico-riabilitativi',
+      'Telesoccorso e pronto intervento sociale',
+      'Mediazione familiare',
+      'Centri antiviolenza'
+    ]
+  },
+  {
+    category: 'Servizi per Minori e Famiglie',
+    activities: [
+      'Gestione di spazi per bambini e ludoteche',
+      'Comunità educative e case famiglia',
+      'Laboratori creativi, didattici e sportivi',
+      'Attività di animazione culturale e del tempo libero',
+      'Campi gioco e campi educativi'
+    ]
+  },
+  {
+    category: 'Servizi di Integrazione Sociale',
+    activities: [
+      'Gestione sportelli informa-giovani/donne',
+      'Sportelli per extracomunitari',
+      'Centri di accoglienza per profughi e rifugiati',
+      'Servizi per l\'inserimento o reinserimento lavorativo',
+      'Servizi di agricoltura sociale'
+    ]
+  },
+  {
+    category: 'Gestione Beni e Formazione',
+    activities: [
+      'Gestione e valorizzazione di beni confiscati alla criminalità organizzata',
+      'Gestione di beni pubblici/privati inutilizzati',
+      'Gestione di scuole e servizi di istruzione',
+      'Formazione professionale'
+    ]
+  }
+];
+
 // SEO Keywords per indicizzazione
 export const SEO_KEYWORDS = [
-  'cooperativa sociale emmanuel accreditata',
+  'cooperativa sociale emmanuel',
   'emmanuel napoli regione campania',
-  'assistenza domiciliare napoli accreditata',
+  'assistenza domiciliare napoli',
   'ADI campania autorizzata',
-  'assistenza anziani napoli accreditata',
+  'assistenza anziani napoli',
   'cooperativa emmanuel accreditamento',
-  'assistenza domiciliare integrata accreditata',
-  'fisioterapia domiciliare napoli accreditata',
-  'infermiere a domicilio napoli autorizzato',
-  'assistenza disabilità campania accreditata',
+  'assistenza domiciliare integrata',
+  'fisioterapia domiciliare napoli',
+  'infermiere a domicilio napoli',
+  'assistenza disabilità campania',
   'luigi borriello emmanuel presidente',
   'gennaro borriello infermiere coordinatore',
   'umberto borriello economia amministrativo',
-  'cooperativa sociale napoli accreditata',
-  'assistenza sanitaria domiciliare autorizzata',
-  'servizi socio sanitari napoli accreditati',
-  'certificazione iso assistenza domiciliare',
-  'ASL napoli 1 centro autorizzazione'
+  'cooperativa sociale napoli',
+  'assistenza sanitaria domiciliare',
+  'servizi socio sanitari napoli',
+  'certificazione iso 9001 assistenza',
+  'ASL napoli 1 centro autorizzazione',
+  'assistenza scolastica napoli',
+  'servizi educativi cooperativa',
+  'doposcuola napoli',
+  'tutoraggio educativo',
+  'legge 381/91 cooperativa sociale'
 ];

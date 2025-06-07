@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Stethoscope, Home, Heart, Users, Clock, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Stethoscope, Home, Heart, Users, Clock, Shield, ArrowRight, CheckCircle, BookOpen, GraduationCap, Target, Briefcase } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
-import { ADI_SERVICES, EXTRA_SERVICES } from '../constants';
+import { ADI_SERVICES, EXTRA_SERVICES, EDUCATIONAL_SERVICES } from '../constants';
 
 const ServicesPage = () => {
   const serviceCategories = [
@@ -34,6 +34,20 @@ const ServicesPage = () => {
         'Tariffe competitive'
       ],
       image: '/images/medium-shot-women-posing-together.jpg'
+    },
+    {
+      icon: BookOpen,
+      title: 'Servizi Educativi e Assistenza Scolastica',
+      description: 'Servizi educativi specialistici, supporto scolastico e attività formative per contrastare la dispersione scolastica e la povertà educativa.',
+      services: EDUCATIONAL_SERVICES,
+      color: 'purple',
+      benefits: [
+        'Educatori qualificati e specializzati',
+        'Programmi personalizzati per ogni studente',
+        'Collaborazione con scuole e famiglie',
+        'Attività innovative e coinvolgenti'
+      ],
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -68,6 +82,57 @@ const ServicesPage = () => {
     }
   ];
 
+  const educationalDetails = [
+    {
+      title: 'Servizi Pre e Post Scuola',
+      description: 'Supporto educativo prima e dopo l\'orario scolastico per garantire continuità formativa.',
+      features: [
+        'Accoglienza mattutina degli studenti',
+        'Assistenza nei compiti pomeridiani',
+        'Attività ricreative ed educative',
+        'Merenda e momenti di socializzazione',
+        'Coordinamento con le famiglie'
+      ],
+      image: '/images/medium-shot-women-posing-together.jpg'
+    },
+    {
+      title: 'Tutoraggio e Doposcuola',
+      description: 'Supporto didattico personalizzato per studenti con difficoltà di apprendimento o bisogni educativi speciali.',
+      features: [
+        'Supporto didattico individualizzato',
+        'Metodi di studio personalizzati',
+        'Recupero materie scolastiche',
+        'Preparazione verifiche ed esami',
+        'Sviluppo autonomia nello studio'
+      ],
+      image: '/images/closeup-support-hands.jpg'
+    },
+    {
+      title: 'Contrasto alla Povertà Educativa',
+      description: 'Programmi specifici per prevenire la dispersione scolastica e garantire pari opportunità formative.',
+      features: [
+        'Identificazione precoce delle difficoltà',
+        'Interventi di sostegno personalizzati',
+        'Coinvolgimento attivo delle famiglie',
+        'Collaborazione con servizi sociali',
+        'Progetti di inclusione sociale'
+      ],
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
+    },
+    {
+      title: 'Mediazione Culturale per Stranieri',
+      description: 'Supporto specializzato per studenti stranieri nell\'integrazione scolastica e sociale.',
+      features: [
+        'Assistenza linguistica italiana',
+        'Mediazione culturale famiglia-scuola',
+        'Supporto nell\'inserimento scolastico',
+        'Valorizzazione delle culture d\'origine',
+        'Progetti di integrazione interculturale'
+      ],
+      image: '/images/medium-shot-women-posing-together.jpg'
+    }
+  ];
+
   const campaniaNorms = [
     {
       title: 'Requisiti per l\'ADI in Campania',
@@ -95,18 +160,18 @@ const ServicesPage = () => {
     <>
       <PageHeader
         title="I Nostri Servizi"
-        description="Assistenza domiciliare professionale e personalizzata per anziani e persone con disabilità in Campania"
-        metaTitle="Servizi di Assistenza Domiciliare - Cooperativa Emmanuel Napoli"
-        metaDescription="Scopri tutti i servizi di assistenza domiciliare della Cooperativa Emmanuel: ADI, assistenza privata, supporto psicologico e molto altro in Campania."
-        keywords="assistenza domiciliare, ADI Campania, servizi anziani, fisioterapia domiciliare, infermiere a domicilio, Napoli"
+        description="Assistenza domiciliare, servizi educativi e supporto personalizzato per anziani, persone con disabilità e minori in Campania"
+        metaTitle="Servizi - Cooperativa Emmanuel Napoli"
+        metaDescription="Scopri tutti i servizi della Cooperativa Emmanuel: ADI, assistenza domiciliare, servizi educativi, doposcuola, tutoraggio e molto altro in Campania."
+        keywords="assistenza domiciliare, ADI Campania, servizi educativi, doposcuola napoli, tutoraggio, assistenza scolastica, fisioterapia domiciliare, infermiere a domicilio"
       />
 
       {/* Servizi Principali */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
+              <FadeInSection key={index} direction="up" delay={index * 200}>
                 <div className={`bg-${category.color}-50 rounded-xl shadow-lg p-8 border-t-4 border-${category.color}-600 h-full`}>
                   <div className="mb-6">
                     <img 
@@ -118,7 +183,7 @@ const ServicesPage = () => {
                       <div className={`p-3 bg-${category.color}-100 rounded-full mr-4`}>
                         <category.icon className={`h-8 w-8 text-${category.color}-600`} />
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-800">{category.title}</h2>
+                      <h2 className="text-xl font-bold text-gray-800">{category.title}</h2>
                     </div>
                   </div>
                   
@@ -126,11 +191,11 @@ const ServicesPage = () => {
                   
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Servizi Inclusi:</h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 max-h-48 overflow-y-auto">
                       {category.services.map((service, idx) => (
                         <li key={idx} className="flex items-start">
-                          <CheckCircle className={`h-5 w-5 text-${category.color}-600 mr-3 mt-0.5 flex-shrink-0`} />
-                          <span className="text-gray-700">{service}</span>
+                          <CheckCircle className={`h-4 w-4 text-${category.color}-600 mr-2 mt-0.5 flex-shrink-0`} />
+                          <span className="text-gray-700 text-sm">{service}</span>
                         </li>
                       ))}
                     </ul>
@@ -154,6 +219,78 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Approfondimento Servizi Educativi */}
+      <section className="py-16 md:py-24 bg-purple-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="text-center mb-12">
+              <GraduationCap className="h-16 w-16 text-purple-600 mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Servizi Educativi e Assistenza Scolastica
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                La Cooperativa Emmanuel offre servizi educativi specialistici per contrastare la dispersione scolastica, 
+                la povertà educativa e promuovere l'integrazione sociale attraverso percorsi formativi personalizzati.
+              </p>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {educationalDetails.map((service, index) => (
+              <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={index * 200}>
+                <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300 h-full">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover rounded-lg mb-6"
+                  />
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <Target className="h-4 w-4 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection direction="up" delay={600}>
+            <div className="mt-12 bg-white rounded-xl shadow-md p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Metodologie Innovative per l'Educazione
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+                I nostri servizi educativi utilizzano metodologie innovative e personalizzate, 
+                adattate alle specifiche esigenze di ogni studente per garantire il successo formativo.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-purple-50 rounded-lg p-6">
+                  <BookOpen className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Apprendimento Personalizzato</h4>
+                  <p className="text-sm text-gray-600">Metodi di studio adattati alle caratteristiche individuali</p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-6">
+                  <Users className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Lavoro di Gruppo</h4>
+                  <p className="text-sm text-gray-600">Attività collaborative per sviluppare competenze sociali</p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-6">
+                  <Target className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Obiettivi Specifici</h4>
+                  <p className="text-sm text-gray-600">Piani educativi con traguardi chiari e misurabili</p>
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
       {/* Servizi Aggiuntivi */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -163,7 +300,7 @@ const ServicesPage = () => {
                 Servizi Specializzati
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Soluzioni complete per ogni esigenza di assistenza domiciliare
+                Soluzioni complete per ogni esigenza di assistenza domiciliare e supporto educativo
               </p>
             </div>
           </FadeInSection>
@@ -251,7 +388,7 @@ const ServicesPage = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   I nostri esperti sono a disposizione per una consulenza gratuita e per guidarti 
-                  nell'accesso ai servizi ADI in Campania.
+                  nell'accesso ai servizi ADI e educativi in Campania.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
