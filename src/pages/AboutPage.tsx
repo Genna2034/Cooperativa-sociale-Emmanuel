@@ -38,6 +38,14 @@ const AboutPage = () => {
       description: 'Moglie del presidente Luigi Borriello, laureata in Scienze dell\'Educazione, coordina tutti i servizi educativi e assistenziali della cooperativa. La sua esperienza nel campo educativo garantisce un approccio professionale e umano nell\'assistenza alle famiglie.',
       specialties: ['Coordinamento servizi educativi', 'Progettazione educativa', 'Supporto familiare', 'Gestione équipe educative'],
       image: '/images/medium-shot-women-posing-together.jpg'
+    },
+    {
+      name: 'Dott.ssa Federica Borriello',
+      role: 'Responsabile Legale e Avvocato',
+      qualifications: 'Laureata in Giurisprudenza',
+      description: 'Laureata in Giurisprudenza e specializzata in diritto sanitario e normative del terzo settore. Si occupa di tutti gli aspetti legali della cooperativa, dalla compliance normativa alla contrattualistica, garantendo il rispetto delle normative vigenti.',
+      specialties: ['Consulenza legale', 'Diritto sanitario', 'Normative cooperative sociali', 'Contrattualistica', 'Compliance normativa'],
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -156,7 +164,7 @@ const AboutPage = () => {
         description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento per l'assistenza domiciliare e i servizi educativi in Campania"
         metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli"
         metaDescription="Scopri la storia della Cooperativa Emmanuel, i nostri principi cooperativi, il team qualificato e i valori che ci guidano nell'assistenza domiciliare e nei servizi educativi."
-        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, Imma Angelone educazione, team sanitario, legge 381/91"
+        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, Imma Angelone educazione, Federica Borriello avvocato, team sanitario, legge 381/91"
       />
 
       {/* La Nostra Mission secondo la Legge 381/91 */}
@@ -373,6 +381,7 @@ const AboutPage = () => {
                       {member.qualifications.includes('Economia') && <Briefcase className="h-5 w-5 text-green-600 mr-2" />}
                       {member.qualifications.includes('Imprenditore') && <Users className="h-5 w-5 text-purple-600 mr-2" />}
                       {member.qualifications.includes('Scienze dell\'Educazione') && <GraduationCap className="h-5 w-5 text-orange-600 mr-2" />}
+                      {member.qualifications.includes('Giurisprudenza') && <Scale className="h-5 w-5 text-red-600 mr-2" />}
                       <span className="text-sm font-medium text-gray-600">{member.qualifications}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>

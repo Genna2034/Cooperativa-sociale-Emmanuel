@@ -152,6 +152,13 @@ export const TEAM_INFO = {
     qualifications: 'Laureata in Scienze dell\'Educazione',
     experience: 'Moglie del presidente, coordina tutti i servizi educativi e assistenziali',
     specialties: ['Coordinamento servizi educativi', 'Progettazione educativa', 'Supporto familiare', 'Gestione équipe educative']
+  },
+  federicaBorriello: {
+    name: 'Dott.ssa Federica Borriello',
+    role: 'Responsabile Legale e Avvocato',
+    qualifications: 'Laureata in Giurisprudenza',
+    experience: 'Specializzata in diritto sanitario e normative del terzo settore',
+    specialties: ['Consulenza legale', 'Diritto sanitario', 'Normative cooperative sociali', 'Contrattualistica', 'Compliance normativa']
   }
 };
 
@@ -235,6 +242,7 @@ export const SEO_KEYWORDS = [
   'gennaro borriello infermiere coordinatore',
   'umberto borriello economia amministrativo',
   'imma angelone educazione coordinatrice',
+  'federica borriello avvocato legale',
   'cooperativa sociale napoli',
   'assistenza sanitaria domiciliare',
   'servizi socio sanitari napoli',
