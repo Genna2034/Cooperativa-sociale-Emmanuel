@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon } from 'lucide-react';
+import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon, GraduationCap, Briefcase } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { STATS } from '../constants';
@@ -9,20 +9,26 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: 'Luigi Borriello',
-      role: 'Presidente',
-      description: 'Cristiano convinto, ha trasformato la sua fede in un impegno quotidiano verso gli ultimi e i più fragili. Con oltre 15 anni di esperienza nel settore dell\'assistenza domiciliare.',
+      role: 'Presidente e Fondatore',
+      qualifications: 'Imprenditore Sociale',
+      description: 'Cristiano convinto, ha trasformato la sua fede in un impegno quotidiano verso gli ultimi e i più fragili. Con oltre 15 anni di esperienza nel settore dell\'assistenza domiciliare, è il visionario che ha fondato la Cooperativa Emmanuel nel 2010.',
+      specialties: ['Leadership aziendale', 'Gestione servizi socio-sanitari', 'Relazioni istituzionali', 'Sviluppo strategico'],
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       name: 'Dott. Gennaro Borriello',
-      role: 'Socio',
-      description: 'Professionista sanitario con esperienza pluriennale nel settore sociosanitario, specializzato in assistenza domiciliare integrata.',
+      role: 'Socio e Coordinatore Sanitario',
+      qualifications: 'Infermiere Professionale',
+      description: 'Infermiere professionale specializzato nel coordinamento e management dei servizi socio-sanitari. Si occupa della supervisione clinica di tutti i servizi ADI e della formazione continua del personale sanitario.',
+      specialties: ['Coordinamento sanitario', 'Management ADI', 'Supervisione clinica', 'Formazione personale sanitario'],
       image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       name: 'Dott. Umberto Borriello',
-      role: 'Socio',
-      description: 'Esperto in gestione dei servizi sanitari territoriali, con particolare focus sui servizi ADI in Campania.',
+      role: 'Socio e Responsabile Amministrativo',
+      qualifications: 'Laureato in Economia',
+      description: 'Laureato in Economia con specializzazione in gestione delle organizzazioni sanitarie. Si occupa della pianificazione economica, del controllo di gestione e dell\'ottimizzazione dei processi amministrativi della cooperativa.',
+      specialties: ['Controllo di gestione', 'Pianificazione economica', 'Amministrazione sanitaria', 'Ottimizzazione processi'],
       image: '/images/closeup-support-hands.jpg'
     }
   ];
@@ -42,8 +48,8 @@ const AboutPage = () => {
     },
     {
       icon: Award,
-      title: 'Qualità',
-      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania.',
+      title: 'Qualità Certificata',
+      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania con certificazione ISO.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
@@ -104,33 +110,33 @@ const AboutPage = () => {
       image: '/images/Logo.png'
     },
     {
-      year: '2012',
-      title: 'Autorizzazione ADI',
-      description: 'Ottenimento dell\'autorizzazione per i servizi di Assistenza Domiciliare Integrata dalla Regione Campania.',
+      year: '2015',
+      title: 'Accreditamento Regione Campania',
+      description: 'Ottenimento dell\'accreditamento ufficiale per i servizi di Assistenza Domiciliare Integrata dalla Regione Campania.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       year: '2015',
-      title: 'Espansione Territoriale',
-      description: 'Estensione dei servizi a tutta la provincia di Napoli e aree limitrofe della Campania.',
+      title: 'Autorizzazione ASL Napoli 1 Centro',
+      description: 'Autorizzazione per l\'erogazione di servizi sanitari domiciliari nell\'ambito territoriale dell\'ASL Napoli 1 Centro.',
       image: '/images/medium-shot-women-posing-together.jpg'
     },
     {
       year: '2018',
       title: '1000 Famiglie Assistite',
-      description: 'Raggiungimento del traguardo di 1000 famiglie assistite con servizi di qualità.',
+      description: 'Raggiungimento del traguardo di 1000 famiglie assistite con servizi di qualità certificata.',
       image: '/images/closeup-support-hands.jpg'
     },
     {
       year: '2020',
-      title: 'Servizi COVID-19',
-      description: 'Adattamento dei servizi durante la pandemia, garantendo continuità assistenziale in sicurezza.',
+      title: 'Certificazione ISO di Qualità',
+      description: 'Ottenimento della certificazione ISO 9001:2015 per il sistema di gestione qualità.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
       year: '2024',
       title: 'Oltre 5000 Persone Assistite',
-      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare in Campania.',
+      description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare accreditata in Campania.',
       image: '/images/medium-shot-women-posing-together.jpg'
     }
   ];
@@ -139,10 +145,10 @@ const AboutPage = () => {
     <>
       <PageHeader
         title="Chi Siamo"
-        description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento per l'assistenza domiciliare in Campania"
-        metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli"
-        metaDescription="Scopri la storia della Cooperativa Emmanuel, il nostro team e i valori che ci guidano nell'assistenza domiciliare a Napoli e in Campania."
-        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, team sanitario"
+        description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento accreditato per l'assistenza domiciliare in Campania"
+        metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli Accreditata"
+        metaDescription="Scopri la storia della Cooperativa Emmanuel, accreditata con la Regione Campania per l'ADI. Il nostro team qualificato e i valori che ci guidano nell'assistenza domiciliare."
+        keywords="cooperativa sociale accreditata, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, team sanitario qualificato"
       />
 
       {/* La Nostra Mission */}
@@ -150,12 +156,26 @@ const AboutPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-6">
+                <img 
+                  src="/images/regione-campania-logo.png"
+                  alt="Accreditamento Regione Campania"
+                  className="h-12 w-auto mr-4"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+                <Shield className="h-10 w-10 text-blue-600" />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 La Nostra Mission
               </h2>
+              <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
+                🏆 Accreditati con la Regione Campania per l'ADI
+              </div>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
                 Portare conforto, dignità e sostegno a chi è in difficoltà, trasformando la cura 
-                in un atto d'amore quotidiano attraverso servizi di assistenza domiciliare di eccellenza.
+                in un atto d'amore quotidiano attraverso servizi di assistenza domiciliare accreditati e certificati.
               </p>
             </div>
           </FadeInSection>
@@ -179,7 +199,7 @@ const AboutPage = () => {
                   <p className="text-gray-600 mb-6 text-center">{area.description}</p>
                   
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800 text-sm">Servizi Inclusi:</h4>
+                    <h4 className="font-semibold text-gray-800 text-sm">Servizi Accreditati:</h4>
                     <ul className="space-y-1">
                       {area.features.map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-600 flex items-center">
@@ -197,25 +217,25 @@ const AboutPage = () => {
           <FadeInSection direction="up" delay={600}>
             <div className="mt-12 bg-blue-50 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Il Nostro Impegno Quotidiano
+                Accreditamento Ufficiale Regione Campania
               </h3>
               <p className="text-gray-600 max-w-3xl mx-auto mb-6">
-                Da oltre 15 anni ci occupiamo non solo di assistenza sanitaria, ma anche di supporto umano 
-                e sociale. Crediamo che ogni persona meriti di vivere con dignità nel proprio ambiente familiare, 
-                circondato dall'affetto dei propri cari e supportato da professionisti competenti e compassionevoli.
+                La Cooperativa Emmanuel è ufficialmente accreditata con la Regione Campania per l'erogazione 
+                di servizi di Assistenza Domiciliare Integrata (ADI) secondo le normative regionali. 
+                Questo accreditamento garantisce standard elevati di qualità e professionalità.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-sm text-gray-600">Anni di Esperienza</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">2015</div>
+                  <div className="text-sm text-gray-600">Anno Accreditamento</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">5000+</div>
-                  <div className="text-sm text-gray-600">Persone Assistite</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">ISO</div>
+                  <div className="text-sm text-gray-600">Certificazione Qualità</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
-                  <div className="text-sm text-gray-600">Campania Coperta</div>
+                  <div className="text-sm text-gray-600">Conformità Normative</div>
                 </div>
               </div>
             </div>
@@ -223,84 +243,50 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Sezione Presidente */}
+      {/* Team Dirigenziale */}
       <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <FadeInSection direction="left">
-              <div>
-                <img 
-                  src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
-                  alt="Luigi Borriello - Presidente Cooperativa Emmanuel"
-                  className="rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-                />
-              </div>
-            </FadeInSection>
-            
-            <div>
-              <FadeInSection direction="right" delay={200}>
-                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
-                  Il Nostro Presidente
-                </div>
-              </FadeInSection>
-              
-              <FadeInSection direction="right" delay={300}>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  Luigi Borriello: Un Cuore al Servizio del Prossimo
-                </h2>
-              </FadeInSection>
-              
-              <div className="space-y-6 text-gray-600">
-                <FadeInSection direction="right" delay={400}>
-                  <p>
-                    Luigi Borriello, presidente della Cooperativa Emmanuel, guida con passione e compassione una realtà che nasce dall'amore per il prossimo. Cristiano convinto, ha trasformato la sua fede in un impegno quotidiano verso gli ultimi e i più fragili.
-                  </p>
-                </FadeInSection>
-                
-                <FadeInSection direction="right" delay={500}>
-                  <p>
-                    Con oltre 15 anni di dedizione nel settore dell'assistenza domiciliare, Luigi è oggi punto di riferimento per centinaia di famiglie che si affidano alla sua visione umana, etica e solidale dell'assistenza.
-                  </p>
-                </FadeInSection>
-                
-                <FadeInSection direction="right" delay={600}>
-                  <blockquote className="pl-4 border-l-4 border-blue-600 italic text-lg">
-                    "La nostra missione è portare conforto, dignità e sostegno a chi è in difficoltà, trasformando la cura in un atto d'amore quotidiano."
-                  </blockquote>
-                </FadeInSection>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Il Nostro Team
+                Il Team Dirigenziale
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Professionisti uniti dalla passione per l'assistenza e dal rispetto per la dignità umana
+                Professionisti qualificati uniti dalla passione per l'assistenza e dal rispetto per la dignità umana
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {teamMembers.map((member, index) => (
               <FadeInSection key={index} direction="up" delay={index * 200}>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
                   <img 
                     src={member.image}
                     alt={member.name}
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">
+                    <div className="flex items-center mb-3">
+                      {member.qualifications.includes('Infermiere') && <Stethoscope className="h-5 w-5 text-blue-600 mr-2" />}
+                      {member.qualifications.includes('Economia') && <Briefcase className="h-5 w-5 text-green-600 mr-2" />}
+                      {member.qualifications.includes('Imprenditore') && <Users className="h-5 w-5 text-purple-600 mr-2" />}
+                      <span className="text-sm font-medium text-gray-600">{member.qualifications}</span>
+                    </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
                     <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                    <p className="text-gray-600">{member.description}</p>
+                    <p className="text-gray-600 mb-4">{member.description}</p>
+                    
+                    <div className="border-t pt-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Competenze Specialistiche:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.specialties.map((specialty, idx) => (
+                          <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
+                            {specialty}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </FadeInSection>
@@ -310,17 +296,17 @@ const AboutPage = () => {
           <FadeInSection direction="up" delay={600}>
             <div className="bg-blue-50 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Team di Professionisti Sanitari
+                Team di Professionisti Sanitari Qualificati
               </h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
                 La Cooperativa Emmanuel si avvale di un team multidisciplinare di professionisti sanitari qualificati: 
                 medici specialisti, infermieri professionali, fisioterapisti, operatori socio-sanitari e psicologi, 
-                tutti formati e costantemente aggiornati per garantire il massimo livello di assistenza.
+                tutti formati e costantemente aggiornati per garantire il massimo livello di assistenza accreditata.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-blue-600">15+</div>
-                  <div className="text-sm text-gray-600">Infermieri</div>
+                  <div className="text-sm text-gray-600">Infermieri Professionali</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-blue-600">8+</div>
@@ -328,11 +314,11 @@ const AboutPage = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-blue-600">20+</div>
-                  <div className="text-sm text-gray-600">OSS</div>
+                  <div className="text-sm text-gray-600">OSS Qualificati</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-blue-600">5+</div>
-                  <div className="text-sm text-gray-600">Specialisti</div>
+                  <div className="text-sm text-gray-600">Medici Specialisti</div>
                 </div>
               </div>
             </div>
@@ -341,7 +327,7 @@ const AboutPage = () => {
       </section>
 
       {/* Valori */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
@@ -349,7 +335,7 @@ const AboutPage = () => {
                 I Nostri Valori
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Principi che guidano ogni nostra azione nell'assistenza domiciliare
+                Principi che guidano ogni nostra azione nell'assistenza domiciliare accreditata
               </p>
             </div>
           </FadeInSection>
@@ -357,7 +343,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <FadeInSection key={index} direction="up" delay={index * 150}>
-                <div className="text-center bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="text-center bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
                   <img 
                     src={value.image}
                     alt={value.title}
@@ -384,7 +370,7 @@ const AboutPage = () => {
                 I Nostri Numeri
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Oltre 15 anni di impegno nel territorio campano
+                Oltre 15 anni di impegno accreditato nel territorio campano
               </p>
             </div>
           </FadeInSection>
@@ -403,7 +389,7 @@ const AboutPage = () => {
       </section>
 
       {/* Storia e Milestones */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
@@ -411,7 +397,7 @@ const AboutPage = () => {
                 La Nostra Storia
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Un percorso di crescita e dedizione al servizio delle famiglie campane
+                Un percorso di crescita e dedizione al servizio delle famiglie campane con accreditamento ufficiale
               </p>
             </div>
           </FadeInSection>
@@ -425,7 +411,7 @@ const AboutPage = () => {
                       {milestone.year}
                     </span>
                   </div>
-                  <div className="flex-grow bg-gray-50 rounded-lg shadow-md p-6 flex items-center gap-6">
+                  <div className="flex-grow bg-white rounded-lg shadow-md p-6 flex items-center gap-6">
                     <img 
                       src={milestone.image}
                       alt={milestone.title}
@@ -444,18 +430,18 @@ const AboutPage = () => {
       </section>
 
       {/* Contatti e Sede */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <FadeInSection direction="left">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  La Nostra Sede
+                  La Nostra Sede Accreditata
                 </h2>
                 <p className="text-gray-600 mb-6">
                   La Cooperativa Emmanuel ha sede nel cuore di Napoli, da dove coordina tutti i servizi 
-                  di assistenza domiciliare per la Campania. La nostra posizione strategica ci permette 
-                  di raggiungere rapidamente ogni zona della regione.
+                  di assistenza domiciliare accreditati per la Campania. La nostra posizione strategica 
+                  ci permette di raggiungere rapidamente ogni zona della regione con servizi certificati.
                 </p>
                 
                 <div className="space-y-4">
@@ -471,6 +457,10 @@ const AboutPage = () => {
                     <Calendar className="h-5 w-5 text-blue-600 mr-3" />
                     <span className="text-gray-700">Lun-Ven: 9:00-18:00, Sab: 9:00-13:00</span>
                   </div>
+                  <div className="flex items-center">
+                    <Shield className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-gray-700">Accreditata Regione Campania dal 2015</span>
+                  </div>
                 </div>
               </div>
             </FadeInSection>
@@ -482,7 +472,7 @@ const AboutPage = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Siamo sempre disponibili per raccontarti la nostra storia e spiegarti 
-                  come possiamo aiutarti nel percorso di assistenza.
+                  come possiamo aiutarti con i nostri servizi accreditati.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 

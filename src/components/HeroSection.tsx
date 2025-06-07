@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/closeup-support-hands.jpg"
-          alt="Assistenza domiciliare"
+          alt="Assistenza domiciliare accreditata"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
@@ -19,20 +19,44 @@ const HeroSection = () => {
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
         <div className="max-w-4xl mx-auto">
+          <FadeInSection direction="up" delay={100}>
+            <div className="flex items-center justify-center mb-6">
+              <img 
+                src="/images/regione-campania-logo.png"
+                alt="Accreditamento Regione Campania"
+                className="h-12 w-auto mr-4"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
+                <Shield className="h-5 w-5 mr-2" />
+                Accreditata Regione Campania dal 2015
+              </div>
+            </div>
+          </FadeInSection>
+
           <FadeInSection direction="up" delay={200}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               <span className="block">Cooperativa Sociale Emmanuel</span>
               <span className="block mt-2 text-blue-200">
-                Al servizio di chi ha più bisogno, da oltre 13 anni a Napoli
+                Accreditata per l'Assistenza Domiciliare in Campania
               </span>
             </h1>
           </FadeInSection>
 
           <FadeInSection direction="up" delay={400}>
             <h2 className="text-xl md:text-2xl text-gray-100 my-8 max-w-3xl mx-auto leading-relaxed">
-              Assistenza Domiciliare Integrata (ADI), supporto ad anziani e persone con disabilità.
+              Assistenza Domiciliare Integrata (ADI) accreditata con la Regione Campania, supporto ad anziani e persone con disabilità.
               Unisciti alle migliaia di famiglie che hanno già scelto Emmanuel per il loro benessere quotidiano.
             </h2>
+          </FadeInSection>
+
+          <FadeInSection direction="up" delay={500}>
+            <div className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-full font-medium mb-6">
+              <Shield className="h-5 w-5 mr-2" />
+              Certificazione ISO di Qualità • Servizi Accreditati
+            </div>
           </FadeInSection>
 
           <FadeInSection direction="up" delay={600}>
