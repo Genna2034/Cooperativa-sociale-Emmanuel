@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon, GraduationCap, Briefcase, BookOpen, Scale } from 'lucide-react';
+import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shield, Stethoscope, Home as HomeIcon, GraduationCap, Briefcase, BookOpen } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { STATS, COOPERATIVE_PRINCIPLES, COOPERATIVE_ACTIVITIES } from '../constants';
@@ -32,20 +32,12 @@ const AboutPage = () => {
       image: '/images/closeup-support-hands.jpg'
     },
     {
-      name: 'Imma Angelone',
+      name: 'Dott.ssa Imma Angelone',
       role: 'Coordinatrice Servizi Educativi e Assistenziali',
       qualifications: 'Laureata in Scienze dell\'Educazione',
       description: 'Moglie del presidente Luigi Borriello, laureata in Scienze dell\'Educazione, coordina tutti i servizi educativi e assistenziali della cooperativa. La sua esperienza nel campo educativo garantisce un approccio professionale e umano nell\'assistenza alle famiglie.',
       specialties: ['Coordinamento servizi educativi', 'Progettazione educativa', 'Supporto familiare', 'Gestione équipe educative'],
       image: '/images/medium-shot-women-posing-together.jpg'
-    },
-    {
-      name: 'Dott.ssa Federica Borriello',
-      role: 'Responsabile Legale e Avvocato',
-      qualifications: 'Laureata in Giurisprudenza',
-      description: 'Laureata in Giurisprudenza e specializzata in diritto sanitario e normative del terzo settore. Si occupa di tutti gli aspetti legali della cooperativa, dalla compliance normativa alla contrattualistica, garantendo il rispetto delle normative vigenti.',
-      specialties: ['Consulenza legale', 'Diritto sanitario', 'Normative cooperative sociali', 'Contrattualistica', 'Compliance normativa'],
-      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
@@ -164,7 +156,7 @@ const AboutPage = () => {
         description="La storia, i valori e le persone che rendono Emmanuel un punto di riferimento per l'assistenza domiciliare e i servizi educativi in Campania"
         metaTitle="Chi Siamo - Cooperativa Sociale Emmanuel Napoli"
         metaDescription="Scopri la storia della Cooperativa Emmanuel, i nostri principi cooperativi, il team qualificato e i valori che ci guidano nell'assistenza domiciliare e nei servizi educativi."
-        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, Imma Angelone educazione, Federica Borriello avvocato, team sanitario, legge 381/91"
+        keywords="cooperativa sociale, Emmanuel, Napoli, assistenza domiciliare, Luigi Borriello, Gennaro Borriello infermiere, Umberto Borriello economia, Imma Angelone educazione, team sanitario, legge 381/91"
       />
 
       {/* La Nostra Mission secondo la Legge 381/91 */}
@@ -173,8 +165,8 @@ const AboutPage = () => {
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
-                <Scale className="h-10 w-10 text-blue-600 mr-4" />
-                <Shield className="h-10 w-10 text-blue-600" />
+                <Shield className="h-10 w-10 text-blue-600 mr-4" />
+                <Heart className="h-10 w-10 text-blue-600" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 La Nostra Mission
@@ -182,11 +174,19 @@ const AboutPage = () => {
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
                 🏛️ Cooperativa Sociale secondo la Legge 381/91
               </div>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-6">
                 La Cooperativa Sociale Emmanuel opera senza scopo di lucro in conformità alla Legge 381/91. 
                 Il nostro obiettivo principale è perseguire l'interesse generale della comunità promuovendo 
                 l'integrazione sociale e umana dei cittadini.
               </p>
+              <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
+                <p className="text-gray-700 italic text-lg mb-2">
+                  <em>"Ama il tuo prossimo come te stesso"</em>
+                </p>
+                <p className="text-blue-600 font-medium text-sm">
+                  Matteo 22:39 - Il fondamento biblico della nostra missione
+                </p>
+              </div>
             </div>
           </FadeInSection>
 
@@ -226,133 +226,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Principi Cooperativi */}
-      <section className="py-16 md:py-24 bg-blue-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <FadeInSection direction="up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                I Nostri Principi Cooperativi
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                La Cooperativa si fonda sui principi cooperativi mondiali che guidano ogni nostra azione
-              </p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {COOPERATIVE_PRINCIPLES.map((principle, index) => (
-              <FadeInSection key={index} direction="up" delay={index * 100}>
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                  <h3 className="text-lg font-bold text-gray-800 mb-3">{principle.title}</h3>
-                  <p className="text-gray-600 text-sm">{principle.description}</p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-
-          <FadeInSection direction="up" delay={600}>
-            <div className="mt-12 bg-white rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Collaborazione e Autogestione
-              </h3>
-              <p className="text-gray-600 max-w-3xl mx-auto mb-6">
-                Per raggiungere i nostri scopi, la cooperativa coopera attivamente con altri enti del terzo settore. 
-                Intendiamo realizzare i nostri obiettivi coinvolgendo volontari ed enti con finalità di solidarietà sociale, 
-                promuovendo l'autogestione responsabile dell'impresa, anche grazie ai soci lavoratori che instaurano 
-                un ulteriore rapporto di lavoro con la cooperativa, regolato da un apposito statuto.
-              </p>
-              <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium">
-                🤝 Aderente alla Confederazione Cooperative Italiane
-              </div>
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* Attività della Cooperativa */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <FadeInSection direction="up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Le Nostre Attività
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Servizi dedicati prioritariamente alla promozione di servizi sociali, sociosanitari, 
-                assistenziali ed educativi per diverse categorie di persone vulnerabili
-              </p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {COOPERATIVE_ACTIVITIES.map((category, index) => (
-              <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={index * 200}>
-                <div className="bg-gray-50 rounded-xl p-8 h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-6">{category.category}</h3>
-                  <ul className="space-y-3">
-                    {category.activities.map((activity, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-6 w-6 text-blue-600 font-medium text-xs mr-3 mt-0.5 flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-gray-700">{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-
-          <FadeInSection direction="up" delay={800}>
-            <div className="mt-12 bg-blue-50 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-                Categorie di Persone Assistite
-              </h3>
-              <p className="text-gray-600 text-center mb-6">
-                La cooperativa si dedica prioritariamente a diverse categorie di persone vulnerabili:
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">👴</div>
-                  <div className="text-sm font-medium text-gray-800">Anziani</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">♿</div>
-                  <div className="text-sm font-medium text-gray-800">Disabili</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">👶</div>
-                  <div className="text-sm font-medium text-gray-800">Minori</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">👩</div>
-                  <div className="text-sm font-medium text-gray-800">Donne vittime di violenza</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">🌍</div>
-                  <div className="text-sm font-medium text-gray-800">Immigrati</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">🏥</div>
-                  <div className="text-sm font-medium text-gray-800">Tossicodipendenti</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">🏛️</div>
-                  <div className="text-sm font-medium text-gray-800">Detenuti</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl mb-2">🏠</div>
-                  <div className="text-sm font-medium text-gray-800">Rifugiati</div>
-                </div>
-              </div>
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* Team Dirigenziale */}
+      {/* Team Dirigenziale (SENZA FEDERICA) */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
@@ -381,7 +255,6 @@ const AboutPage = () => {
                       {member.qualifications.includes('Economia') && <Briefcase className="h-5 w-5 text-green-600 mr-2" />}
                       {member.qualifications.includes('Imprenditore') && <Users className="h-5 w-5 text-purple-600 mr-2" />}
                       {member.qualifications.includes('Scienze dell\'Educazione') && <GraduationCap className="h-5 w-5 text-orange-600 mr-2" />}
-                      {member.qualifications.includes('Giurisprudenza') && <Scale className="h-5 w-5 text-red-600 mr-2" />}
                       <span className="text-sm font-medium text-gray-600">{member.qualifications}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
@@ -437,6 +310,7 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Resto delle sezioni rimane uguale... */}
       {/* Valori */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">

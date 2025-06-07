@@ -14,14 +14,14 @@ const HomePage = () => {
     {
       icon: Heart,
       title: 'Assistenza Personalizzata',
-      description: 'Ogni piano di cura è studiato sulle specifiche esigenze della persona e della famiglia.',
+      description: 'Ogni piano di cura è studiato sulle specifiche esigenze della persona e della famiglia, seguendo l\'insegnamento cristiano di amare il prossimo.',
       link: '/servizi',
       image: '/images/closeup-support-hands.jpg'
     },
     {
       icon: Users,
       title: 'Team Qualificato',
-      description: 'Professionisti sanitari esperti e formati per garantire il massimo livello di assistenza.',
+      description: 'Professionisti sanitari esperti e formati per garantire il massimo livello di assistenza con compassione cristiana.',
       link: '/chi-siamo',
       image: '/images/medium-shot-women-posing-together.jpg'
     },
@@ -63,7 +63,7 @@ const HomePage = () => {
       <Helmet>
         <title>Cooperativa Sociale Emmanuel | Assistenza Domiciliare Napoli | ADI Campania Accreditata</title>
         <meta name="description" content="Cooperativa Sociale Emmanuel: accreditata con la Regione Campania per l'assistenza domiciliare a Napoli. Servizi ADI autorizzati, assistenza anziani e disabilità. Certificazione ISO. Chiama +39 081 7877064" />
-        <meta name="keywords" content="cooperativa sociale emmanuel accreditata, emmanuel napoli regione campania, assistenza domiciliare napoli accreditata, ADI campania autorizzata, assistenza anziani napoli, cooperativa emmanuel accreditamento, luigi borriello emmanuel, gennaro borriello infermiere, umberto borriello economia, certificazione iso" />
+        <meta name="keywords" content="cooperativa sociale emmanuel accreditata, emmanuel napoli regione campania, assistenza domiciliare napoli accreditata, ADI campania autorizzata, assistenza anziani napoli, cooperativa emmanuel accreditamento, luigi borriello emmanuel, gennaro borriello infermiere, umberto borriello economia, imma angelone educazione, certificazione iso" />
         
         {/* Schema.org per la homepage */}
         <script type="application/ld+json">
@@ -96,7 +96,7 @@ const HomePage = () => {
       <AccreditationSection />
       <StatsSection />
 
-      {/* Sezione Caratteristiche */}
+      {/* Sezione Caratteristiche con riferimento biblico */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
@@ -107,9 +107,17 @@ const HomePage = () => {
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
                 🏆 Accreditata con la Regione Campania dal 2015
               </div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
                 La nostra missione è portare conforto, dignità e sostegno a chi è in difficoltà con servizi accreditati e certificazione ISO di qualità
               </p>
+              <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
+                <p className="text-gray-700 italic text-lg mb-2">
+                  <em>"Ama il tuo prossimo come te stesso"</em>
+                </p>
+                <p className="text-blue-600 font-medium text-sm">
+                  Matteo 22:39 - Il fondamento biblico della nostra missione
+                </p>
+              </div>
             </div>
           </FadeInSection>
 
@@ -190,7 +198,7 @@ const HomePage = () => {
 
       <BlogSection />
 
-      {/* Call to Action */}
+      {/* Call to Action con riferimento biblico */}
       <section className="py-16 md:py-24 bg-blue-600">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeInSection direction="up">
@@ -205,9 +213,17 @@ const HomePage = () => {
             <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-white font-medium mb-6">
               🏆 Accreditata Regione Campania • Certificazione ISO
             </div>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
               La prima consulenza è sempre gratuita. Contatta la Cooperativa Sociale Emmanuel accreditata per scoprire come possiamo aiutarti.
             </p>
+            <div className="bg-white/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+              <p className="text-white italic text-lg mb-2">
+                <em>"Tutto quello che avete fatto a uno solo di questi miei fratelli più piccoli, l'avete fatto a me"</em>
+              </p>
+              <p className="text-blue-200 font-medium text-sm">
+                Matteo 25:40 - La nostra ispirazione quotidiana
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/prenotazioni"
