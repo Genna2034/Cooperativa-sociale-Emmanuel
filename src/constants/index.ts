@@ -147,7 +147,7 @@ export const TEAM_INFO = {
     specialties: ['Controllo di gestione', 'Pianificazione economica', 'Amministrazione sanitaria']
   },
   immaAngelone: {
-    name: 'Imma Angelone',
+    name: 'Dott.ssa Imma Angelone',
     role: 'Coordinatrice Servizi Educativi e Assistenziali',
     qualifications: 'Laureata in Scienze dell\'Educazione',
     experience: 'Moglie del presidente, coordina tutti i servizi educativi e assistenziali',
@@ -225,6 +225,27 @@ export const COOPERATIVE_ACTIVITIES = [
     ]
   }
 ];
+
+// Riferimenti biblici e spirituali
+export const BIBLICAL_REFERENCES = {
+  mainVerse: {
+    text: "Ama il tuo prossimo come te stesso",
+    reference: "Matteo 22:39",
+    context: "Questo comandamento biblico è il fondamento della nostra missione di servizio verso chi ha più bisogno"
+  },
+  additionalVerses: [
+    {
+      text: "Chi accoglie uno di questi piccoli nel mio nome, accoglie me",
+      reference: "Matteo 18:5",
+      context: "Guida il nostro approccio nell'assistenza ai più fragili"
+    },
+    {
+      text: "Tutto quello che avete fatto a uno solo di questi miei fratelli più piccoli, l'avete fatto a me",
+      reference: "Matteo 25:40",
+      context: "Ispira ogni nostro gesto di cura e assistenza"
+    }
+  ]
+};
 
 // SEO Keywords per indicizzazione
 export const SEO_KEYWORDS = [
