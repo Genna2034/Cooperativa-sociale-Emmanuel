@@ -27,12 +27,13 @@ const Header = () => {
     };
   }, []);
 
+  // NUOVO ORDINE DELLA BARRA DI NAVIGAZIONE
   const navItems = [
     { href: '/servizi', label: 'Servizi' },
     { href: '/chi-siamo', label: 'Chi Siamo' },
+    { href: '/contatti', label: 'Contatti' },
     { href: '/recensioni', label: 'Recensioni' },
-    { href: '/prenotazioni', label: 'Prenota' },
-    { href: '/contatti', label: 'Contatti' }
+    { href: '/prenotazioni', label: 'Prenota' }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -52,7 +53,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - DIMENSIONI ORIGINALI RIPRISTINATE */}
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/images/Logo.png" 
@@ -82,7 +83,7 @@ const Header = () => {
             </div>
           </nav>
           
-          {/* Desktop CTA - TESTO AGGIORNATO */}
+          {/* Desktop CTA */}
           <div className="hidden md:block">
             <Link 
               to="/lavora-con-noi" 

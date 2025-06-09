@@ -35,20 +35,21 @@ const MobileNavigation = () => {
     };
   }, [isOpen]);
 
+  // NUOVO ORDINE DELLA BARRA DI NAVIGAZIONE MOBILE
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/servizi', label: 'Servizi' },
     { href: '/chi-siamo', label: 'Chi Siamo' },
+    { href: '/contatti', label: 'Contatti' },
     { href: '/recensioni', label: 'Recensioni' },
-    { href: '/prenotazioni', label: 'Prenota' },
-    { href: '/contatti', label: 'Contatti' }
+    { href: '/prenotazioni', label: 'Prenota' }
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
     <>
-      {/* Header mobile */}
+      {/* Header mobile OTTIMIZZATO */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-top ${
           isScrolled
@@ -70,10 +71,10 @@ const MobileNavigation = () => {
               <span className="ml-2 text-lg font-bold text-gray-800">Emmanuel</span>
             </Link>
             
-            {/* Menu button */}
+            {/* Menu button OTTIMIZZATO */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-700 hover:text-blue-600 transition-colors touch-target"
+              className="p-2 text-gray-700 hover:text-blue-600 transition-colors touch-target min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle mobile menu"
               aria-expanded={isOpen}
             >
@@ -91,7 +92,7 @@ const MobileNavigation = () => {
         />
       )}
 
-      {/* Menu mobile */}
+      {/* Menu mobile OTTIMIZZATO */}
       <nav
         className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-50 transform transition-transform duration-300 ease-out shadow-2xl ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -110,21 +111,21 @@ const MobileNavigation = () => {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 text-gray-500 hover:text-gray-700 touch-target"
+              className="p-2 text-gray-500 hover:text-gray-700 touch-target min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Chiudi menu"
             >
               <X className="h-5 w-5" />
             </button>
           </div>
 
-          {/* Navigation items */}
+          {/* Navigation items OTTIMIZZATI */}
           <div className="flex-1 overflow-y-auto ios-scroll">
             <div className="py-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`block px-4 py-4 text-lg font-medium transition-colors mobile-spacing touch-target ${
+                  className={`block px-4 py-4 text-lg font-medium transition-colors mobile-spacing touch-target min-h-[44px] flex items-center ${
                     isActive(item.href)
                       ? 'text-blue-600 bg-blue-50 border-r-4 border-blue-600'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
@@ -139,19 +140,19 @@ const MobileNavigation = () => {
             <div className="px-4 py-6 border-t bg-gray-50">
               <Link
                 to="/lavora-con-noi"
-                className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg font-medium transition-colors hover:bg-blue-700 mobile-button"
+                className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg font-medium transition-colors hover:bg-blue-700 mobile-button min-h-[44px] flex items-center justify-center"
               >
                 Lavora Con Noi
               </Link>
             </div>
           </div>
 
-          {/* Footer del menu */}
+          {/* Footer del menu OTTIMIZZATO */}
           <div className="p-4 border-t bg-gray-50">
             <div className="space-y-3">
               <a 
                 href={`tel:${CONTACT_INFO.phone}`}
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors touch-target"
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors touch-target min-h-[44px]"
               >
                 <Phone className="h-4 w-4 mr-3" />
                 <span className="text-sm">{CONTACT_INFO.phone}</span>
@@ -159,7 +160,7 @@ const MobileNavigation = () => {
               
               <a 
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors touch-target"
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors touch-target min-h-[44px]"
               >
                 <Mail className="h-4 w-4 mr-3" />
                 <span className="text-sm break-all">{CONTACT_INFO.email}</span>

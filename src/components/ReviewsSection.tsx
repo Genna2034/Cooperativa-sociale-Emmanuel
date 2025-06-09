@@ -52,6 +52,7 @@ const ReviewsSection = () => {
     service: ''
   });
 
+  // IMPLEMENTAZIONE RECENSIONI LIVE - Le recensioni vengono salvate nel localStorage
   const handleSubmitReview = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -65,13 +66,31 @@ const ReviewsSection = () => {
       image: "/images/closeup-support-hands.jpg" // Immagine di default
     };
 
-    setReviews([review, ...reviews]);
+    const updatedReviews = [review, ...reviews];
+    setReviews(updatedReviews);
+    
+    // SALVA LE RECENSIONI NEL LOCALSTORAGE PER PERSISTENZA
+    localStorage.setItem('emmanuelReviews', JSON.stringify(updatedReviews));
+    
     setNewReview({ name: '', rating: 5, comment: '', service: '' });
     setShowForm(false);
 
-    // Qui potresti inviare la recensione al backend
-    console.log('Nuova recensione:', review);
+    // Mostra messaggio di conferma
+    alert('Grazie per la tua recensione! È stata pubblicata con successo.');
   };
+
+  // Carica recensioni dal localStorage al mount del componente
+  React.useEffect(() => {
+    const savedReviews = localStorage.getItem('emmanuelReviews');
+    if (savedReviews) {
+      try {
+        const parsedReviews = JSON.parse(savedReviews);
+        setReviews(parsedReviews);
+      } catch (error) {
+        console.error('Errore nel caricamento delle recensioni salvate:', error);
+      }
+    }
+  }, []);
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -152,7 +171,7 @@ const ReviewsSection = () => {
             {!showForm ? (
               <button
                 onClick={() => setShowForm(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors touch-target"
               >
                 <Plus className="h-5 w-5" />
                 Lascia una Recensione
@@ -174,7 +193,7 @@ const ReviewsSection = () => {
                         required
                         value={newReview.name}
                         onChange={(e) => setNewReview({ ...newReview, name: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[44px]"
                         placeholder="Il tuo nome"
                       />
                     </div>
@@ -187,13 +206,14 @@ const ReviewsSection = () => {
                         required
                         value={newReview.service}
                         onChange={(e) => setNewReview({ ...newReview, service: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[44px]"
                       >
                         <option value="">Seleziona servizio</option>
                         <option value="Assistenza Domiciliare">Assistenza Domiciliare</option>
                         <option value="Fisioterapia Domiciliare">Fisioterapia Domiciliare</option>
                         <option value="Assistenza Infermieristica">Assistenza Infermieristica</option>
                         <option value="Supporto Psicologico">Supporto Psicologico</option>
+                        <option value="Servizi Educativi">Servizi Educativi</option>
                       </select>
                     </div>
                   </div>
@@ -208,7 +228,7 @@ const ReviewsSection = () => {
                           key={i}
                           type="button"
                           onClick={() => setNewReview({ ...newReview, rating: i + 1 })}
-                          className="focus:outline-none"
+                          className="focus:outline-none touch-target min-h-[44px] min-w-[44px] flex items-center justify-center"
                         >
                           <Star
                             className={`h-8 w-8 ${
@@ -240,13 +260,13 @@ const ReviewsSection = () => {
                     <button
                       type="button"
                       onClick={() => setShowForm(false)}
-                      className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+                      className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors touch-target min-h-[44px]"
                     >
                       Annulla
                     </button>
                     <button
                       type="submit"
-                      className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+                      className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors touch-target min-h-[44px]"
                     >
                       Pubblica Recensione
                     </button>

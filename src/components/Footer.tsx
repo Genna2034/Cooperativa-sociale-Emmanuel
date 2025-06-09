@@ -18,7 +18,8 @@ const Footer = () => {
     'Assistenza Anziani',
     'Supporto Disabilità',
     'Fisioterapia Domiciliare',
-    'Assistenza Infermieristica'
+    'Assistenza Infermieristica',
+    'Servizi Educativi e Scolastici'
   ];
 
   return (
@@ -37,14 +38,14 @@ const Footer = () => {
                 <span className="text-2xl font-bold text-white">Emmanuel</span>
               </Link>
               <p className="text-gray-400 mb-4">
-                Cooperativa Sociale Emmanuel al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania. Certificazione ISO di qualità.
+                Cooperativa Sociale Emmanuel al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania. Accreditata con la Regione Campania per servizi ADI.
               </p>
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
                 <Heart className="h-4 w-4 text-red-500" />
                 <span>Con amore e professionalità dal 2010</span>
               </div>
               <div className="text-sm text-blue-400 font-medium">
-                🏆 Certificazione ISO di Qualità
+                🏆 Accreditata Regione Campania • Certificazione ISO 9001:2015
               </div>
             </div>
           </FadeInSection>
@@ -144,7 +145,7 @@ const Footer = () => {
                   Cookie Policy
                 </Link>
                 <span>•</span>
-                <span>P.IVA: IT123456789</span>
+                <span>Cooperativa Sociale secondo Legge 381/91</span>
               </div>
             </div>
           </div>

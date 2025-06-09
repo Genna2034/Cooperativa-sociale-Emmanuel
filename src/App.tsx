@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import AccessibilityWidget from './components/AccessibilityWidget';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
+import ChatWidget from './components/ChatWidget';
 
 // Lazy loading delle pagine per performance ottimali
 import HomePage from './pages/HomePage';
@@ -18,6 +19,7 @@ import CareersPage from './pages/CareersPage';
 import PrivacyPage from './pages/PrivacyPage';
 import CookiePage from './pages/CookiePage';
 import NotFoundPage from './pages/NotFoundPage';
+import ADIProcessPage from './pages/ADIProcessPage';
 
 function App() {
   return (
@@ -37,12 +39,14 @@ function App() {
               <Route path="/lavora-con-noi" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/cookie" element={<CookiePage />} />
+              <Route path="/come-richiedere-adi" element={<ADIProcessPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
           <AccessibilityWidget />
           <CookieConsent />
+          <ChatWidget />
         </div>
       </Router>
     </HelmetProvider>
