@@ -71,10 +71,10 @@ const Header = () => {
                 <Link 
                   key={item.href}
                   to={item.href} 
-                  className={`transition-colors font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:bg-blue-600 after:transition-all ${
+                  className={`transition-colors font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:bg-turquoise-600 after:transition-all ${
                     isActive(item.href)
-                      ? 'text-blue-600 after:w-full'
-                      : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'
+                      ? 'text-turquoise-600 after:w-full'
+                      : 'text-gray-700 hover:text-turquoise-600 after:w-0 hover:after:w-full'
                   }`}
                 >
                   {item.label}
@@ -87,7 +87,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Link 
               to="/lavora-con-noi" 
-              className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-md active:scale-95 whitespace-nowrap"
+              className="px-6 py-2 bg-turquoise-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-turquoise-700 hover:shadow-md active:scale-95 whitespace-nowrap"
             >
               Sei un Professionista Sanitario?
             </Link>

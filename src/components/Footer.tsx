@@ -44,7 +44,7 @@ const Footer = () => {
                 <Heart className="h-4 w-4 text-red-500" />
                 <span>Con amore e professionalità dal 2010</span>
               </div>
-              <div className="text-sm text-blue-400 font-medium">
+              <div className="text-sm text-turquoise-400 font-medium">
                 🏆 Accreditata Regione Campania • Certificazione ISO 9001:2015
               </div>
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                   <li key={link.href}>
                     <Link 
                       to={link.href} 
-                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                      className="text-gray-400 hover:text-turquoise-400 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -89,25 +89,25 @@ const Footer = () => {
               <h4 className="text-lg font-bold text-white mb-4">Contatti Emmanuel</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <Phone className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
+                  <Phone className="h-5 w-5 text-turquoise-400 mr-2 mt-0.5" />
                   <a
                     href={`tel:${CONTACT_INFO.phone}`}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-400 hover:text-turquoise-400 transition-colors"
                   >
                     {CONTACT_INFO.phone}
                   </a>
                 </li>
                 <li className="flex items-start">
-                  <Mail className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
+                  <Mail className="h-5 w-5 text-turquoise-400 mr-2 mt-0.5" />
                   <a
                     href={`mailto:${CONTACT_INFO.email}`}
-                    className="text-gray-400 hover:text-blue-400 transition-colors break-all"
+                    className="text-gray-400 hover:text-turquoise-400 transition-colors break-all"
                   >
                     {CONTACT_INFO.email}
                   </a>
                 </li>
                 <li className="flex items-start">
-                  <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-turquoise-400 mr-2 mt-0.5" />
                   <span className="text-gray-400">Napoli, Campania - Italia</span>
                 </li>
               </ul>
@@ -137,11 +137,11 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center gap-4 text-sm text-gray-500">
-                <Link to="/privacy" className="hover:text-blue-400 transition-colors">
+                <Link to="/privacy" className="hover:text-turquoise-400 transition-colors">
                   Privacy Policy
                 </Link>
                 <span>•</span>
-                <Link to="/cookie" className="hover:text-blue-400 transition-colors">
+                <Link to="/cookie" className="hover:text-turquoise-400 transition-colors">
                   Cookie Policy
                 </Link>
                 <span>•</span>
