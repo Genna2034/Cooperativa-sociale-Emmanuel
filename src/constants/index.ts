@@ -49,21 +49,22 @@ export const EXTRA_SERVICES = [
   'Piani personalizzati per ogni esigenza familiare',
 ];
 
-// Servizi educativi e scolastici
+// Servizi educativi e scolastici - AGGIORNATI
 export const EDUCATIONAL_SERVICES = [
   'Servizi educativi e specialistici scolastici',
   'Servizi pre e post scuola',
   'Tutoraggio educativo e doposcuola',
   'Supporto didattico personalizzato',
   'Formazione extrascolastica per prevenire la dispersione',
-  'Contrasto alla povertà educativa',
   'Laboratori creativi, didattici e sportivi',
   'Attività di animazione culturale e del tempo libero',
   'Campi gioco e campi educativi',
-  'Supporto scolastico e mediazione culturale per stranieri',
+  'Supporto scolastico per studenti stranieri',
   'Assistenza linguistica per studenti stranieri',
   'Gestione di spazi per bambini e ludoteche',
-  'Comunità educative e case famiglia'
+  'Comunità educative e case famiglia',
+  'Gestione di nidi e micronidi',
+  'Partecipazione a procedure per gestione asili nido'
 ];
 
 // Informazioni sull'accreditamento
@@ -155,7 +156,7 @@ export const TEAM_INFO = {
   }
 };
 
-// Attività della cooperativa secondo la Legge 381/91
+// Attività della cooperativa secondo la Legge 381/91 - AGGIORNATE
 export const COOPERATIVE_ACTIVITIES = [
   {
     category: 'Servizi Residenziali e Domiciliari',
@@ -174,9 +175,10 @@ export const COOPERATIVE_ACTIVITIES = [
       'Tutoraggio educativo e doposcuola',
       'Supporto didattico personalizzato',
       'Formazione extrascolastica per prevenire la dispersione',
-      'Contrasto alla povertà educativa',
-      'Supporto scolastico e mediazione culturale per stranieri',
-      'Assistenza linguistica per studenti stranieri'
+      'Supporto scolastico per studenti stranieri',
+      'Assistenza linguistica per studenti stranieri',
+      'Gestione di nidi e micronidi',
+      'Partecipazione a procedure per gestione asili nido'
     ]
   },
   {
@@ -240,7 +242,7 @@ export const BIBLICAL_REFERENCES = {
   ]
 };
 
-// SEO Keywords per indicizzazione
+// SEO Keywords per indicizzazione - AGGIORNATE
 export const SEO_KEYWORDS = [
   'cooperativa sociale emmanuel',
   'emmanuel napoli regione campania',
@@ -265,5 +267,8 @@ export const SEO_KEYWORDS = [
   'servizi educativi cooperativa',
   'doposcuola napoli',
   'tutoraggio educativo',
+  'gestione nidi napoli',
+  'gestione micronidi campania',
+  'asili nido cooperativa sociale',
   'legge 381/91 cooperativa sociale'
 ];
