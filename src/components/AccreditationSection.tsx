@@ -39,7 +39,7 @@ const AccreditationSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-turquoise-50">
+    <section className="py-16 md:py-24 bg-blue-50">
       <div className="container mx-auto px-4 md:px-6">
         <FadeInSection direction="up">
           <div className="text-center mb-12">
@@ -53,7 +53,7 @@ const AccreditationSection = () => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <Shield className="h-12 w-12 text-turquoise-600" />
+              <Shield className="h-12 w-12 text-blue-600" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Accreditamenti e Certificazioni
@@ -75,7 +75,7 @@ const AccreditationSection = () => {
                     alt={`Logo ${accreditation.title}`}
                     className="h-12 w-12 object-contain mr-3"
                   />
-                  <Award className="h-8 w-8 text-turquoise-600" />
+                  <Award className="h-8 w-8 text-blue-600" />
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{accreditation.title}</h3>
@@ -97,7 +97,7 @@ const AccreditationSection = () => {
                     href={accreditation.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-turquoise-600 hover:text-turquoise-700 font-medium text-sm"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm"
                   >
                     Verifica Accreditamento <ExternalLink className="ml-1 h-4 w-4" />
                   </a>
@@ -122,7 +122,7 @@ const AccreditationSection = () => {
               ))}
             </div>
             
-            <div className="mt-8 p-6 bg-turquoise-50 rounded-lg">
+            <div className="mt-8 p-6 bg-blue-50 rounded-lg">
               <h4 className="font-bold text-gray-800 mb-3">Riferimenti Normativi</h4>
               <div className="text-sm text-gray-600 space-y-2">
                 <p>• <strong>Delibera Regione Campania n. 92/2015:</strong> Accreditamento per servizi ADI</p>

@@ -104,7 +104,7 @@ const ChatWidget = () => {
       <div className="fixed bottom-20 right-4 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-turquoise-600 hover:bg-turquoise-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-turquoise-500"
+          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           aria-label="Apri chat di supporto"
         >
           {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
@@ -115,15 +115,15 @@ const ChatWidget = () => {
       {isOpen && (
         <div className="fixed bottom-32 right-4 w-80 max-w-[calc(100vw-2rem)] h-96 bg-white rounded-lg shadow-xl border z-50 flex flex-col">
           {/* Header */}
-          <div className="bg-turquoise-600 text-white p-4 rounded-t-lg">
+          <div className="bg-blue-600 text-white p-4 rounded-t-lg">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-bold">Supporto Emmanuel</h3>
-                <p className="text-sm text-turquoise-100">Di solito rispondiamo subito</p>
+                <p className="text-sm text-blue-100">Di solito rispondiamo subito</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-turquoise-200 transition-colors"
+                className="text-white hover:text-blue-200 transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -140,13 +140,13 @@ const ChatWidget = () => {
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.isUser
-                      ? 'bg-turquoise-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-800'
                   }`}
                 >
                   <p className="text-sm">{message.text}</p>
                   <p className={`text-xs mt-1 ${
-                    message.isUser ? 'text-turquoise-100' : 'text-gray-500'
+                    message.isUser ? 'text-blue-100' : 'text-gray-500'
                   }`}>
                     {message.timestamp.toLocaleTimeString('it-IT', { 
                       hour: '2-digit', 
@@ -199,12 +199,12 @@ const ChatWidget = () => {
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Scrivi un messaggio..."
-                className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise-500 text-sm"
+                className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
               />
               <button
                 onClick={handleSendMessage}
                 disabled={!inputText.trim()}
-                className="p-2 bg-turquoise-600 text-white rounded-lg hover:bg-turquoise-700 disabled:bg-gray-300 transition-colors"
+                className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 transition-colors"
               >
                 <Send className="h-4 w-4" />
               </button>
@@ -214,14 +214,14 @@ const ChatWidget = () => {
             <div className="flex justify-center space-x-4 mt-3 pt-3 border-t">
               <a
                 href={`tel:${CONTACT_INFO.phone}`}
-                className="flex items-center text-xs text-turquoise-600 hover:text-turquoise-700"
+                className="flex items-center text-xs text-blue-600 hover:text-blue-700"
               >
                 <Phone className="h-3 w-3 mr-1" />
                 Chiama
               </a>
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="flex items-center text-xs text-turquoise-600 hover:text-turquoise-700"
+                className="flex items-center text-xs text-blue-600 hover:text-blue-700"
               >
                 <Mail className="h-3 w-3 mr-1" />
                 Email

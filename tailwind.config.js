@@ -4,31 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // NUOVO TEMA PALE TURQUOISE
-        turquoise: {
-          50: '#F0FDFA',
-          100: '#CCFBF1',
-          200: '#99F6E4',
-          300: '#5EEAD4',
-          400: '#2DD4BF',
-          500: '#14B8A6',
-          600: '#0D9488',
-          700: '#0F766E',
-          800: '#115E59',
-          900: '#134E4A',
-        },
-        // Manteniamo il blu solo per compatibilità legacy
+        // NUOVO TEMA AZZURRO CHIARO DELICATO
         blue: {
-          50: '#F0FDFA',
-          100: '#CCFBF1',
-          200: '#99F6E4',
-          300: '#5EEAD4',
-          400: '#2DD4BF',
-          500: '#14B8A6',
-          600: '#0D9488',
-          700: '#0F766E',
-          800: '#115E59',
-          900: '#134E4A',
+          50: '#F0F9FF',    // Molto chiaro
+          100: '#E0F2FE',   // Chiaro
+          200: '#BAE6FD',   // Chiaro medio
+          300: '#7DD3FC',   // Medio
+          400: '#38BDF8',   // Medio scuro
+          500: '#0EA5E9',   // Base
+          600: '#0284C7',   // Principale (più delicato)
+          700: '#0369A1',   // Scuro
+          800: '#075985',   // Molto scuro
+          900: '#0C4A6E',   // Scurissimo
         },
       },
       fontFamily: {
