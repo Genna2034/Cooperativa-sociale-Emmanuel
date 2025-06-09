@@ -48,11 +48,7 @@ const AccreditationSection = () => {
               <img 
                 src="/images/regione-campania-logo.png"
                 alt="Logo Regione Campania"
-                className="h-16 w-auto mr-4"
-                onError={(e) => {
-                  // Fallback se l'immagine non è disponibile
-                  e.currentTarget.style.display = 'none';
-                }}
+                className="h-20 w-auto mr-6 shadow-md rounded-lg bg-white p-2"
               />
               <Shield className="h-12 w-12 text-blue-600" />
             </div>
@@ -74,11 +70,7 @@ const AccreditationSection = () => {
                   <img 
                     src={accreditation.logo}
                     alt={`Logo ${accreditation.title}`}
-                    className="h-12 w-12 object-contain mr-3"
-                    onError={(e) => {
-                      // Fallback se l'immagine non è disponibile
-                      e.currentTarget.style.display = 'none';
-                    }}
+                    className="h-16 w-16 object-contain mr-4 bg-white rounded-lg shadow-sm p-1"
                   />
                   <Award className="h-8 w-8 text-blue-600" />
                 </div>
