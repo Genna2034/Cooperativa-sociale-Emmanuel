@@ -44,10 +44,16 @@ const AccreditationSection = () => {
         <FadeInSection direction="up">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
-              {/* PLACEHOLDER PER IL LOGO DELLA REGIONE CAMPANIA */}
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-blue-600 font-bold text-xs">REGIONE<br/>CAMPANIA</span>
-              </div>
+              {/* LOGO UFFICIALE DELLA REGIONE CAMPANIA */}
+              <img 
+                src="/images/regione-campania-logo.png"
+                alt="Logo Regione Campania"
+                className="h-16 w-auto mr-4"
+                onError={(e) => {
+                  // Fallback se l'immagine non è disponibile
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
               <Shield className="h-12 w-12 text-blue-600" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">

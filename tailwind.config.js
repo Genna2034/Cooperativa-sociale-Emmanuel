@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        // NUOVO TEMA AZZURRO PIÙ TENDENTE AL BLU - PIÙ DELICATO
+        // NUOVO TEMA AZZURRO BASATO SUL LOGO ALLEGATO
         blue: {
           50: '#F0F9FF',    // Azzurro molto chiaro
           100: '#E0F2FE',   // Azzurro chiaro
           200: '#BAE6FD',   // Azzurro chiaro medio
           300: '#7DD3FC',   // Azzurro medio
-          400: '#38BDF8',   // Azzurro medio scuro
+          400: '#38BDF8',   // Azzurro medio scuro (colore destra logo - bottoni)
           500: '#0EA5E9',   // Azzurro base
-          600: '#0284C7',   // Azzurro principale (più tendente al blu)
+          600: '#0284C7',   // Azzurro principale (colore sinistra logo - scritte)
           700: '#0369A1',   // Azzurro scuro
           800: '#075985',   // Azzurro molto scuro
           900: '#0C4A6E',   // Azzurro scurissimo
