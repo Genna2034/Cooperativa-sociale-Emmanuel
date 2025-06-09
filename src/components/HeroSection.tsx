@@ -14,7 +14,7 @@ const HeroSection = () => {
           alt="Assistenza domiciliare accreditata"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gray-900/50 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gray-900/40 mix-blend-multiply" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
@@ -36,8 +36,8 @@ const HeroSection = () => {
           </FadeInSection>
 
           <FadeInSection direction="up" delay={500}>
-            <div className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-full font-medium mb-6">
-              🏆 Certificazione ISO 9001:2015 • Servizi Accreditati
+            <div className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium mb-6 shadow-lg">
+              🏆 Accreditata Regione Campania • Certificazione ISO 9001:2015
             </div>
           </FadeInSection>
 

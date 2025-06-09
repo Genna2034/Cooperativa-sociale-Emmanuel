@@ -13,7 +13,7 @@ const AccreditationSection = () => {
       logo: '/images/regione-campania-logo.png'
     },
     {
-      title: 'Certificazione ISO di Qualità',
+      title: 'Certificazione ISO 9001:2015',
       description: 'Sistema di gestione qualità certificato secondo gli standard internazionali per garantire l\'eccellenza nei servizi socio-sanitari.',
       authority: 'Ente Certificatore Accreditato',
       validFrom: '2020',
@@ -44,23 +44,18 @@ const AccreditationSection = () => {
         <FadeInSection direction="up">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
-              <img 
-                src="/images/regione-campania-logo.png"
-                alt="Logo Regione Campania"
-                className="h-16 w-auto mr-4"
-                onError={(e) => {
-                  // Fallback se l'immagine non è disponibile
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
+              {/* PLACEHOLDER PER IL LOGO DELLA REGIONE CAMPANIA */}
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <span className="text-blue-600 font-bold text-xs">REGIONE<br/>CAMPANIA</span>
+              </div>
               <Shield className="h-12 w-12 text-blue-600" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Accreditamenti e Certificazioni
+              Accreditamenti e Certificazioni Ufficiali
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               La Cooperativa Emmanuel è ufficialmente accreditata con la Regione Campania 
-              per l'erogazione di servizi di Assistenza Domiciliare Integrata
+              per l'erogazione di servizi di Assistenza Domiciliare Integrata dal 2015
             </p>
           </div>
         </FadeInSection>
@@ -68,12 +63,16 @@ const AccreditationSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {accreditations.map((accreditation, index) => (
             <FadeInSection key={index} direction="up" delay={index * 200}>
-              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 h-full border-l-4 border-blue-600">
                 <div className="flex items-center mb-4">
                   <img 
                     src={accreditation.logo}
                     alt={`Logo ${accreditation.title}`}
                     className="h-12 w-12 object-contain mr-3"
+                    onError={(e) => {
+                      // Fallback se l'immagine non è disponibile
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                   <Award className="h-8 w-8 text-blue-600" />
                 </div>
@@ -116,7 +115,7 @@ const AccreditationSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {qualityStandards.map((standard, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{standard}</span>
                 </div>
               ))}

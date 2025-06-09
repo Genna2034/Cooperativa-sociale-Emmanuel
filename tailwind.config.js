@@ -4,18 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        // NUOVO TEMA AZZURRO CHIARO DELICATO
+        // NUOVO TEMA AZZURRO PIÙ TENDENTE AL BLU - PIÙ DELICATO
         blue: {
-          50: '#F0F9FF',    // Molto chiaro
-          100: '#E0F2FE',   // Chiaro
-          200: '#BAE6FD',   // Chiaro medio
-          300: '#7DD3FC',   // Medio
-          400: '#38BDF8',   // Medio scuro
-          500: '#0EA5E9',   // Base
-          600: '#0284C7',   // Principale (più delicato)
-          700: '#0369A1',   // Scuro
-          800: '#075985',   // Molto scuro
-          900: '#0C4A6E',   // Scurissimo
+          50: '#F0F9FF',    // Azzurro molto chiaro
+          100: '#E0F2FE',   // Azzurro chiaro
+          200: '#BAE6FD',   // Azzurro chiaro medio
+          300: '#7DD3FC',   // Azzurro medio
+          400: '#38BDF8',   // Azzurro medio scuro
+          500: '#0EA5E9',   // Azzurro base
+          600: '#0284C7',   // Azzurro principale (più tendente al blu)
+          700: '#0369A1',   // Azzurro scuro
+          800: '#075985',   // Azzurro molto scuro
+          900: '#0C4A6E',   // Azzurro scurissimo
+        },
+        // Colori aggiuntivi per varietà
+        purple: {
+          50: '#FAF5FF',
+          100: '#F3E8FF',
+          200: '#E9D5FF',
+          300: '#D8B4FE',
+          400: '#C084FC',
+          500: '#A855F7',
+          600: '#9333EA',
+          700: '#7C3AED',
+          800: '#6B21A8',
+          900: '#581C87',
         },
       },
       fontFamily: {
