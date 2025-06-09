@@ -20,6 +20,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import CookiePage from './pages/CookiePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ADIProcessPage from './pages/ADIProcessPage';
+import StaffAreaPage from './pages/StaffAreaPage';
 
 function App() {
   return (
@@ -27,26 +28,37 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50">
           <ScrollToTop />
-          <Header />
-          <main className="pt-20">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/servizi" element={<ServicesPage />} />
-              <Route path="/chi-siamo" element={<AboutPage />} />
-              <Route path="/recensioni" element={<ReviewsPage />} />
-              <Route path="/prenotazioni" element={<BookingPage />} />
-              <Route path="/contatti" element={<ContactPage />} />
-              <Route path="/lavora-con-noi" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/cookie" element={<CookiePage />} />
-              <Route path="/come-richiedere-adi" element={<ADIProcessPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </main>
-          <Footer />
-          <AccessibilityWidget />
-          <CookieConsent />
-          <ChatWidget />
+          
+          <Routes>
+            {/* Area Staff - Layout separato senza header/footer */}
+            <Route path="/staff" element={<StaffAreaPage />} />
+            
+            {/* Pagine pubbliche con layout normale */}
+            <Route path="/*" element={
+              <>
+                <Header />
+                <main className="pt-20">
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/servizi" element={<ServicesPage />} />
+                    <Route path="/chi-siamo" element={<AboutPage />} />
+                    <Route path="/recensioni" element={<ReviewsPage />} />
+                    <Route path="/prenotazioni" element={<BookingPage />} />
+                    <Route path="/contatti" element={<ContactPage />} />
+                    <Route path="/lavora-con-noi" element={<CareersPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/cookie" element={<CookiePage />} />
+                    <Route path="/come-richiedere-adi" element={<ADIProcessPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Routes>
+                </main>
+                <Footer />
+                <AccessibilityWidget />
+                <CookieConsent />
+                <ChatWidget />
+              </>
+            } />
+          </Routes>
         </div>
       </Router>
     </HelmetProvider>
