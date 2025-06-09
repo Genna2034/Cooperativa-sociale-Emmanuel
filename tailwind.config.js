@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // NUOVO TEMA AZZURRO BASATO SUL LOGO ALLEGATO
+        // TEMA AZZURRO CORRETTO - Sovrascrive completamente i colori blue
         blue: {
           50: '#F0F9FF',    // Azzurro molto chiaro
-          100: '#E0F2FE',   // Azzurro chiaro
+          100: '#E0F2FE',   // Azzurro chiaro  
           200: '#BAE6FD',   // Azzurro chiaro medio
           300: '#7DD3FC',   // Azzurro medio
           400: '#38BDF8',   // Azzurro medio scuro (colore destra logo - bottoni)
@@ -29,6 +29,19 @@ export default {
           700: '#7C3AED',
           800: '#6B21A8',
           900: '#581C87',
+        },
+        // Manteniamo anche i colori originali per compatibilità
+        teal: {
+          50: '#F0FDFA',
+          100: '#CCFBF1',
+          200: '#99F6E4',
+          300: '#5EEAD4',
+          400: '#2DD4BF',
+          500: '#14B8A6',
+          600: '#0D9488',
+          700: '#0F766E',
+          800: '#115E59',
+          900: '#134E4A',
         },
       },
       fontFamily: {
