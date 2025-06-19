@@ -86,7 +86,7 @@ const ADIProcessPage = () => {
         description="Guida completa per richiedere l'Assistenza Domiciliare Integrata nella Regione Campania"
         metaTitle="Come Richiedere ADI Campania - Cooperativa Emmanuel"
         metaDescription="Guida passo-passo per accedere ai servizi di Assistenza Domiciliare Integrata in Campania. Requisiti, documentazione e procedura completa."
-        keywords="ADI Campania, come richiedere assistenza domiciliare, procedura ADI, requisiti assistenza domiciliare, UVM Campania"
+        keywords="ADI Campania, come richiedere assistenza domiciliare, procedura ADI, requisiti assistenza domiciliare, UVM Campania, supporto psicologico ADI"
         showBreadcrumb={false}
       />
 
@@ -216,7 +216,8 @@ const ADIProcessPage = () => {
                 Servizi Inclusi nell'ADI
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Tutti i servizi erogati dalla Cooperativa Emmanuel nell'ambito dell'ADI
+                Tutti i servizi erogati dalla Cooperativa Emmanuel nell'ambito dell'ADI, 
+                incluso il supporto psicologico specializzato
               </p>
             </div>
           </FadeInSection>
@@ -238,7 +239,8 @@ const ADIProcessPage = () => {
                   <p className="text-gray-700">
                     Tutti i servizi ADI sono erogati gratuitamente per i pazienti che rispettano i requisiti. 
                     La Cooperativa Emmanuel è accreditata con la Regione Campania e l'ASL Napoli 1 Centro 
-                    per garantire la massima qualità nell'assistenza domiciliare.
+                    per garantire la massima qualità nell'assistenza domiciliare, incluso il supporto psicologico 
+                    per pazienti e famiglie.
                   </p>
                 </div>
               </div>

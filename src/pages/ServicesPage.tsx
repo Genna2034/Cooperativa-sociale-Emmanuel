@@ -163,7 +163,7 @@ const ServicesPage = () => {
         description="Assistenza domiciliare, servizi educativi e supporto personalizzato per anziani, persone con disabilità e minori in Campania"
         metaTitle="Servizi - Cooperativa Emmanuel Napoli"
         metaDescription="Scopri tutti i servizi della Cooperativa Emmanuel: ADI, assistenza domiciliare, servizi educativi, doposcuola, tutoraggio e molto altro in Campania."
-        keywords="assistenza domiciliare, ADI Campania, servizi educativi, doposcuola napoli, tutoraggio, assistenza scolastica, fisioterapia domiciliare, infermiere a domicilio"
+        keywords="assistenza domiciliare, ADI Campania, servizi educativi, doposcuola napoli, tutoraggio, assistenza scolastica, fisioterapia domiciliare, infermiere a domicilio, supporto psicologico"
       />
 
       {/* Servizi Principali */}
@@ -291,7 +291,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Servizi Aggiuntivi */}
+      {/* Servizi Specializzati con Supporto Psicologico in evidenza */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
@@ -300,7 +300,8 @@ const ServicesPage = () => {
                 Servizi Specializzati
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Soluzioni complete per ogni esigenza di assistenza domiciliare e supporto educativo
+                Soluzioni complete per ogni esigenza di assistenza domiciliare e supporto educativo, 
+                con particolare attenzione al benessere psicologico
               </p>
             </div>
           </FadeInSection>
@@ -333,6 +334,40 @@ const ServicesPage = () => {
               </FadeInSection>
             ))}
           </div>
+
+          {/* Sezione dedicata al Supporto Psicologico */}
+          <FadeInSection direction="up" delay={600}>
+            <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-md p-8">
+              <div className="text-center mb-8">
+                <Heart className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  Supporto Psicologico Specializzato
+                </h3>
+                <p className="text-gray-600 max-w-3xl mx-auto">
+                  Il benessere psicologico è fondamentale nel percorso di cura. I nostri psicologi specializzati 
+                  offrono supporto professionale per pazienti, famiglie e caregivers.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-lg p-6 text-center">
+                  <Users className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Supporto Familiare</h4>
+                  <p className="text-sm text-gray-600">Accompagnamento psicologico per tutta la famiglia nel percorso di cura</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 text-center">
+                  <Heart className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Elaborazione del Lutto</h4>
+                  <p className="text-sm text-gray-600">Supporto specializzato nei momenti di perdita e transizione</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 text-center">
+                  <Shield className="h-8 w-8 text-green-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-800 mb-2">Gestione dello Stress</h4>
+                  <p className="text-sm text-gray-600">Tecniche per gestire ansia e stress legati alla malattia</p>
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
         </div>
       </section>
 

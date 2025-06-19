@@ -36,7 +36,7 @@ export const ADI_SERVICES = [
   'Assistenza infermieristica professionale',
   'Fisioterapia domiciliare',
   'Fornitura di ausili sanitari',
-  'Supporto psicologico',
+  'Supporto psicologico per paziente e famiglia',
   'Educazione sanitaria al caregiver',
   'Somministrazione farmaci',
 ];
@@ -46,6 +46,7 @@ export const EXTRA_SERVICES = [
   'Compagnia e sorveglianza domiciliare',
   'Supporto per commissioni quotidiane',
   'Assistenza notturna e diurna continuativa',
+  'Supporto psicologico e counseling familiare',
   'Piani personalizzati per ogni esigenza familiare',
 ];
 
@@ -55,6 +56,7 @@ export const EDUCATIONAL_SERVICES = [
   'Servizi pre e post scuola',
   'Tutoraggio educativo e doposcuola',
   'Supporto didattico personalizzato',
+  'Supporto psicologico per studenti e famiglie',
   'Formazione extrascolastica per prevenire la dispersione',
   'Laboratori creativi, didattici e sportivi',
   'Attività di animazione culturale e del tempo libero',
@@ -187,7 +189,8 @@ export const COOPERATIVE_ACTIVITIES = [
       'Progetti terapeutico-riabilitativi',
       'Telesoccorso e pronto intervento sociale',
       'Mediazione familiare',
-      'Centri antiviolenza'
+      'Centri antiviolenza',
+      'Supporto psicologico specializzato'
     ]
   },
   {
@@ -254,6 +257,7 @@ export const SEO_KEYWORDS = [
   'fisioterapia domiciliare napoli',
   'infermiere a domicilio napoli',
   'assistenza disabilità campania',
+  'supporto psicologico domiciliare napoli',
   'luigi borriello emmanuel presidente',
   'gennaro borriello infermiere coordinatore',
   'umberto borriello economia amministrativo',

@@ -10,7 +10,7 @@ const AccreditationSection = () => {
       authority: 'Regione Campania - Settore Sanità',
       validFrom: '2015',
       link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html',
-      logo: '/images/regione-campania-logo.png'
+      logo: '/images/Logo.png'
     },
     {
       title: 'Certificazione ISO 9001:2015',
@@ -44,13 +44,6 @@ const AccreditationSection = () => {
         <FadeInSection direction="up">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
-              {/* LOGO UFFICIALE DELLA REGIONE CAMPANIA - MOLTO PIÙ GRANDE E SENZA SFONDO */}
-              <img 
-                src="/images/regione-campania-logo.png"
-                alt="Logo Regione Campania"
-                className="h-32 w-auto mr-8 drop-shadow-lg"
-                style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
-              />
               <Shield className="h-16 w-16 text-blue-600" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -71,14 +64,7 @@ const AccreditationSection = () => {
                   <img 
                     src={accreditation.logo}
                     alt={`Logo ${accreditation.title}`}
-                    className={`object-contain mr-4 ${
-                      accreditation.logo.includes('regione-campania') 
-                        ? 'h-20 w-20 drop-shadow-md' 
-                        : 'h-16 w-16 bg-white rounded-lg shadow-sm p-1'
-                    }`}
-                    style={accreditation.logo.includes('regione-campania') ? 
-                      { filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' } : {}
-                    }
+                    className="h-16 w-16 bg-white rounded-lg shadow-sm p-1 object-contain mr-4"
                   />
                   <Award className="h-8 w-8 text-blue-600" />
                 </div>
@@ -115,13 +101,6 @@ const AccreditationSection = () => {
         <FadeInSection direction="up" delay={600}>
           <div className="bg-white rounded-xl shadow-md p-8">
             <div className="flex items-center justify-center mb-6">
-              {/* LOGO REGIONE CAMPANIA ANCHE QUI - PIÙ GRANDE E TRASPARENTE */}
-              <img 
-                src="/images/regione-campania-logo.png"
-                alt="Logo Regione Campania"
-                className="h-24 w-auto mr-6 drop-shadow-md"
-                style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.15))' }}
-              />
               <h3 className="text-2xl font-bold text-gray-800">
                 Standard di Qualità Garantiti
               </h3>
