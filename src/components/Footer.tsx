@@ -45,13 +45,8 @@ const Footer = () => {
                 <span>Con amore e professionalità dal 2010</span>
               </div>
               <div className="flex items-center gap-2 mb-4">
-                <img 
-                  src="/images/regione-campania-logo.png"
-                  alt="Logo Regione Campania"
-                  className="h-8 w-auto"
-                />
                 <span className="text-sm text-blue-400 font-medium">
-                  Accreditata Regione Campania
+                  🏆 Accreditata Regione Campania dal 2015
                 </span>
               </div>
               <div className="text-sm text-blue-400 font-medium">

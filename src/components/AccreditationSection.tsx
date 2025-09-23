@@ -61,11 +61,6 @@ const AccreditationSection = () => {
             <FadeInSection key={index} direction="up" delay={index * 200}>
               <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 h-full border-l-4 border-blue-600">
                 <div className="flex items-center mb-4">
-                  <img 
-                    src={accreditation.logo}
-                    alt={`Logo ${accreditation.title}`}
-                    className="h-16 w-16 bg-white rounded-lg shadow-sm p-1 object-contain mr-4"
-                  />
                   <Award className="h-8 w-8 text-blue-600" />
                 </div>
                 
