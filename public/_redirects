@@ -1,0 +1,13 @@
+# Redirect Netlify domain to custom domain
+https://deluxe-kitten-b2c047.netlify.app/* https://cooperativaemmanuel.it/:splat 301!
+https://cooperativa-emmanuel.netlify.app/* https://cooperativaemmanuel.it/:splat 301!
+
+# Force HTTPS
+http://cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
+http://www.cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
+
+# Redirect www to non-www
+https://www.cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
+
+# SPA fallback
+/* /index.html 200

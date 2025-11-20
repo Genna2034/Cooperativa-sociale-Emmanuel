@@ -11,8 +11,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/closeup-support-hands.jpg"
-          alt="Assistenza domiciliare accreditata"
+          alt="Cooperativa Sociale Emmanuel - Assistenza domiciliare Napoli"
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gray-900/40 mix-blend-multiply" />
       </div>
@@ -22,8 +23,8 @@ const HeroSection = () => {
           <FadeInSection direction="up" delay={200}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               <span className="block">Cooperativa Sociale Emmanuel</span>
-              <span className="block mt-2 text-blue-200">
-                Al servizio di chi ha più bisogno, da oltre 15 anni a Napoli
+              <span className="block mt-2 text-blue-200 text-3xl md:text-4xl">
+                Assistenza Domiciliare Napoli Accreditata
               </span>
             </h1>
           </FadeInSection>

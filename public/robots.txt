@@ -16,7 +16,7 @@ Disallow: /*.json$
 Disallow: /manifest.json
 
 # Sitemap
-Sitemap: https://deluxe-kitten-b2c047.netlify.app/sitemap.xml
+Sitemap: https://cooperativaemmanuel.it/sitemap.xml
 
 # Informazioni aggiuntive per SEO
 # Cooperativa Sociale Emmanuel
