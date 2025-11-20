@@ -8,10 +8,10 @@ import { CONTACT_INFO } from '../constants';
 
 const MicronidoRomaganoPage = () => {
   const teamFeatures = [
-    { icon: Users, text: '4 educatrici qualificate (3 full-time + 1 part-time)' },
-    { icon: Target, text: 'Rapporto educatore/bambino 1:6 (1:4 per lattanti)' },
-    { icon: Heart, text: 'Coordinatore pedagogico 10 ore/settimana' },
-    { icon: CheckCircle, text: '2 ausiliarie per pulizie e routine' }
+    { icon: Users, text: 'Educatrici qualificate e specializzate' },
+    { icon: Target, text: 'Rapporto educatore/bambino ottimale per ogni fascia di età' },
+    { icon: Heart, text: 'Coordinamento pedagogico costante' },
+    { icon: CheckCircle, text: 'Personale ausiliario dedicato' }
   ];
 
   const outdoorActivities = [
@@ -327,20 +327,20 @@ const MicronidoRomaganoPage = () => {
               <div className="bg-white border-2 border-blue-200 rounded-xl p-6 mb-12">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Organizzazione e Continuità</h3>
                 <p className="text-gray-600 mb-4">
-                  Per garantire la massima continuità educativa e relazionale, abbiamo implementato:
+                  Per garantire la massima continuità educativa e relazionale, il nostro team lavora con:
                 </p>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                    <span><strong>Sistema di turnazione strutturato</strong> che assicura la presenza costante degli educatori di riferimento</span>
+                    <span><strong>Organizzazione strutturata</strong> che assicura presenza costante degli educatori di riferimento</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                    <span><strong>Personale di riserva qualificato</strong> per copertura immediata delle assenze</span>
+                    <span><strong>Continuità del servizio</strong> garantita in ogni momento</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                    <span><strong>Riunioni di équipe settimanali</strong> per coordinamento e progettazione condivisa</span>
+                    <span><strong>Coordinamento costante</strong> per progettazione educativa condivisa</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
@@ -590,9 +590,9 @@ const MicronidoRomaganoPage = () => {
 
             <FadeInSection direction="up" delay={1000}>
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-xl p-8 md:p-12 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Iscrizioni e Contatti</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Informazioni e Contatti</h2>
                 <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                  Vuoi conoscere meglio il nostro micronido? Prenota una visita senza impegno e scopri l'ambiente dove il tuo bambino potrà crescere sereno e felice.
+                  Per informazioni sul servizio Micronido di Romagnano Sesia, contattaci.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto text-left">
@@ -623,7 +623,7 @@ const MicronidoRomaganoPage = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex justify-center">
                   <a
                     href={`https://wa.me/390817877064?text=Ciao! Vorrei informazioni sul Micronido di Romagnano Sesia`}
                     target="_blank"
@@ -633,20 +633,6 @@ const MicronidoRomaganoPage = () => {
                     <MessageCircle className="h-5 w-5 mr-2" />
                     Contattaci su WhatsApp
                   </a>
-
-                  <Link
-                    to="/prenotazioni"
-                    className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
-                  >
-                    Prenota Visita
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </Link>
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="text-blue-100 text-sm">
-                    <strong>Orari di apertura:</strong> Lunedì - Venerdì | 7:30 - 18:00
-                  </p>
                 </div>
               </div>
             </FadeInSection>
