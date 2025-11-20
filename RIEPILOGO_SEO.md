@@ -209,13 +209,11 @@ Crawl-delay: 1
 Sitemap: https://cooperativaemmanuel.it/sitemap.xml
 ```
 
-### 3. _redirects (nuovo)
+### 3. _redirects
 ```
-# Redirect Netlify to custom domain
-https://deluxe-kitten-b2c047.netlify.app/* https://cooperativaemmanuel.it/:splat 301!
-
 # Force HTTPS
 http://cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
+http://www.cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
 
 # Redirect www to non-www
 https://www.cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
@@ -336,7 +334,7 @@ https://www.cooperativaemmanuel.it/* https://cooperativaemmanuel.it/:splat 301!
 - [x] Mobile-first responsive
 - [x] File _redirects creato
 - [x] SSL/HTTPS configurazione
-- [x] Domini Netlify reindirizzati
+- [x] Dominio cooperativaemmanuel.it configurato
 
 ## 🎯 PROSSIMI PASSI
 
