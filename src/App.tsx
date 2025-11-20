@@ -20,6 +20,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import CookiePage from './pages/CookiePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ADIProcessPage from './pages/ADIProcessPage';
+import MicronidoRomaganoPage from './pages/MicronidoRomaganoPage';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/cookie" element={<CookiePage />} />
               <Route path="/come-richiedere-adi" element={<ADIProcessPage />} />
+              <Route path="/micronido-romagnano-sesia" element={<MicronidoRomaganoPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

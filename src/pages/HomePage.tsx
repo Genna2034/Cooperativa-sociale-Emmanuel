@@ -50,6 +50,13 @@ const HomePage = () => {
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
+      title: 'Micronido d\'Infanzia – Romagnano Sesia',
+      description: 'Servizio educativo per bambini 0-3 anni con progetto pedagogico completo, educazione all\'aperto e laboratori specializzati.',
+      features: ['Educatori qualificati 1:6', 'Laboratori creativi', 'Sportello psicopedagogico'],
+      link: '/micronido-romagnano-sesia',
+      image: '/images/closeup-support-hands.jpg'
+    },
+    {
       title: 'Supporto Familiare',
       description: 'Accompagnamento e sostegno per le famiglie nel percorso di cura dei propri cari.',
       features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto 24/7'],
