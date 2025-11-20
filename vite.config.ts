@@ -18,18 +18,19 @@ export default defineConfig({
         }
       }
     },
-    // Ottimizzazioni per performance
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
+        drop_debugger: true,
+        passes: 2
+      },
+      mangle: true
     },
-    // Compressione gzip
     reportCompressedSize: true,
-    // Chunk size warnings
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+    sourcemap: false
   },
   // Preload delle risorse critiche
   server: {

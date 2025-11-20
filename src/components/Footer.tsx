@@ -30,15 +30,15 @@ const Footer = () => {
           <FadeInSection direction="up" delay={100}>
             <div>
               <Link to="/" className="flex items-center gap-3 mb-6">
-                <img 
-                  src="/images/Logo.png" 
-                  alt="Logo Cooperativa Sociale Emmanuel" 
-                  className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110" 
+                <img
+                  src="/images/Logo.png"
+                  alt="Logo Cooperativa Sociale Emmanuel Napoli"
+                  className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110"
                 />
                 <span className="text-2xl font-bold text-white">Emmanuel</span>
               </Link>
               <p className="text-gray-400 mb-4">
-                Cooperativa Sociale Emmanuel al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania. Accreditata con la Regione Campania per servizi ADI.
+                La Cooperativa Sociale Emmanuel è al servizio di chi ha più bisogno, da oltre 15 anni a Napoli e in Campania. La Cooperativa Sociale Emmanuel è accreditata con la Regione Campania per servizi ADI.
               </p>
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
                 <Heart className="h-4 w-4 text-red-500" />
@@ -91,7 +91,7 @@ const Footer = () => {
           {/* Contact Info */}
           <FadeInSection direction="up" delay={400}>
             <div>
-              <h4 className="text-lg font-bold text-white mb-4">Contatti Emmanuel</h4>
+              <h4 className="text-lg font-bold text-white mb-4">Contatti Cooperativa Sociale Emmanuel</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />

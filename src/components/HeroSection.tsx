@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/closeup-support-hands.jpg"
-          alt="Cooperativa Sociale Emmanuel - Assistenza domiciliare Napoli"
+          alt="Cooperativa Sociale Emmanuel Napoli - Assistenza domiciliare"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -22,17 +22,14 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <FadeInSection direction="up" delay={200}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              <span className="block">Cooperativa Sociale Emmanuel</span>
-              <span className="block mt-2 text-blue-200 text-3xl md:text-4xl">
-                Assistenza Domiciliare Napoli Accreditata
-              </span>
+              Cooperativa Sociale Emmanuel Napoli
             </h1>
           </FadeInSection>
 
           <FadeInSection direction="up" delay={400}>
             <h2 className="text-xl md:text-2xl text-gray-100 my-8 max-w-3xl mx-auto leading-relaxed">
-              Assistenza Domiciliare Integrata (ADI) accreditata con la Regione Campania, supporto ad anziani e persone con disabilità.
-              Unisciti alle migliaia di famiglie che hanno già scelto Emmanuel per il loro benessere quotidiano.
+              Assistenza Domiciliare Integrata (ADI) accreditata Regione Campania. La Cooperativa Sociale Emmanuel offre supporto ad anziani e persone con disabilità.
+              Migliaia di famiglie hanno già scelto la Cooperativa Sociale Emmanuel per il loro benessere.
             </h2>
           </FadeInSection>
 

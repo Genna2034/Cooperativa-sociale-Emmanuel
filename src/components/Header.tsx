@@ -55,9 +55,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src="/images/Logo.png" 
-              alt="Cooperativa Sociale Emmanuel" 
+            <img
+              src="/images/Logo.png"
+              alt="Cooperativa Sociale Emmanuel Napoli"
               className={`object-contain transition-all duration-300 hover:scale-105 ${
                 isScrolled ? 'h-12 w-12' : 'h-16 w-16'
               }`}

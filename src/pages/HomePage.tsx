@@ -61,9 +61,9 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Cooperativa Sociale Emmanuel | Assistenza Napoli ADI</title>
-        <meta name="description" content="Cooperativa Sociale Emmanuel: assistenza domiciliare Napoli accreditata Regione Campania. ADI autorizzata, anziani, disabilità. ISO. ☎ 081 7877064" />
-        <meta name="keywords" content="cooperativa sociale emmanuel, assistenza domiciliare napoli, cooperativa sociale napoli, ADI campania, assistenza anziani napoli, emmanuel napoli" />
+        <title>Cooperativa Sociale Emmanuel Napoli</title>
+        <meta name="description" content="Cooperativa Sociale Emmanuel Napoli: assistenza domiciliare ADI accreditata Regione Campania. Anziani e disabilità. ☎ 081 7877064" />
+        <meta name="keywords" content="cooperativa sociale emmanuel, cooperativa sociale emmanuel napoli, emmanuel napoli, assistenza domiciliare napoli, cooperativa sociale napoli" />
         <link rel="canonical" href="https://cooperativaemmanuel.it/" />
 
         <script type="application/ld+json">
@@ -196,13 +196,13 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Assistenza Domiciliare Napoli: Perché Scegliere Emmanuel
+                Perché Scegliere la Cooperativa Sociale Emmanuel
               </h2>
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
                 🏆 Accreditata con la Regione Campania dal 2015
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                La nostra missione è portare conforto, dignità e sostegno a chi è in difficoltà con servizi accreditati e certificazione ISO di qualità
+                La Cooperativa Sociale Emmanuel porta conforto, dignità e sostegno a chi è in difficoltà con servizi accreditati e certificazione ISO di qualità
               </p>
               <div className="bg-blue-50 rounded-lg p-6 max-w-2xl mx-auto">
                 <p className="text-gray-700 italic text-lg mb-2">
@@ -222,10 +222,11 @@ const HomePage = () => {
                   to={feature.link}
                   className="group bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all duration-300 block"
                 >
-                  <img 
+                  <img
                     src={feature.image}
-                    alt={`${feature.title} - Cooperativa Emmanuel Accreditata`}
+                    alt={`${feature.title} - Cooperativa Sociale Emmanuel`}
                     className="w-full h-32 object-cover rounded-lg mb-4"
+                    loading="lazy"
                   />
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
                     <feature.icon className="h-8 w-8 text-blue-600" />
@@ -248,7 +249,7 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Servizi ADI Campania: Cooperativa Sociale Emmanuel
+                Servizi della Cooperativa Sociale Emmanuel
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Soluzioni complete per l'assistenza domiciliare integrata in Campania con accreditamento ufficiale e certificazione ISO
@@ -260,10 +261,11 @@ const HomePage = () => {
             {quickServices.map((service, index) => (
               <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
                 <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
-                  <img 
+                  <img
                     src={service.image}
-                    alt={`${service.title} - Cooperativa Emmanuel Napoli Accreditata`}
+                    alt={`${service.title} - Cooperativa Sociale Emmanuel Napoli`}
                     className="w-full h-48 object-cover rounded-lg mb-6"
+                    loading="lazy"
                   />
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
@@ -302,13 +304,13 @@ const HomePage = () => {
               className="w-full max-w-md mx-auto h-48 object-cover rounded-lg mb-8"
             />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Inizia il Tuo Percorso di Assistenza con Emmanuel
+              Contatta la Cooperativa Sociale Emmanuel
             </h2>
             <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-white font-medium mb-6">
               🏆 Accreditata Regione Campania • Certificazione ISO
             </div>
             <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
-              La prima consulenza è sempre gratuita. Contatta la Cooperativa Sociale Emmanuel accreditata per scoprire come possiamo aiutarti.
+              La prima consulenza è sempre gratuita. Contatta la Cooperativa Sociale Emmanuel per scoprire come possiamo aiutarti.
             </p>
             <div className="bg-white/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
               <p className="text-white italic text-lg mb-2">
@@ -329,7 +331,7 @@ const HomePage = () => {
                 to="/contatti"
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Contatta Emmanuel Ora
+                Contattaci Ora
               </Link>
             </div>
           </FadeInSection>
