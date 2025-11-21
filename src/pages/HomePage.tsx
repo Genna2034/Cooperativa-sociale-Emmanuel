@@ -50,6 +50,13 @@ const HomePage = () => {
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
+      title: 'Servizi Educativi e Scolastici',
+      description: 'Supporto educativo specializzato, doposcuola, tutoraggio e servizi pre/post scuola per studenti di ogni età.',
+      features: ['Doposcuola qualificato', 'Tutoraggio personalizzato', 'Supporto studenti stranieri'],
+      link: '/servizi',
+      image: '/images/medium-shot-women-posing-together.jpg'
+    },
+    {
       title: 'Micronido d\'Infanzia – Romagnano Sesia',
       description: 'Servizio educativo per bambini 0-3 anni con progetto pedagogico completo, educazione all\'aperto e laboratori specializzati.',
       features: ['Educatori qualificati 1:6', 'Laboratori creativi', 'Sportello psicopedagogico'],
@@ -59,9 +66,9 @@ const HomePage = () => {
     {
       title: 'Supporto Familiare',
       description: 'Accompagnamento e sostegno per le famiglie nel percorso di cura dei propri cari.',
-      features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto 24/7'],
+      features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto continuo'],
       link: '/prenotazioni',
-      image: '/images/medium-shot-women-posing-together.jpg'
+      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
