@@ -13,7 +13,7 @@ const AboutPage = () => {
       qualifications: 'Imprenditore Sociale',
       description: 'Cristiano convinto, ha trasformato la sua fede in un impegno quotidiano verso gli ultimi e i più fragili. Con oltre 15 anni di esperienza nel settore dell\'assistenza domiciliare, è il visionario che ha fondato la Cooperativa Emmanuel nel 2010.',
       specialties: ['Leadership aziendale', 'Gestione servizi socio-sanitari', 'Relazioni istituzionali', 'Sviluppo strategico'],
-      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
+      image: '/images/Luigi Borriello.png'
     },
     {
       name: 'Dott. Gennaro Borriello',
