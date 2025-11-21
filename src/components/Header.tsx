@@ -30,7 +30,6 @@ const Header = () => {
   // NUOVO ORDINE DELLA BARRA DI NAVIGAZIONE
   const navItems = [
     { href: '/servizi', label: 'Servizi' },
-    { href: '/micronido-romagnano-sesia', label: 'Micronido' },
     { href: '/chi-siamo', label: 'Chi Siamo' },
     { href: '/contatti', label: 'Contatti' },
     { href: '/recensioni', label: 'Recensioni' },

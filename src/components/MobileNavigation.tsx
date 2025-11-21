@@ -39,7 +39,6 @@ const MobileNavigation = () => {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/servizi', label: 'Servizi' },
-    { href: '/micronido-romagnano-sesia', label: 'Micronido' },
     { href: '/chi-siamo', label: 'Chi Siamo' },
     { href: '/contatti', label: 'Contatti' },
     { href: '/recensioni', label: 'Recensioni' },

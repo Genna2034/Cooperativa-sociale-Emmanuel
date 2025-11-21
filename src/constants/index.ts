@@ -45,7 +45,6 @@ export const EXTRA_SERVICES = [
   'Assistenza alla persona (igiene, pasti, deambulazione)',
   'Compagnia e sorveglianza domiciliare',
   'Supporto per commissioni quotidiane',
-  'Assistenza notturna e diurna continuativa',
   'Supporto psicologico e counseling familiare',
   'Piani personalizzati per ogni esigenza familiare',
 ];

@@ -65,20 +65,6 @@ const ServicesPage = () => {
       description: 'Corsi per familiari e badanti per migliorare la qualità dell\'assistenza.',
       features: ['Tecniche di mobilizzazione', 'Gestione farmaci', 'Primo soccorso', 'Comunicazione efficace'],
       image: '/images/medium-shot-women-posing-together.jpg'
-    },
-    {
-      icon: Clock,
-      title: 'Assistenza Notturna',
-      description: 'Sorveglianza e assistenza durante le ore notturne per garantire sicurezza e tranquillità.',
-      features: ['Controllo parametri vitali', 'Assistenza igienica', 'Somministrazione farmaci', 'Pronto intervento'],
-      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
-    },
-    {
-      icon: Shield,
-      title: 'Servizi di Emergenza',
-      description: 'Interventi rapidi per situazioni urgenti e supporto nelle emergenze sanitarie.',
-      features: ['Reperibilità 24/7', 'Intervento rapido', 'Coordinamento con 118', 'Supporto familiare'],
-      image: '/images/closeup-support-hands.jpg'
     }
   ];
 
