@@ -244,10 +244,10 @@ const AboutPage = () => {
             {teamMembers.map((member, index) => (
               <FadeInSection key={index} direction="up" delay={index * 200}>
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
-                  <img 
+                  <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-contain bg-gray-50"
                   />
                   <div className="p-6">
                     <div className="flex items-center mb-3">
