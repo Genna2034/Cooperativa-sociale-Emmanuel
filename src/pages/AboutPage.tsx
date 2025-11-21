@@ -21,7 +21,7 @@ const AboutPage = () => {
       qualifications: 'Infermiere Professionale',
       description: 'Infermiere professionale specializzato nel coordinamento e management dei servizi socio-sanitari. Si occupa della supervisione clinica di tutti i servizi ADI e della formazione continua del personale sanitario.',
       specialties: ['Coordinamento sanitario', 'Management ADI', 'Supervisione clinica', 'Formazione personale sanitario'],
-      image: '/images/medium-shot-women-posing-together.jpg'
+      image: '/images/Dott. Gennaro Borriello.png'
     },
     {
       name: 'Dott. Umberto Borriello',
@@ -29,7 +29,7 @@ const AboutPage = () => {
       qualifications: 'Laureato in Economia',
       description: 'Laureato in Economia con specializzazione in gestione delle organizzazioni sanitarie. Si occupa della pianificazione economica, del controllo di gestione e dell\'ottimizzazione dei processi amministrativi della cooperativa.',
       specialties: ['Controllo di gestione', 'Pianificazione economica', 'Amministrazione sanitaria', 'Ottimizzazione processi'],
-      image: '/images/closeup-support-hands.jpg'
+      image: '/images/Dott. Umberto Borriello.png'
     },
     {
       name: 'Dott.ssa Imma Angelone',
