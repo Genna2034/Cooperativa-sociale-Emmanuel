@@ -46,7 +46,7 @@ const HomePage = () => {
       title: 'Assistenza Domiciliare Integrata (ADI)',
       description: 'Servizi sanitari e socio-assistenziali a domicilio per anziani e persone con disabilità, accreditati con la Regione Campania.',
       features: ['Visite mediche specialistiche', 'Assistenza infermieristica', 'Fisioterapia domiciliare'],
-      link: '/servizi',
+      link: '/come-richiedere-adi',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {

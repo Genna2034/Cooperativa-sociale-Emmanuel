@@ -16,15 +16,22 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
           {/* ADI Services */}
           <FadeInSection direction="left" delay={200}>
-            <div className="bg-white rounded-xl shadow-md p-8 border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Stethoscope className="h-8 w-8 text-blue-600" />
+            <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
+              <img
+                src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
+                alt="Prestazioni ADI - Assistenza Domiciliare Integrata"
+                className="w-full h-48 object-cover"
+                loading="lazy"
+              />
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-blue-100 rounded-full mr-4">
+                    <Stethoscope className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">
+                    Prestazioni offerte per conto dell'ADI
+                  </h3>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">
-                  Prestazioni offerte per conto dell'ADI
-                </h3>
-              </div>
               
               <p className="text-gray-600 mb-6">
                 Assistenza Domiciliare Integrata con servizi professionali e qualificati
@@ -38,20 +45,28 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           </FadeInSection>
-          
+
           {/* Extra Services */}
           <FadeInSection direction="right" delay={400}>
-            <div className="bg-white rounded-xl shadow-md p-8 border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-100 rounded-full mr-4">
-                  <Home className="h-8 w-8 text-blue-600" />
+            <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
+              <img
+                src="/images/medium-shot-women-posing-together.jpg"
+                alt="Servizi di assistenza ad anziani e persone con disabilità"
+                className="w-full h-48 object-cover"
+                loading="lazy"
+              />
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-blue-100 rounded-full mr-4">
+                    <Home className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">
+                    Servizi di assistenza ad anziani e persone con disabilità
+                  </h3>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">
-                  Servizi di assistenza ad anziani e persone con disabilità
-                </h3>
-              </div>
               
               <p className="text-gray-600 mb-6">
                 Supporto personalizzato per il benessere quotidiano e l'autonomia
@@ -70,6 +85,7 @@ const ServicesSection = () => {
                 <p className="text-gray-700 italic">
                   "Ogni piano di assistenza è personalizzato sulle esigenze specifiche della persona e della famiglia"
                 </p>
+              </div>
               </div>
             </div>
           </FadeInSection>
