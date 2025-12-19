@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Phone, Mail, FileText, Calendar, Users, Stethoscope } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
@@ -79,14 +80,34 @@ const ADIProcessPage = () => {
     'Coordinamento con il medico di famiglia'
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Come si attiva l'ADI (Assistenza Domiciliare Integrata)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'attivazione dell'ADI inizia con una valutazione del medico di medicina generale o dello specialista ospedaliero, che identifica la necessità di assistenza domiciliare integrata. Il medico compila la richiesta e la invia all'ASL competente del territorio (per Napoli, l'ASL Napoli 1 Centro). L'ASL valuta il caso attraverso l'Unità di Valutazione Multidimensionale (UVM) e, in caso di approvazione, autorizza l'ente accreditato (come la Cooperativa Emmanuel) a erogare i servizi necessari."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <PageHeader
         title="Come Accedere all'ADI in Campania"
         description="Guida completa per richiedere l'Assistenza Domiciliare Integrata nella Regione Campania"
         metaTitle="Come Richiedere ADI Campania - Cooperativa Emmanuel"
         metaDescription="Guida passo-passo per accedere ai servizi di Assistenza Domiciliare Integrata in Campania. Requisiti, documentazione e procedura completa."
-        keywords="ADI Campania, come richiedere assistenza domiciliare, procedura ADI, requisiti assistenza domiciliare, UVM Campania, supporto psicologico ADI"
+        keywords="ADI Campania, come richiedere assistenza domiciliare, procedura ADI, requisiti assistenza domiciliare, UVM Campania, supporto psicologico ADI, come attivare ADI Napoli"
         showBreadcrumb={false}
       />
 
@@ -109,6 +130,28 @@ const ADIProcessPage = () => {
                   La Cooperativa Emmanuel è accreditata con la Regione Campania per l'erogazione di questi servizi.
                 </p>
               </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Attivazione ADI - Sezione Informativa */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Come si attiva l'ADI (Assistenza Domiciliare Integrata)
+              </h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                L'attivazione dell'ADI inizia con una valutazione del medico di medicina generale o dello specialista ospedaliero,
+                che identifica la necessità di assistenza domiciliare integrata. Il medico compila la richiesta e la invia all'ASL competente
+                del territorio (per Napoli, l'ASL Napoli 1 Centro). L'ASL valuta il caso attraverso l'Unità di Valutazione Multidimensionale (UVM)
+                e, in caso di approvazione, autorizza l'ente accreditato (come la Cooperativa Emmanuel) a erogare i servizi necessari.
+              </p>
+              <p className="text-gray-700 font-medium">
+                Se ritieni di avere i requisiti per accedere all'ADI a Napoli, parla con il tuo medico di base per avviare il percorso.
+              </p>
             </div>
           </FadeInSection>
         </div>
