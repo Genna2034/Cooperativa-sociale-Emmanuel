@@ -56,7 +56,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/images/Logo.png"
+              src="/images/logo_emmanuel_new_ok.png"
               alt="Cooperativa Sociale Emmanuel Napoli"
               className={`object-contain transition-all duration-300 hover:scale-105 ${
                 isScrolled ? 'h-12 w-12' : 'h-16 w-16'

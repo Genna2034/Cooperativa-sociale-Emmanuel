@@ -31,7 +31,7 @@ const Footer = () => {
             <div>
               <Link to="/" className="flex items-center gap-3 mb-6">
                 <img
-                  src="/images/Logo.png"
+                  src="/images/logo_emmanuel_new_ok.png"
                   alt="Logo Cooperativa Sociale Emmanuel Napoli"
                   className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110"
                 />
@@ -133,10 +133,10 @@ const Footer = () => {
           <div className="border-t border-gray-800 pt-8 mt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-2 text-gray-500 text-sm">
-                <img 
-                  src="/images/Logo.png" 
-                  alt="Logo Cooperativa Sociale Emmanuel" 
-                  className="h-6 w-6 object-contain" 
+                <img
+                  src="/images/logo_emmanuel_new_ok.png"
+                  alt="Logo Cooperativa Sociale Emmanuel"
+                  className="h-6 w-6 object-contain"
                 />
                 <span>© {new Date().getFullYear()} Cooperativa Sociale Emmanuel. Tutti i diritti riservati.</span>
               </div>

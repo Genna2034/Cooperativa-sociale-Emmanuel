@@ -93,8 +93,8 @@ const HomePage = () => {
               "logo": {
                 "@type": "ImageObject",
                 "@id": "https://cooperativaemmanuel.it/#logo",
-                "url": "https://cooperativaemmanuel.it/images/Logo.png",
-                "contentUrl": "https://cooperativaemmanuel.it/images/Logo.png",
+                "url": "https://cooperativaemmanuel.it/images/logo_emmanuel_new_ok.png",
+                "contentUrl": "https://cooperativaemmanuel.it/images/logo_emmanuel_new_ok.png",
                 "width": 512,
                 "height": 512,
                 "caption": "Cooperativa Sociale Emmanuel Logo"

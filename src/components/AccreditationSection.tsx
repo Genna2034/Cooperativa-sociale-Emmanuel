@@ -10,14 +10,14 @@ const AccreditationSection = () => {
       authority: 'Regione Campania - Settore Sanità',
       validFrom: '2015',
       link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html',
-      logo: '/images/Logo.png'
+      logo: '/images/logo_emmanuel_new_ok.png'
     },
     {
       title: 'Certificazione ISO 9001:2015',
       description: 'Sistema di gestione qualità certificato secondo gli standard internazionali per garantire l\'eccellenza nei servizi socio-sanitari.',
       authority: 'Ente Certificatore Accreditato',
       validFrom: '2020',
-      logo: '/images/Logo.png'
+      logo: '/images/logo_emmanuel_new_ok.png'
     },
     {
       title: 'Autorizzazione ASL Napoli 1 Centro',
@@ -25,7 +25,7 @@ const AccreditationSection = () => {
       authority: 'ASL Napoli 1 Centro',
       validFrom: '2015',
       link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html',
-      logo: '/images/Logo.png'
+      logo: '/images/logo_emmanuel_new_ok.png'
     }
   ];
 

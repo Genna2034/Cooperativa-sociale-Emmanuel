@@ -115,7 +115,7 @@ const AboutPage = () => {
       year: '2010',
       title: 'Fondazione della Cooperativa',
       description: 'Nasce la Cooperativa Sociale Emmanuel secondo la Legge 381/91, con la missione di assistere anziani, persone con disabilità e minori.',
-      image: '/images/Logo.png'
+      image: '/images/logo_emmanuel_new_ok.png'
     },
     {
       year: '2015',

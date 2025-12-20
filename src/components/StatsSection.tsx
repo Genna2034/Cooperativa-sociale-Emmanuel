@@ -48,8 +48,8 @@ const StatsSection = () => {
                   alt="Supporto e cura"
                   className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] -mt-8"
                 />
-                <img 
-                  src="/images/Logo.png"
+                <img
+                  src="/images/logo_emmanuel_new_ok.png"
                   alt="Logo Emmanuel"
                   className="rounded-lg shadow-xl w-full h-48 object-contain bg-white p-4 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
                 />

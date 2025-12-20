@@ -15,9 +15,9 @@ const NotFoundPage = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
           <div className="mb-8">
-            <img 
-              src="/images/Logo.png" 
-              alt="Cooperativa Emmanuel" 
+            <img
+              src="/images/logo_emmanuel_new_ok.png"
+              alt="Cooperativa Emmanuel"
               className="h-20 w-20 mx-auto mb-6"
             />
             <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
