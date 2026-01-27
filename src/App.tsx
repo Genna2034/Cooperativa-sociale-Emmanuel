@@ -21,6 +21,9 @@ import CookiePage from './pages/CookiePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ADIProcessPage from './pages/ADIProcessPage';
 import MicronidoRomaganoPage from './pages/MicronidoRomaganoPage';
+import ADINapoliPage from './pages/ADINapoliPage';
+import InfermiereDomicilioPage from './pages/InfermiereDomicilioPage';
+import FisioterapiaDomicilioPage from './pages/FisioterapiaDomicilioPage';
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
               <Route path="/cookie" element={<CookiePage />} />
               <Route path="/come-richiedere-adi" element={<ADIProcessPage />} />
               <Route path="/micronido-romagnano-sesia" element={<MicronidoRomaganoPage />} />
+              <Route path="/adi-napoli" element={<ADINapoliPage />} />
+              <Route path="/infermiere-domicilio-napoli" element={<InfermiereDomicilioPage />} />
+              <Route path="/fisioterapia-domicilio-napoli" element={<FisioterapiaDomicilioPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
