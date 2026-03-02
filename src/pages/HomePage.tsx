@@ -8,6 +8,7 @@ import BlogSection from '../components/BlogSection';
 import NewsletterSection from '../components/NewsletterSection';
 import AccreditationSection from '../components/AccreditationSection';
 import FadeInSection from '../components/FadeInSection';
+import NewServiceBadge from '../components/NewServiceBadge';
 
 const HomePage = () => {
   const features = [
@@ -47,28 +48,59 @@ const HomePage = () => {
       description: 'Servizi sanitari e socio-assistenziali a domicilio per anziani e persone con disabilità, accreditati con la Regione Campania.',
       features: ['Visite mediche specialistiche', 'Assistenza infermieristica', 'Fisioterapia domiciliare'],
       link: '/come-richiedere-adi',
-      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg',
+      isNew: false
     },
     {
       title: 'Servizi Educativi e Scolastici',
       description: 'Supporto educativo specializzato, doposcuola, tutoraggio e servizi pre/post scuola per studenti di ogni età.',
       features: ['Doposcuola qualificato', 'Tutoraggio personalizzato', 'Supporto studenti stranieri'],
       link: '/servizi',
-      image: '/images/medium-shot-women-posing-together.jpg'
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: false
     },
     {
       title: 'Micronido d\'Infanzia – Romagnano Sesia',
       description: 'Servizio educativo per bambini 0-3 anni con progetto pedagogico completo, educazione all\'aperto e laboratori specializzati.',
       features: ['Educatori qualificati 1:6', 'Laboratori creativi', 'Sportello psicopedagogico'],
       link: '/micronido-romagnano-sesia',
-      image: '/images/closeup-support-hands.jpg'
+      image: '/images/closeup-support-hands.jpg',
+      isNew: false
     },
     {
       title: 'Supporto Familiare',
       description: 'Accompagnamento e sostegno per le famiglie nel percorso di cura dei propri cari.',
       features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto continuo'],
       link: '/prenotazioni',
-      image: '/images/closeup-support-hands.jpg'
+      image: '/images/closeup-support-hands.jpg',
+      isNew: false
+    },
+    {
+      title: 'Micronido – Albisola Superiore',
+      description: 'Servizio educativo individualizzato presso asilo nido comunale.',
+      features: ['Educatore dedicato', 'Continuità garantita', 'Monitoraggio mensile'],
+      link: '/micronido-albisola-superiore',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: true,
+      activationDate: '2026-03-02'
+    },
+    {
+      title: 'Educativa Domiciliare – Ambito N12',
+      description: 'Percorsi educativi per minori e famiglie in situazione di fragilità.',
+      features: ['PEI personalizzato', 'Lavoro di rete territoriale', 'Sviluppo dell\'autonomia'],
+      link: '/educativa-domiciliare-ambito-n12',
+      image: '/images/closeup-support-hands.jpg',
+      isNew: true,
+      activationDate: '2026-03-02'
+    },
+    {
+      title: 'Nido d\'Infanzia – San Gemini',
+      description: 'Un ecosistema educativo 0-3 innovativo e sostenibile.',
+      features: ['Approccio Reggio Children', 'Outdoor education', 'Family Hub per le famiglie'],
+      link: '/nido-san-gemini',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: true,
+      activationDate: '2026-03-02'
     }
   ];
 
@@ -274,7 +306,8 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {quickServices.map((service, index) => (
               <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
-                <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
+                <div className="relative bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
+                  {service.isNew && <NewServiceBadge activationDate={service.activationDate} />}
                   <img
                     src={service.image}
                     alt={`${service.title} - Cooperativa Sociale Emmanuel Napoli`}
@@ -283,7 +316,7 @@ const HomePage = () => {
                   />
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-700">
@@ -292,8 +325,8 @@ const HomePage = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
+
+                  <Link
                     to={service.link}
                     className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
                   >

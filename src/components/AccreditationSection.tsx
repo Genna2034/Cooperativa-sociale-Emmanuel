@@ -72,10 +72,12 @@ const AccreditationSection = () => {
                     <span className="font-semibold text-gray-700">Autorità:</span>
                     <span className="text-gray-600 ml-2">{accreditation.authority}</span>
                   </div>
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-700">Valido dal:</span>
-                    <span className="text-gray-600 ml-2">{accreditation.validFrom}</span>
-                  </div>
+                  {accreditation.validFrom && (
+                    <div className="text-sm">
+                      <span className="font-semibold text-gray-700">Valido dal:</span>
+                      <span className="text-gray-600 ml-2">{accreditation.validFrom}</span>
+                    </div>
+                  )}
                 </div>
                 
                 {accreditation.link && (
