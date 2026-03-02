@@ -46,11 +46,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-sm text-blue-400 font-medium">
-                  🏆 Accreditata Regione Campania dal 2015
+                  🏆 Accreditata Regione Campania
                 </span>
               </div>
               <div className="text-sm text-blue-400 font-medium">
-                🏆 Certificazione ISO 9001:2015
+                🏆 Certificazione ISO 9001
               </div>
             </div>
           </FadeInSection>

@@ -24,6 +24,9 @@ import MicronidoRomaganoPage from './pages/MicronidoRomaganoPage';
 import ADINapoliPage from './pages/ADINapoliPage';
 import InfermiereDomicilioPage from './pages/InfermiereDomicilioPage';
 import FisioterapiaDomicilioPage from './pages/FisioterapiaDomicilioPage';
+import MicronidoAlbiolaPage from './pages/MicronidoAlbiolaPage';
+import EducativaDomiciliareAmbito12Page from './pages/EducativaDomiciliareAmbito12Page';
+import NidoSanGeminiPage from './pages/NidoSanGeminiPage';
 
 function App() {
   return (
@@ -49,6 +52,9 @@ function App() {
               <Route path="/adi-napoli" element={<ADINapoliPage />} />
               <Route path="/infermiere-domicilio-napoli" element={<InfermiereDomicilioPage />} />
               <Route path="/fisioterapia-domicilio-napoli" element={<FisioterapiaDomicilioPage />} />
+              <Route path="/micronido-albisola-superiore" element={<MicronidoAlbiolaPage />} />
+              <Route path="/educativa-domiciliare-ambito-n12" element={<EducativaDomiciliareAmbito12Page />} />
+              <Route path="/nido-san-gemini" element={<NidoSanGeminiPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

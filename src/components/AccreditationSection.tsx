@@ -8,12 +8,12 @@ const AccreditationSection = () => {
       title: 'Accreditamento Regione Campania',
       description: 'Cooperativa accreditata per l\'erogazione di servizi di Assistenza Domiciliare Integrata (ADI) secondo le normative regionali della Campania.',
       authority: 'Regione Campania - Settore Sanità',
-      validFrom: '2015',
+      validFrom: '',
       link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html',
       logo: '/images/logo_emmanuel_new_ok.png'
     },
     {
-      title: 'Certificazione ISO 9001:2015',
+      title: 'Certificazione ISO 9001',
       description: 'Sistema di gestione qualità certificato secondo gli standard internazionali per garantire l\'eccellenza nei servizi socio-sanitari.',
       authority: 'Ente Certificatore Accreditato',
       validFrom: '2020',
@@ -23,7 +23,7 @@ const AccreditationSection = () => {
       title: 'Autorizzazione ASL Napoli 1 Centro',
       description: 'Autorizzazione per l\'erogazione di servizi sanitari domiciliari nell\'ambito territoriale dell\'ASL Napoli 1 Centro.',
       authority: 'ASL Napoli 1 Centro',
-      validFrom: '2015',
+      validFrom: '',
       link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html',
       logo: '/images/logo_emmanuel_new_ok.png'
     }
@@ -50,8 +50,8 @@ const AccreditationSection = () => {
               Accreditamenti e Certificazioni Ufficiali
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              La Cooperativa Emmanuel è ufficialmente accreditata con la Regione Campania 
-              per l'erogazione di servizi di Assistenza Domiciliare Integrata dal 2015
+              La Cooperativa Emmanuel è ufficialmente accreditata con la Regione Campania
+              per l'erogazione di servizi di Assistenza Domiciliare Integrata
             </p>
           </div>
         </FadeInSection>
@@ -113,10 +113,10 @@ const AccreditationSection = () => {
             <div className="mt-8 p-6 bg-blue-50 rounded-lg">
               <h4 className="font-bold text-gray-800 mb-3">Riferimenti Normativi</h4>
               <div className="text-sm text-gray-600 space-y-2">
-                <p>• <strong>Delibera Regione Campania n. 92/2015:</strong> Accreditamento per servizi ADI</p>
+                <p>• <strong>Delibera Regione Campania:</strong> Accreditamento per servizi ADI</p>
                 <p>• <strong>D.G.R. Campania n. 445/2018:</strong> Aggiornamento requisiti strutturali e organizzativi</p>
                 <p>• <strong>ASL Napoli 1 Centro:</strong> Autorizzazione servizi sanitari domiciliari</p>
-                <p>• <strong>Certificazione ISO 9001:2015:</strong> Sistema di gestione qualità</p>
+                <p>• <strong>Certificazione ISO 9001:</strong> Sistema di gestione qualità</p>
               </div>
             </div>
           </div>

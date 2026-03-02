@@ -11,8 +11,8 @@ export const STATS = [
   },
   {
     id: 2,
-    value: '2015',
-    label: 'Anno accreditamento Regione Campania',
+    value: 'Accreditata',
+    label: 'Regione Campania per servizi ADI',
   },
   {
     id: 3,
@@ -71,20 +71,20 @@ export const EDUCATIONAL_SERVICES = [
 // Informazioni sull'accreditamento
 export const ACCREDITATION_INFO = {
   regioneCampania: {
-    year: '2015',
+    year: '',
     authority: 'Regione Campania - Settore Sanità',
     services: 'Assistenza Domiciliare Integrata (ADI)',
     link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html'
   },
   aslNapoli: {
-    year: '2015',
+    year: '',
     authority: 'ASL Napoli 1 Centro',
     services: 'Servizi sanitari domiciliari',
     link: 'https://aslnapoli1centro.portaleamministrazionetrasparente.it/archivio28_provvedimenti-amministrativi_0_288592_725_1.html'
   },
   iso: {
     year: '2020',
-    standard: 'ISO 9001:2015',
+    standard: 'ISO 9001',
     scope: 'Sistema di gestione qualità per servizi socio-sanitari'
   }
 };

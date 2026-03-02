@@ -36,7 +36,7 @@ const HeroSection = () => {
 
           <FadeInSection direction="up" delay={500}>
             <div className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium mb-6 shadow-lg">
-              🏆 Accreditata Regione Campania • Certificazione ISO 9001:2015
+              🏆 Accreditata Regione Campania • Certificazione ISO 9001
             </div>
           </FadeInSection>
 

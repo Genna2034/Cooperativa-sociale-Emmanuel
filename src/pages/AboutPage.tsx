@@ -57,7 +57,7 @@ const AboutPage = () => {
     {
       icon: Award,
       title: 'Qualità Certificata ISO 9001',
-      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania con certificazione ISO 9001:2015.',
+      description: 'Standard elevati nei servizi, conformi alle normative regionali della Campania con certificazione ISO 9001.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
@@ -118,13 +118,13 @@ const AboutPage = () => {
       image: '/images/logo_emmanuel_new_ok.png'
     },
     {
-      year: '2015',
+      year: 'Accreditamento',
       title: 'Accreditamento Regione Campania',
       description: 'Ottenimento dell\'accreditamento ufficiale per i servizi di Assistenza Domiciliare Integrata dalla Regione Campania.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
-      year: '2015',
+      year: 'Autorizzazione',
       title: 'Autorizzazione ASL Napoli 1 Centro',
       description: 'Autorizzazione per l\'erogazione di servizi sanitari domiciliari nell\'ambito territoriale dell\'ASL Napoli 1 Centro.',
       image: '/images/medium-shot-women-posing-together.jpg'
@@ -137,8 +137,8 @@ const AboutPage = () => {
     },
     {
       year: '2020',
-      title: 'Certificazione ISO 9001:2015',
-      description: 'Ottenimento della certificazione ISO 9001:2015 per il sistema di gestione qualità nei servizi socio-sanitari.',
+      title: 'Certificazione ISO 9001',
+      description: 'Ottenimento della certificazione ISO 9001 per il sistema di gestione qualità nei servizi socio-sanitari.',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
     {
@@ -444,7 +444,7 @@ const AboutPage = () => {
                   </div>
                   <div className="flex items-center">
                     <Shield className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Certificazione ISO 9001:2015</span>
+                    <span className="text-gray-700">Certificazione ISO 9001</span>
                   </div>
                 </div>
               </div>

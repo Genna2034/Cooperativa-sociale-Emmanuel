@@ -28,7 +28,7 @@ const HomePage = () => {
     {
       icon: Shield,
       title: 'Accreditamento Ufficiale',
-      description: 'Accreditati con la Regione Campania per l\'erogazione di servizi ADI dal 2015.',
+      description: 'Accreditati con la Regione Campania per l\'erogazione di servizi ADI.',
       link: '/recensioni',
       image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg'
     },
@@ -213,7 +213,7 @@ const HomePage = () => {
                 Perché Scegliere la Cooperativa Sociale Emmanuel
               </h2>
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
-                🏆 Accreditata con la Regione Campania dal 2015
+                🏆 Accreditata con la Regione Campania
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
                 La Cooperativa Sociale Emmanuel porta conforto, dignità e sostegno a chi è in difficoltà con servizi accreditati e certificazione ISO di qualità
