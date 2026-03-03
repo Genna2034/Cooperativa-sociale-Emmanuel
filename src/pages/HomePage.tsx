@@ -76,6 +76,24 @@ const HomePage = () => {
       isNew: false
     },
     {
+      title: 'Assistenza Educativa Specialistica – Albisola (Scuole)',
+      description: 'Supporto educativo per l\'integrazione scolastica di alunni con disabilità.',
+      features: ['PEI e obiettivi personalizzati', 'Continuità educativa', 'Lavoro di rete scuola–famiglia'],
+      link: '/assistenza-educativa-specialistica-albisola-scuole',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: true,
+      activationDate: '2026-03-02'
+    },
+    {
+      title: 'Autismo – INCLUDI-LAVORO',
+      description: 'Inclusione sociale e lavorativa per persone con disturbo dello spettro autistico.',
+      features: ['Percorsi di inclusione', 'Formazione e accompagnamento', 'Rete territoriale e ATS'],
+      link: '/autismo-includi-lavoro',
+      image: '/images/closeup-support-hands.jpg',
+      isNew: true,
+      activationDate: '2026-03-02'
+    },
+    {
       title: 'Micronido – Albisola Superiore',
       description: 'Servizio educativo individualizzato presso asilo nido comunale.',
       features: ['Educatore dedicato', 'Continuità garantita', 'Monitoraggio mensile'],
@@ -306,32 +324,34 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {quickServices.map((service, index) => (
               <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
-                <div className="relative bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300">
+                <div className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
                   {service.isNew && <NewServiceBadge activationDate={service.activationDate} />}
                   <img
                     src={service.image}
                     alt={`${service.title} - Cooperativa Sociale Emmanuel Napoli`}
-                    className="w-full h-48 object-cover rounded-lg mb-6"
+                    className="w-full h-48 object-cover"
                     loading="lazy"
                   />
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
 
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-5 w-5 text-blue-600 font-medium text-xs mr-3">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-700">
+                          <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-5 w-5 text-blue-600 font-medium text-xs mr-3">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
 
-                  <Link
-                    to={service.link}
-                    className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                  >
-                    Scopri di più <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                    <Link
+                      to={service.link}
+                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                    >
+                      Scopri di più <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </FadeInSection>
             ))}
