@@ -119,6 +119,30 @@ const HomePage = () => {
       image: '/images/medium-shot-women-posing-together.jpg',
       isNew: true,
       activationDate: '2026-03-02'
+    },
+    {
+      title: 'ADI anziani e disabili – Comune di Portici',
+      description: 'Assistenza domiciliare integrata per anziani e persone con disabilità nel Comune di Portici.',
+      features: ['Valutazione dei bisogni', 'Interventi sanitari e socio-assistenziali', 'Continuità e coordinamento'],
+      link: '/adi-portici',
+      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg',
+      isNew: false
+    },
+    {
+      title: 'SAD anziani e disabili – Comune di Portici',
+      description: 'Servizio di assistenza domiciliare per supporto alla vita quotidiana e al benessere.',
+      features: ['Cura della persona e igiene', 'Supporto domestico e relazionale', 'Piani personalizzati'],
+      link: '/sad-portici',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: false
+    },
+    {
+      title: 'SAD anziani e disabili – Comune di Casoria',
+      description: 'Assistenza domiciliare per anziani e persone con disabilità nel Comune di Casoria.',
+      features: ['Supporto nelle attività quotidiane', 'Monitoraggio e continuità', 'Integrazione con i servizi'],
+      link: '/sad-casoria',
+      image: '/images/closeup-support-hands.jpg',
+      isNew: false
     }
   ];
 
@@ -332,7 +356,7 @@ const HomePage = () => {
                     className="w-full h-48 object-cover"
                     loading="lazy"
                   />
-                  <div className="p-8">
+                  <div className="px-8 pb-8 pt-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
 

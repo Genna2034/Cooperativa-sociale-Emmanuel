@@ -27,6 +27,9 @@ import FisioterapiaDomicilioPage from './pages/FisioterapiaDomicilioPage';
 import MicronidoAlbiolaPage from './pages/MicronidoAlbiolaPage';
 import EducativaDomiciliareAmbito12Page from './pages/EducativaDomiciliareAmbito12Page';
 import NidoSanGeminiPage from './pages/NidoSanGeminiPage';
+import ADIPorticiPage from './pages/ADIPorticiPage';
+import SADPorticiPage from './pages/SADPorticiPage';
+import SADCasoriaPage from './pages/SADCasoriaPage';
 
 function App() {
   return (
@@ -55,6 +58,9 @@ function App() {
               <Route path="/micronido-albisola-superiore" element={<MicronidoAlbiolaPage />} />
               <Route path="/educativa-domiciliare-ambito-n12" element={<EducativaDomiciliareAmbito12Page />} />
               <Route path="/nido-san-gemini" element={<NidoSanGeminiPage />} />
+              <Route path="/adi-portici" element={<ADIPorticiPage />} />
+              <Route path="/sad-portici" element={<SADPorticiPage />} />
+              <Route path="/sad-casoria" element={<SADCasoriaPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
