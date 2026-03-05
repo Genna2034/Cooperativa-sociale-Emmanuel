@@ -18,8 +18,8 @@ const AboutPage = () => {
     {
       name: 'Dott. Gennaro Borriello',
       role: 'Socio e Coordinatore Sanitario',
-      qualifications: 'Infermiere Professionale',
-      description: 'Infermiere professionale specializzato nel coordinamento e management dei servizi socio-sanitari. Si occupa della supervisione clinica di tutti i servizi ADI e della formazione continua del personale sanitario.',
+      qualifications: 'Coordinatore infermieristico',
+      description: 'Coordinatore infermieristico specializzato nel coordinamento e management dei servizi socio-sanitari. Si occupa della supervisione clinica di tutti i servizi ADI e della formazione continua del personale sanitario.',
       specialties: ['Coordinamento sanitario', 'Management ADI', 'Supervisione clinica', 'Formazione personale sanitario'],
       image: '/images/Dott. Gennaro Borriello.png'
     },

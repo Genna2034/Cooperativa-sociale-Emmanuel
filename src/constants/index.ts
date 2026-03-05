@@ -137,7 +137,7 @@ export const TEAM_INFO = {
   gennaroBorriello: {
     name: 'Dott. Gennaro Borriello',
     role: 'Socio e Coordinatore Sanitario',
-    qualifications: 'Infermiere Professionale',
+    qualifications: 'Coordinatore infermieristico',
     experience: 'Specializzato in coordinamento e management servizi socio-sanitari',
     specialties: ['Coordinamento sanitario', 'Management ADI', 'Supervisione clinica', 'Formazione personale']
   },
