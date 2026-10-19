@@ -30,13 +30,13 @@ const HeroSection = () => {
           <FadeInSection direction="up" delay={400}>
             <h2 className="text-xl md:text-2xl text-gray-100 my-8 max-w-3xl mx-auto leading-relaxed">
               Assistenza Domiciliare Integrata (ADI) accreditata Regione Campania. La Cooperativa Sociale Emmanuel offre supporto ad anziani e persone con disabilità.
-              Migliaia di famiglie hanno già scelto la Cooperativa Sociale Emmanuel per il loro benessere.
+              Tante famiglie hanno già scelto la Cooperativa Sociale Emmanuel per il loro benessere.
             </h2>
           </FadeInSection>
 
           <FadeInSection direction="up" delay={500}>
             <div className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium mb-6 shadow-lg">
-              🏆 Accreditata Regione Campania • Certificazione ISO 9001
+              Accreditata Regione Campania • Certificazione ISO 9001
             </div>
           </FadeInSection>
 

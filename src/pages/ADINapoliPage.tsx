@@ -109,7 +109,7 @@ const ADINapoliPage = () => {
               L'Assistenza Domiciliare Integrata (ADI) è il servizio sanitario completo per anziani, persone con disabilità e pazienti in convalescenza che desiderano ricevere cure professionali a domicilio. La Cooperativa Sociale Emmanuel è accreditata dalla Regione Campania dal 2015.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              I nostri team multidisciplinari garantiscono infermieri professionali, fisioterapisti e operatori socio-sanitari qualificati, disponibili 24 ore su 24. Con 5000+ persone assistite e 15 anni di esperienza, sappiamo come prendersi cura chi ha più bisogno.
+              I nostri team multidisciplinari garantiscono infermieri professionali, fisioterapisti e operatori socio-sanitari qualificati, disponibili 24 ore su 24. Con 185 persone assistite e 15 anni di esperienza, sappiamo come prendersi cura chi ha più bisogno.
             </p>
           </section>
         </FadeInSection>

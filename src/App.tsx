@@ -33,6 +33,7 @@ import SADCasoriaPage from './pages/SADCasoriaPage';
 import NidoDeBaggisIserniaPage from './pages/NidoDeBaggisIserniaPage';
 import SosteniamoIlQuartierePage from './pages/SosteniamoIlQuartierePage';
 import PalmulaSanVitalianoPage from './pages/PalmulaSanVitalianoPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/servizi" element={<ServicesPage />} />
+              <Route path="/progetti" element={<ProjectsPage />} />
               <Route path="/chi-siamo" element={<AboutPage />} />
               <Route path="/recensioni" element={<ReviewsPage />} />
               <Route path="/prenotazioni" element={<BookingPage />} />

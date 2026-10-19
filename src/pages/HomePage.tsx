@@ -1,14 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Heart, Shield, Award } from 'lucide-react';
+import { ArrowRight, Users, Heart, Shield, Award, Stethoscope, BookOpen, HeartHandshake } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
 import BlogSection from '../components/BlogSection';
 import NewsletterSection from '../components/NewsletterSection';
 import AccreditationSection from '../components/AccreditationSection';
 import FadeInSection from '../components/FadeInSection';
-import NewServiceBadge from '../components/NewServiceBadge';
+import ProjectCard from '../components/ProjectCard';
+import { PROJECTS } from '../constants/projects';
 
 const HomePage = () => {
   const features = [
@@ -42,136 +43,34 @@ const HomePage = () => {
     }
   ];
 
-  const quickServices = [
+  const serviceAreas = [
     {
-      title: 'Asilo Nido Comunale "De Baggis" – Isernia',
-      description: 'Servizio educativo per l\'infanzia 0-3 anni presso il nido comunale del Comune di Isernia, anno educativo 2026/27.',
-      features: ['Educatori qualificati', 'Progetto pedagogico personalizzato', 'Alleanza con le famiglie'],
-      link: '/nido-de-baggis-isernia',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: true,
-      activationDate: '2026-10-19'
-    },
-    {
-      title: 'SosteniAMO il quartiere',
-      description: 'Progetto della Città Metropolitana di Napoli (POC Legalità 2014-2020): percorsi personalizzati di inserimento sociale e lavorativo per giovani a rischio, con Emmanuel mandataria del Raggruppamento.',
-      features: ['Équipe di prossimità', 'Laboratori di orientamento al mestiere', 'Portfolio delle competenze'],
-      link: '/sosteniamo-il-quartiere',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: true,
-      activationDate: '2026-10-19'
-    },
-    {
-      title: 'PALMULA. San Vitaliano si racconta',
-      description: 'Festival diffuso delle radici, delle voci e dei saperi di San Vitaliano: partner del Comune per l\'Avviso ministeriale "Cultura nei piccoli comuni".',
-      features: ['Cantieri di comunità', 'Rassegna Palmula Live', 'Archivio della memoria e mappa narrativa'],
-      link: '/palmula-san-vitaliano',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: true,
-      activationDate: '2026-10-19'
-    },
-    {
-      title: 'Assistenza Domiciliare Integrata (ADI)',
-      description: 'Servizi sanitari e socio-assistenziali a domicilio per anziani e persone con disabilità, accreditati con la Regione Campania.',
-      features: ['Visite mediche specialistiche', 'Assistenza infermieristica', 'Fisioterapia domiciliare'],
+      icon: Stethoscope,
+      title: 'Assistenza domiciliare',
+      description: 'ADI accreditata con la Regione Campania e SAD per i Comuni: cure sanitarie e supporto quotidiano a casa, per anziani e persone con disabilità.',
+      items: ['Infermieri e fisioterapisti a domicilio', 'Operatori socio-sanitari', 'Piani di cura personalizzati'],
       link: '/come-richiedere-adi',
-      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg',
-      isNew: false
+      cta: 'Come richiedere l\'ADI'
     },
     {
-      title: 'Servizi Educativi e Scolastici',
-      description: 'Supporto educativo specializzato, doposcuola, tutoraggio e servizi pre/post scuola per studenti di ogni età.',
-      features: ['Doposcuola qualificato', 'Tutoraggio personalizzato', 'Supporto studenti stranieri'],
+      icon: BookOpen,
+      title: 'Servizi educativi e infanzia',
+      description: 'Nidi e micronidi comunali, educativa domiciliare, doposcuola e assistenza educativa scolastica per minori e famiglie.',
+      items: ['Asili nido e micronidi 0-3', 'Educativa domiciliare', 'Supporto scolastico e doposcuola'],
       link: '/servizi',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: false
+      cta: 'Scopri i servizi educativi'
     },
     {
-      title: 'Micronido d\'Infanzia – Romagnano Sesia',
-      description: 'Servizio educativo per bambini 0-3 anni con progetto pedagogico completo, educazione all\'aperto e laboratori specializzati.',
-      features: ['Educatori qualificati 1:6', 'Laboratori creativi', 'Sportello psicopedagogico'],
-      link: '/micronido-romagnano-sesia',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: false
-    },
-    {
-      title: 'Supporto Familiare',
-      description: 'Accompagnamento e sostegno per le famiglie nel percorso di cura dei propri cari.',
-      features: ['Consulenza gratuita', 'Piani personalizzati', 'Supporto continuo'],
-      link: '/prenotazioni',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: false
-    },
-    {
-      title: 'Assistenza Educativa Specialistica – Albisola (Scuole)',
-      description: 'Supporto educativo per l\'integrazione scolastica di alunni con disabilità.',
-      features: ['PEI e obiettivi personalizzati', 'Continuità educativa', 'Lavoro di rete scuola–famiglia'],
-      link: '/servizi',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: true,
-      activationDate: '2026-03-02'
-    },
-    {
-      title: 'Autismo – INCLUDI-LAVORO',
-      description: 'Inclusione sociale e lavorativa per persone con disturbo dello spettro autistico.',
-      features: ['Percorsi di inclusione', 'Formazione e accompagnamento', 'Rete territoriale e ATS'],
-      link: '/servizi',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: true,
-      activationDate: '2026-03-02'
-    },
-    {
-      title: 'Micronido – Albisola Superiore',
-      description: 'Servizio educativo individualizzato presso asilo nido comunale.',
-      features: ['Educatore dedicato', 'Continuità garantita', 'Monitoraggio mensile'],
-      link: '/micronido-albisola-superiore',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: true,
-      activationDate: '2026-03-02'
-    },
-    {
-      title: 'Educativa Domiciliare – Ambito N12',
-      description: 'Percorsi educativi per minori e famiglie in situazione di fragilità.',
-      features: ['PEI personalizzato', 'Lavoro di rete territoriale', 'Sviluppo dell\'autonomia'],
-      link: '/educativa-domiciliare-ambito-n12',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: true,
-      activationDate: '2026-03-02'
-    },
-    {
-      title: 'Nido d\'Infanzia – San Gemini',
-      description: 'Un ecosistema educativo 0-3 innovativo e sostenibile.',
-      features: ['Approccio Reggio Children', 'Outdoor education', 'Family Hub per le famiglie'],
-      link: '/nido-san-gemini',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: true,
-      activationDate: '2026-03-02'
-    },
-    {
-      title: 'ADI anziani e disabili – Comune di Portici',
-      description: 'Assistenza domiciliare integrata per anziani e persone con disabilità nel Comune di Portici.',
-      features: ['Valutazione dei bisogni', 'Interventi sanitari e socio-assistenziali', 'Continuità e coordinamento'],
-      link: '/adi-portici',
-      image: '/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg',
-      isNew: false
-    },
-    {
-      title: 'SAD anziani e disabili – Comune di Portici',
-      description: 'Servizio di assistenza domiciliare per supporto alla vita quotidiana e al benessere.',
-      features: ['Cura della persona e igiene', 'Supporto domestico e relazionale', 'Piani personalizzati'],
-      link: '/sad-portici',
-      image: '/images/medium-shot-women-posing-together.jpg',
-      isNew: false
-    },
-    {
-      title: 'SAD anziani e disabili – Comune di Casoria',
-      description: 'Assistenza domiciliare per anziani e persone con disabilità nel Comune di Casoria.',
-      features: ['Supporto nelle attività quotidiane', 'Monitoraggio e continuità', 'Integrazione con i servizi'],
-      link: '/sad-casoria',
-      image: '/images/closeup-support-hands.jpg',
-      isNew: false
+      icon: HeartHandshake,
+      title: 'Inclusione sociale e cultura',
+      description: 'Progetti con enti pubblici e partner del terzo settore per giovani, persone fragili e comunità locali.',
+      items: ['Percorsi di inserimento sociale e lavorativo', 'Supporto psicologico e alle famiglie', 'Progetti culturali di comunità'],
+      link: '/progetti',
+      cta: 'Vedi i progetti'
     }
   ];
+
+  const latestProjects = PROJECTS.slice(0, 4);
 
   return (
     <>
@@ -314,7 +213,7 @@ const HomePage = () => {
                 Perché Scegliere la Cooperativa Sociale Emmanuel
               </h2>
               <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-4">
-                🏆 Accreditata con la Regione Campania
+                Accreditata con la Regione Campania
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
                 La Cooperativa Sociale Emmanuel porta conforto, dignità e sostegno a chi è in difficoltà con servizi accreditati e certificazione ISO di qualità
@@ -358,52 +257,76 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Sezione Servizi Principali */}
+      {/* Aree di servizio */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeInSection direction="up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Servizi della Cooperativa Sociale Emmanuel
+                Di cosa ci occupiamo
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Soluzioni complete per l'assistenza domiciliare integrata in Campania con accreditamento ufficiale e certificazione ISO
+                Tre aree di intervento, un unico modo di lavorare: vicino alle persone e in rete con il territorio
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {quickServices.map((service, index) => (
-              <FadeInSection key={index} direction={index % 2 === 0 ? 'left' : 'right'} delay={200}>
-                <div className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  {service.isNew && <NewServiceBadge activationDate={service.activationDate} />}
-                  <img
-                    src={service.image}
-                    alt={`${service.title} - Cooperativa Sociale Emmanuel Napoli`}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="px-8 pb-8 pt-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
-                    <p className="text-gray-600 mb-6">{service.description}</p>
-
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-700">
-                          <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-5 w-5 text-blue-600 font-medium text-xs mr-3">✓</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Link
-                      to={service.link}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                    >
-                      Scopri di più <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {serviceAreas.map((area, index) => (
+              <FadeInSection key={index} direction="up" delay={index * 150}>
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-8 h-full flex flex-col">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-full mb-5">
+                    <area.icon className="h-7 w-7 text-blue-600" />
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-3">{area.title}</h3>
+                  <p className="text-gray-600 mb-5">{area.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {area.items.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 h-5 w-5 text-blue-600 font-medium text-xs mr-3 flex-shrink-0">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to={area.link}
+                    className="mt-auto inline-flex items-center text-blue-600 font-medium hover:text-blue-700"
+                  >
+                    {area.cta} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ultimi progetti */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                  Gli ultimi progetti
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Servizi e progetti che gestiamo oggi per Comuni ed enti pubblici
+                </p>
+              </div>
+              <Link
+                to="/progetti"
+                className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 whitespace-nowrap"
+              >
+                Tutti i progetti e i territori <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {latestProjects.map((project, index) => (
+              <FadeInSection key={project.link} direction="up" delay={index * 100}>
+                <ProjectCard project={project} compact />
               </FadeInSection>
             ))}
           </div>
@@ -425,7 +348,7 @@ const HomePage = () => {
               Contatta la Cooperativa Sociale Emmanuel
             </h2>
             <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-white font-medium mb-6">
-              🏆 Accreditata Regione Campania • Certificazione ISO
+              Accreditata Regione Campania • Certificazione ISO
             </div>
             <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
               La prima consulenza è sempre gratuita. Contatta la Cooperativa Sociale Emmanuel per scoprire come possiamo aiutarti.

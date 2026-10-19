@@ -7,6 +7,7 @@ import FadeInSection from './FadeInSection';
 const Footer = () => {
   const footerLinks = [
     { label: 'Servizi', href: '/servizi' },
+    { label: 'Progetti', href: '/progetti' },
     { label: 'Chi Siamo', href: '/chi-siamo' },
     { label: 'Recensioni', href: '/recensioni' },
     { label: 'Prenotazioni', href: '/prenotazioni' },
@@ -46,11 +47,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-sm text-blue-400 font-medium">
-                  🏆 Accreditata Regione Campania
+                  Accreditata Regione Campania
                 </span>
               </div>
               <div className="text-sm text-blue-400 font-medium">
-                🏆 Certificazione ISO 9001
+                Certificazione ISO 9001
               </div>
             </div>
           </FadeInSection>

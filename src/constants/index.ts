@@ -6,7 +6,7 @@ export const CONTACT_INFO = {
 export const STATS = [
   {
     id: 1,
-    value: '5,000+',
+    value: '185',
     label: 'Persone assistite',
   },
   {

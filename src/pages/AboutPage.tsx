@@ -143,7 +143,7 @@ const AboutPage = () => {
     },
     {
       year: '2024',
-      title: 'Oltre 5000 Persone Assistite',
+      title: '185 Persone Assistite',
       description: 'Consolidamento come punto di riferimento per l\'assistenza domiciliare e i servizi educativi in Campania.',
       image: '/images/medium-shot-women-posing-together.jpg'
     }

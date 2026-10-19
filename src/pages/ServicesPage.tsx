@@ -4,6 +4,15 @@ import { Stethoscope, Home, Heart, Users, Clock, Shield, ArrowRight, CheckCircle
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { ADI_SERVICES, EXTRA_SERVICES, EDUCATIONAL_SERVICES } from '../constants';
+import ProjectCard from '../components/ProjectCard';
+import { PROJECTS } from '../constants/projects';
+
+// Classi esplicite: Tailwind non genera classi composte dinamicamente (es. `bg-${color}-50`)
+const COLOR_STYLES = {
+  blue:   { card: 'bg-blue-50 border-blue-600',     iconBg: 'bg-blue-100',   icon: 'text-blue-600',   box: 'bg-blue-100',   dot: 'bg-blue-600' },
+  green:  { card: 'bg-green-50 border-green-600',   iconBg: 'bg-green-100',  icon: 'text-green-600',  box: 'bg-green-100',  dot: 'bg-green-600' },
+  purple: { card: 'bg-purple-50 border-purple-600', iconBg: 'bg-purple-100', icon: 'text-purple-600', box: 'bg-purple-100', dot: 'bg-purple-600' }
+} as const;
 
 const ServicesPage = () => {
   const serviceCategories = [
@@ -12,7 +21,7 @@ const ServicesPage = () => {
       title: 'Assistenza Domiciliare Integrata (ADI)',
       description: 'Servizi sanitari autorizzati dalla Regione Campania per garantire cure professionali a domicilio.',
       services: ADI_SERVICES,
-      color: 'blue',
+      color: 'blue' as const,
       benefits: [
         'Servizi gratuiti per gli aventi diritto',
         'Personale sanitario qualificato',
@@ -26,7 +35,7 @@ const ServicesPage = () => {
       title: 'Assistenza Privata Domiciliare',
       description: 'Servizi di supporto quotidiano per anziani e persone con disabilità, personalizzati sulle esigenze familiari.',
       services: EXTRA_SERVICES,
-      color: 'green',
+      color: 'green' as const,
       benefits: [
         'Assistenza 24/7 disponibile',
         'Operatori formati e selezionati',
@@ -40,7 +49,7 @@ const ServicesPage = () => {
       title: 'Servizi Educativi e Assistenza Scolastica',
       description: 'Servizi educativi specialistici, supporto scolastico e attività formative per contrastare la dispersione scolastica e la povertà educativa.',
       services: EDUCATIONAL_SERVICES,
-      color: 'purple',
+      color: 'purple' as const,
       benefits: [
         'Educatori qualificati e specializzati',
         'Programmi personalizzati per ogni studente',
@@ -156,9 +165,11 @@ const ServicesPage = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map((category, index) => {
+              const c = COLOR_STYLES[category.color];
+              return (
               <FadeInSection key={index} direction="up" delay={index * 200}>
-                <div className={`bg-${category.color}-50 rounded-xl shadow-lg p-8 border-t-4 border-${category.color}-600 h-full`}>
+                <div className={`${c.card} rounded-xl shadow-lg p-8 border-t-4 h-full`}>
                   <div className="mb-6">
                     <img 
                       src={category.image}
@@ -166,8 +177,8 @@ const ServicesPage = () => {
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
                     <div className="flex items-center">
-                      <div className={`p-3 bg-${category.color}-100 rounded-full mr-4`}>
-                        <category.icon className={`h-8 w-8 text-${category.color}-600`} />
+                      <div className={`p-3 ${c.iconBg} rounded-full mr-4`}>
+                        <category.icon className={`h-8 w-8 ${c.icon}`} />
                       </div>
                       <h2 className="text-xl font-bold text-gray-800">{category.title}</h2>
                     </div>
@@ -177,28 +188,53 @@ const ServicesPage = () => {
                   
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Servizi Inclusi:</h3>
-                    <ul className="space-y-2 max-h-48 overflow-y-auto">
+                    <ul className="space-y-2">
                       {category.services.map((service, idx) => (
                         <li key={idx} className="flex items-start">
-                          <CheckCircle className={`h-4 w-4 text-${category.color}-600 mr-2 mt-0.5 flex-shrink-0`} />
+                          <CheckCircle className={`h-4 w-4 ${c.icon} mr-2 mt-0.5 flex-shrink-0`} />
                           <span className="text-gray-700 text-sm">{service}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className={`bg-${category.color}-100 rounded-lg p-4`}>
+                  <div className={`${c.box} rounded-lg p-4`}>
                     <h4 className="font-semibold text-gray-800 mb-2">Vantaggi:</h4>
                     <ul className="space-y-1">
                       {category.benefits.map((benefit, idx) => (
                         <li key={idx} className="text-sm text-gray-700 flex items-center">
-                          <span className={`w-2 h-2 bg-${category.color}-600 rounded-full mr-2`}></span>
+                          <span className={`w-2 h-2 ${c.dot} rounded-full mr-2 flex-shrink-0`}></span>
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+              </FadeInSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Progetti e servizi territoriali */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Progetti e servizi sul territorio</h2>
+                <p className="text-xl text-gray-600">I servizi che gestiamo oggi per Comuni, Ambiti ed enti pubblici</p>
+              </div>
+              <Link to="/progetti" className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 whitespace-nowrap">
+                Vedi tutti <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </FadeInSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PROJECTS.slice(0, 8).map((project, index) => (
+              <FadeInSection key={project.link} direction="up" delay={index * 80}>
+                <ProjectCard project={project} compact />
               </FadeInSection>
             ))}
           </div>
