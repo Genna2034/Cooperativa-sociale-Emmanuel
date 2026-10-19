@@ -53,9 +53,9 @@ const HomePage = () => {
       activationDate: '2026-10-19'
     },
     {
-      title: 'Sosteniamo il Quartiere – Giovani a rischio devianza',
-      description: 'Percorsi personalizzati di inserimento sociale e lavorativo per giovani nei Comuni di Napoli, Afragola, Caivano, Castello di Cisterna, Giugliano e Marigliano.',
-      features: ['Percorsi individuali', 'Orientamento e inserimento lavorativo', 'Educativa di prossimità'],
+      title: 'SosteniAMO il quartiere',
+      description: 'Progetto della Città Metropolitana di Napoli (POC Legalità 2014-2020): percorsi personalizzati di inserimento sociale e lavorativo per giovani a rischio, con Emmanuel mandataria del Raggruppamento.',
+      features: ['Équipe di prossimità', 'Laboratori di orientamento al mestiere', 'Portfolio delle competenze'],
       link: '/sosteniamo-il-quartiere',
       image: '/images/closeup-support-hands.jpg',
       isNew: true,
@@ -63,8 +63,8 @@ const HomePage = () => {
     },
     {
       title: 'PALMULA. San Vitaliano si racconta',
-      description: 'Partner del Comune di San Vitaliano nel progetto culturale partecipato dell\'Avviso ministeriale "Cultura nei piccoli comuni".',
-      features: ['Memoria e racconto della comunità', 'Laboratori creativi', 'Partecipazione intergenerazionale'],
+      description: 'Festival diffuso delle radici, delle voci e dei saperi di San Vitaliano: partner del Comune per l\'Avviso ministeriale "Cultura nei piccoli comuni".',
+      features: ['Cantieri di comunità', 'Rassegna Palmula Live', 'Archivio della memoria e mappa narrativa'],
       link: '/palmula-san-vitaliano',
       image: '/images/medium-shot-women-posing-together.jpg',
       isNew: true,
