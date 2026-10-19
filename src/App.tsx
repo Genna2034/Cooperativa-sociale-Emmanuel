@@ -30,6 +30,9 @@ import NidoSanGeminiPage from './pages/NidoSanGeminiPage';
 import ADIPorticiPage from './pages/ADIPorticiPage';
 import SADPorticiPage from './pages/SADPorticiPage';
 import SADCasoriaPage from './pages/SADCasoriaPage';
+import NidoDeBaggisIserniaPage from './pages/NidoDeBaggisIserniaPage';
+import SosteniamoIlQuartierePage from './pages/SosteniamoIlQuartierePage';
+import PalmulaSanVitalianoPage from './pages/PalmulaSanVitalianoPage';
 
 function App() {
   return (
@@ -61,6 +64,9 @@ function App() {
               <Route path="/adi-portici" element={<ADIPorticiPage />} />
               <Route path="/sad-portici" element={<SADPorticiPage />} />
               <Route path="/sad-casoria" element={<SADCasoriaPage />} />
+              <Route path="/nido-de-baggis-isernia" element={<NidoDeBaggisIserniaPage />} />
+              <Route path="/sosteniamo-il-quartiere" element={<SosteniamoIlQuartierePage />} />
+              <Route path="/palmula-san-vitaliano" element={<PalmulaSanVitalianoPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

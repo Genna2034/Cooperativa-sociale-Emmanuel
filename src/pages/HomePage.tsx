@@ -44,6 +44,33 @@ const HomePage = () => {
 
   const quickServices = [
     {
+      title: 'Asilo Nido Comunale "De Baggis" – Isernia',
+      description: 'Servizio educativo per l\'infanzia 0-3 anni presso il nido comunale del Comune di Isernia, anno educativo 2026/27.',
+      features: ['Educatori qualificati', 'Progetto pedagogico personalizzato', 'Alleanza con le famiglie'],
+      link: '/nido-de-baggis-isernia',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: true,
+      activationDate: '2026-10-19'
+    },
+    {
+      title: 'Sosteniamo il Quartiere – Giovani a rischio devianza',
+      description: 'Percorsi personalizzati di inserimento sociale e lavorativo per giovani nei Comuni di Napoli, Afragola, Caivano, Castello di Cisterna, Giugliano e Marigliano.',
+      features: ['Percorsi individuali', 'Orientamento e inserimento lavorativo', 'Educativa di prossimità'],
+      link: '/sosteniamo-il-quartiere',
+      image: '/images/closeup-support-hands.jpg',
+      isNew: true,
+      activationDate: '2026-10-19'
+    },
+    {
+      title: 'PALMULA. San Vitaliano si racconta',
+      description: 'Partner del Comune di San Vitaliano nel progetto culturale partecipato dell\'Avviso ministeriale "Cultura nei piccoli comuni".',
+      features: ['Memoria e racconto della comunità', 'Laboratori creativi', 'Partecipazione intergenerazionale'],
+      link: '/palmula-san-vitaliano',
+      image: '/images/medium-shot-women-posing-together.jpg',
+      isNew: true,
+      activationDate: '2026-10-19'
+    },
+    {
       title: 'Assistenza Domiciliare Integrata (ADI)',
       description: 'Servizi sanitari e socio-assistenziali a domicilio per anziani e persone con disabilità, accreditati con la Regione Campania.',
       features: ['Visite mediche specialistiche', 'Assistenza infermieristica', 'Fisioterapia domiciliare'],
@@ -79,7 +106,7 @@ const HomePage = () => {
       title: 'Assistenza Educativa Specialistica – Albisola (Scuole)',
       description: 'Supporto educativo per l\'integrazione scolastica di alunni con disabilità.',
       features: ['PEI e obiettivi personalizzati', 'Continuità educativa', 'Lavoro di rete scuola–famiglia'],
-      link: '/assistenza-educativa-specialistica-albisola-scuole',
+      link: '/servizi',
       image: '/images/medium-shot-women-posing-together.jpg',
       isNew: true,
       activationDate: '2026-03-02'
@@ -88,7 +115,7 @@ const HomePage = () => {
       title: 'Autismo – INCLUDI-LAVORO',
       description: 'Inclusione sociale e lavorativa per persone con disturbo dello spettro autistico.',
       features: ['Percorsi di inclusione', 'Formazione e accompagnamento', 'Rete territoriale e ATS'],
-      link: '/autismo-includi-lavoro',
+      link: '/servizi',
       image: '/images/closeup-support-hands.jpg',
       isNew: true,
       activationDate: '2026-03-02'
