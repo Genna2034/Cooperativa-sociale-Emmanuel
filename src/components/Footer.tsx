@@ -15,12 +15,12 @@ const Footer = () => {
   ];
 
   const services = [
-    'Assistenza Domiciliare Integrata',
-    'Assistenza Anziani',
-    'Supporto Disabilità',
-    'Fisioterapia Domiciliare',
-    'Assistenza Infermieristica',
-    'Servizi Educativi e Scolastici'
+    { label: 'Assistenza Domiciliare Integrata (ADI) Napoli', href: '/adi-napoli' },
+    { label: 'Come richiedere l\'ADI in Campania', href: '/come-richiedere-adi' },
+    { label: 'Infermiere a domicilio Napoli', href: '/infermiere-domicilio-napoli' },
+    { label: 'Fisioterapia domiciliare Napoli', href: '/fisioterapia-domicilio-napoli' },
+    { label: 'Servizi educativi e infanzia', href: '/servizi' },
+    { label: 'Progetti e territori', href: '/progetti' }
   ];
 
   return (
@@ -80,9 +80,11 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold text-white mb-4">I Nostri Servizi</h4>
               <ul className="space-y-2">
-                {services.map((service, index) => (
-                  <li key={index} className="text-gray-400 text-sm">
-                    {service}
+                {services.map((service) => (
+                  <li key={service.href + service.label}>
+                    <Link to={service.href} className="text-gray-400 text-sm hover:text-blue-400 transition-colors">
+                      {service.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

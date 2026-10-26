@@ -23,13 +23,13 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <FadeInSection direction="up" delay={200}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Cooperativa Sociale Emmanuel Napoli
+              Assistenza Domiciliare Integrata a Napoli
             </h1>
           </FadeInSection>
 
           <FadeInSection direction="up" delay={400}>
             <h2 className="text-xl md:text-2xl text-gray-100 my-8 max-w-3xl mx-auto leading-relaxed">
-              Assistenza Domiciliare Integrata (ADI) accreditata Regione Campania. La Cooperativa Sociale Emmanuel offre supporto ad anziani e persone con disabilità.
+              Cooperativa Sociale Emmanuel: ADI accreditata dalla Regione Campania, con infermieri, fisioterapisti e OSS a domicilio per anziani e persone con disabilità, gratuita tramite ASL per gli aventi diritto.
               Tante famiglie hanno già scelto la Cooperativa Sociale Emmanuel per il loro benessere.
             </h2>
           </FadeInSection>

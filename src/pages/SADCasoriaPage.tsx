@@ -80,6 +80,7 @@ const SADCasoriaPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="SAD anziani e disabili – Comune di Casoria"
         description="Assistenza domiciliare per promuovere autonomia, sicurezza e qualità della vita."
         breadcrumb={[

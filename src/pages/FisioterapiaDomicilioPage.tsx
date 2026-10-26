@@ -97,6 +97,7 @@ const FisioterapiaDomicilioPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Fisioterapia a Domicilio a Napoli"
         subtitle="Riabilitazione professionale personalizzata"
       />
@@ -104,7 +105,7 @@ const FisioterapiaDomicilioPage = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Fisioterapia Domiciliare a Napoli</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Fisioterapia Domiciliare a Napoli</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               La fisioterapia domiciliare rappresenta il modo migliore per recuperare mobilità e autonomia personale senza lo stress di raggiungere strutture sanitarie. La Cooperativa Sociale Emmanuel mette a disposizione fisioterapisti certificati che si recano direttamente a casa tua.
             </p>

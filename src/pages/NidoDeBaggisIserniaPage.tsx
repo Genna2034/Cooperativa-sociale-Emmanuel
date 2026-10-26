@@ -83,6 +83,7 @@ const NidoDeBaggisIserniaPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title='Asilo Nido Comunale "De Baggis" – Isernia'
         description="Servizio educativo per l'infanzia 0-3 anni – Anno educativo 2026/27"
       />

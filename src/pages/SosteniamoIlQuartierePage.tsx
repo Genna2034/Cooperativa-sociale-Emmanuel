@@ -122,6 +122,7 @@ const SosteniamoIlQuartierePage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="SosteniAMO il quartiere"
         description="Percorsi personalizzati di inserimento sociale e lavorativo per giovani a rischio – POC Legalità 2014-2020, Città Metropolitana di Napoli"
       />

@@ -43,6 +43,14 @@ const InfermiereDomicilioPage = () => {
       answer: 'Mediamente 30-45 minuti a seconda dell\'intervento necessario. Alcuni pazienti richiedono visite più brevi, altri più lunghe.'
     },
     {
+      question: 'Posso avere un infermiere a domicilio tramite l\'ASL di Napoli?',
+      answer: 'Sì. Tramite l\'Assistenza Domiciliare Integrata (ADI) l\'ASL Napoli 1 Centro, l\'ASL Napoli 2 Nord e l\'ASL Napoli 3 Sud garantiscono gratuitamente le prestazioni infermieristiche a domicilio agli aventi diritto. La richiesta parte dal medico di famiglia; la Cooperativa Emmanuel è ente accreditato dalla Regione Campania e può essere scelta come erogatore del servizio.'
+    },
+    {
+      question: 'Qual è la differenza tra infermiere ASL e infermiere privato?',
+      answer: 'L\'infermiere tramite ASL (ADI) è gratuito ma richiede la prescrizione del medico e l\'autorizzazione del Distretto, con tempi di alcuni giorni. L\'infermiere privato si attiva in 24-48 ore senza prescrizione, con tariffe concordate. Molte famiglie iniziano con il servizio privato in attesa dell\'attivazione dell\'ADI.'
+    },
+    {
       question: 'Come prenoto un infermiere?',
       answer: 'Chiama 081 7877064 oppure scrivi email a cooperativa.emmanuel@outlook.it. Risposta garantita entro 2 ore.'
     },
@@ -82,9 +90,9 @@ const InfermiereDomicilioPage = () => {
   return (
     <>
       <Helmet>
-        <title>Infermiere a Domicilio Napoli | Assistenza 24/7 Professionale</title>
-        <meta name="description" content="Infermieri professionali a domicilio a Napoli disponibili 24 ore. Medicazioni, terapie, monitoraggio. Cooperativa Emmanuel accreditata Regione Campania." />
-        <meta name="keywords" content="infermiere domicilio Napoli, infermiere a casa Napoli, assistenza infermieristica domiciliare, cure infermieristiche Napoli" />
+        <title>Infermiere a Domicilio Napoli – tramite ASL (ADI) o privato | Emmanuel</title>
+        <meta name="description" content="Infermiere a domicilio a Napoli: gratuito tramite ASL con l'ADI per gli aventi diritto, oppure privato in 24-48 ore. Medicazioni, terapie, prelievi, monitoraggio. Cooperativa Emmanuel accreditata Regione Campania." />
+        <meta name="keywords" content="infermiere domicilio ASL Napoli, infermiere a domicilio Napoli, assistenza infermieristica domiciliare Napoli, infermiere ADI Napoli, infermiere domicilio Napoli, infermiere a casa Napoli, assistenza infermieristica domiciliare, cure infermieristiche Napoli" />
         <link rel="canonical" href="https://cooperativaemmanuel.it/infermiere-domicilio-napoli" />
 
         <meta property="og:type" content="website" />
@@ -97,6 +105,7 @@ const InfermiereDomicilioPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Infermiere a Domicilio a Napoli"
         subtitle="Assistenza infermieristica professionale 24/7"
       />
@@ -104,13 +113,42 @@ const InfermiereDomicilioPage = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Assistenza Infermieristica Domiciliare a Napoli</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Assistenza Infermieristica Domiciliare a Napoli</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               Un infermiere a domicilio rappresenta la soluzione ideale quando la salute richiede monitoraggio medico costante, ma il ricovero non è necessario. La Cooperativa Sociale Emmanuel mette a disposizione infermieri professionali qualificati, disponibili 24 ore su 24 a Napoli e provincia.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
               Dalla somministrazione di terapie farmacologiche al cambio di medicazioni, dal monitoraggio di parametri vitali alle gestioni di accessi vascolari: i nostri infermieri sanno come prendersi cura con dedizione e professionalità.
             </p>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="mb-16 bg-blue-50 rounded-lg p-8 md:p-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Infermiere a domicilio tramite ASL Napoli (ADI) o privato</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Tramite ASL: gratuito con l'ADI</h3>
+                <p className="text-gray-700 mb-3">
+                  Per anziani non autosufficienti, persone con disabilità, pazienti dimessi dall'ospedale o con patologie croniche, l'<strong>ASL Napoli 1 Centro</strong>, l'<strong>ASL Napoli 2 Nord</strong> e l'<strong>ASL Napoli 3 Sud</strong> attivano l'Assistenza Domiciliare Integrata.
+                  Le prestazioni infermieristiche a domicilio sono <strong>a carico del Servizio Sanitario Nazionale</strong>.
+                </p>
+                <p className="text-gray-700 mb-3">
+                  La richiesta parte dal <strong>medico di famiglia</strong>; dopo la valutazione del Distretto, la famiglia può scegliere la Cooperativa Emmanuel, <strong>accreditata dalla Regione Campania</strong>, come ente erogatore.
+                </p>
+                <Link to="/come-richiedere-adi" className="text-blue-700 underline font-medium">Come richiedere l'ADI all'ASL →</Link>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Privato: attivo in 24-48 ore</h3>
+                <p className="text-gray-700 mb-3">
+                  Senza prescrizione e senza attese: un infermiere della cooperativa viene a casa per <strong>medicazioni, terapie iniettive e infusionali, prelievi, gestione cateteri e stomie, monitoraggio dei parametri</strong>, anche la sera e nei festivi.
+                </p>
+                <p className="text-gray-700 mb-3">
+                  È la soluzione ideale per esigenze brevi, per chi non ha i requisiti ADI o nell'attesa che l'ASL autorizzi il servizio.
+                </p>
+                <a href={`tel:${CONTACT_INFO.phone}`} className="text-blue-700 underline font-medium">Chiama {CONTACT_INFO.phone} →</a>
+              </div>
+            </div>
           </section>
         </FadeInSection>
 

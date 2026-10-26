@@ -97,6 +97,7 @@ const PalmulaSanVitalianoPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="PALMULA. San Vitaliano si racconta"
         description="Festival diffuso delle radici, delle voci e dei saperi della comunità sanvitalianese"
       />

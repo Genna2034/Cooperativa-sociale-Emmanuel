@@ -69,6 +69,7 @@ const NidoSanGeminiPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Nido d'Infanzia – San Gemini"
         subtitle="Un ecosistema educativo 0-3 innovativo e sostenibile"
       />
@@ -76,7 +77,7 @@ const NidoSanGeminiPage = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Un Nido Pensato Diversamente</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Un Nido Pensato Diversamente</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               Il Nido d'Infanzia di San Gemini rappresenta un hub civico innovativo che integra l'approccio Reggio Children e l'Outdoor Education, promuovendo il bambino come protagonista attivo del proprio apprendimento in un ambiente dove la pedagogia incontra la sostenibilità.
             </p>

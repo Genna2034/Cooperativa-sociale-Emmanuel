@@ -80,6 +80,7 @@ const SADPorticiPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="SAD anziani e disabili – Comune di Portici"
         description="Supporto alla vita quotidiana e al benessere della persona a domicilio."
         breadcrumb={[

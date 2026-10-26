@@ -80,6 +80,7 @@ const ADIPorticiPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="ADI anziani e disabili – Comune di Portici"
         description="Assistenza domiciliare integrata per un supporto continuo e coordinato."
         breadcrumb={[

@@ -62,6 +62,7 @@ const EducativaDomiciliareAmbito12Page = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Educativa Domiciliare – Ambito N12"
         subtitle="Un modello ecosistemico per minori e famiglie"
       />
@@ -69,7 +70,7 @@ const EducativaDomiciliareAmbito12Page = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Educativa Domiciliare Ecosistemica</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Educativa Domiciliare Ecosistemica</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               Il servizio di educativa domiciliare dell'Ambito N12 Pozzuoli rappresenta un intervento innovativo basato sul modello ecosistemico, che mette al centro il minore e la sua famiglia come parte di una rete di sistemi interconnessi: scuola, servizi sanitari, territorio.
             </p>

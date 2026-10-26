@@ -62,6 +62,7 @@ const MicronidoAlbiolaPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Micronido – Albisola Superiore"
         subtitle="Intervento educativo individualizzato nel contesto del nido"
       />
@@ -69,7 +70,7 @@ const MicronidoAlbiolaPage = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Educativa Individualizzata al Nido</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Educativa Individualizzata al Nido</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               Il servizio di assistenza educativa presso l'asilo nido comunale di Albisola Superiore rappresenta un intervento mirato allo sviluppo dell'autonomia, delle competenze relazionali e della partecipazione inclusiva del bambino alle attività didattiche ordinarie.
             </p>

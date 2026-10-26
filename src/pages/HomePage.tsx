@@ -75,9 +75,13 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Cooperativa Sociale Emmanuel Napoli</title>
-        <meta name="description" content="Cooperativa Sociale Emmanuel Napoli: assistenza domiciliare ADI accreditata Regione Campania. Anziani e disabilità. ☎ 081 7877064" />
-        <meta name="keywords" content="cooperativa sociale emmanuel, cooperativa sociale emmanuel napoli, emmanuel napoli, assistenza domiciliare napoli, cooperativa sociale napoli" />
+        <title>Assistenza Domiciliare Integrata Napoli (ADI) | Cooperativa Sociale Emmanuel</title>
+        <meta name="description" content="Cooperativa Sociale Emmanuel: assistenza domiciliare integrata (ADI) a Napoli accreditata Regione Campania. Infermieri, fisioterapisti e OSS a domicilio per anziani e disabili, gratuita tramite ASL. ☎ 081 7877064" />
+        <meta name="keywords" content="assistenza domiciliare integrata napoli, ADI napoli, assistenza domiciliare napoli, infermiere domicilio asl napoli, cooperativa sociale emmanuel, cooperativa sociale napoli, assistenza anziani napoli" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cooperativaemmanuel.it/" />
+        <meta property="og:title" content="Assistenza Domiciliare Integrata Napoli (ADI) | Cooperativa Sociale Emmanuel" />
+        <meta property="og:description" content="ADI a Napoli accreditata Regione Campania: infermieri, fisioterapisti e OSS a domicilio per anziani e persone con disabilità, gratuita tramite ASL per gli aventi diritto." />
         <link rel="canonical" href="https://cooperativaemmanuel.it/" />
 
         <script type="application/ld+json">
@@ -157,14 +161,7 @@ const HomePage = () => {
                   "opens": "09:00",
                   "closes": "13:00"
                 }
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "150",
-                "bestRating": "5",
-                "worstRating": "1"
-              }
+              ]
             },
             {
               "@type": "WebSite",
@@ -179,7 +176,7 @@ const HomePage = () => {
               "@type": "WebPage",
               "@id": "https://cooperativaemmanuel.it/#webpage",
               "url": "https://cooperativaemmanuel.it",
-              "name": "Cooperativa Sociale Emmanuel | Assistenza Napoli ADI",
+              "name": "Assistenza Domiciliare Integrata Napoli (ADI) | Cooperativa Sociale Emmanuel",
               "isPartOf": { "@id": "https://cooperativaemmanuel.it/#website" },
               "about": { "@id": "https://cooperativaemmanuel.it/#organization" },
               "description": "Cooperativa Sociale Emmanuel: assistenza domiciliare Napoli accreditata. ADI Campania, anziani, disabilità. ISO certificata.",

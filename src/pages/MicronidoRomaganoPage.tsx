@@ -108,6 +108,7 @@ const MicronidoRomaganoPage = () => {
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Micronido d'Infanzia – Romagnano Sesia"
         description="Un ambiente educativo accogliente per bambini 0-3 anni"
         breadcrumb={[

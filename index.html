@@ -2,186 +2,29 @@
 <html lang="it" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/images/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO OTTIMIZZATO PER "COOPERATIVA SOCIALE EMMANUEL" -->
-    <title>Cooperativa Sociale Emmanuel Napoli</title>
-    <meta name="description" content="Cooperativa Sociale Emmanuel Napoli: assistenza domiciliare ADI accreditata Regione Campania. Anziani e disabilità. ☎ 081 7877064" />
-    <meta name="keywords" content="cooperativa sociale emmanuel, emmanuel napoli, assistenza domiciliare napoli, ADI campania, assistenza anziani napoli, cooperativa emmanuel, assistenza domiciliare integrata, fisioterapia domiciliare napoli, infermiere a domicilio napoli, assistenza disabilità campania, luigi borriello emmanuel, cooperativa sociale napoli, assistenza sanitaria domiciliare, servizi socio sanitari napoli" />
+    <!--
+      Title, description, canonical, Open Graph e dati strutturati sono definiti
+      pagina per pagina nei componenti (react-helmet-async) e inseriti qui
+      in fase di build da scripts/prerender.mjs.
+    -->
     <meta name="author" content="Cooperativa Sociale Emmanuel" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="bingbot" content="index, follow" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://cooperativaemmanuel.it/" />
-    
+    <meta property="og:site_name" content="Cooperativa Sociale Emmanuel" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:image" content="https://cooperativaemmanuel.it/images/Logo.png" />
+    <meta property="og:image:alt" content="Logo Cooperativa Sociale Emmanuel - Assistenza Domiciliare Napoli" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://cooperativaemmanuel.it/images/Logo.png" />
+
     <!-- Geo targeting -->
     <meta name="geo.region" content="IT-72" />
     <meta name="geo.placename" content="Napoli" />
     <meta name="geo.position" content="40.8518;14.2681" />
     <meta name="ICBM" content="40.8518, 14.2681" />
-    
-    <!-- Open Graph / Facebook - OTTIMIZZATO -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Cooperativa Sociale Emmanuel" />
-    <meta property="og:url" content="https://cooperativaemmanuel.it/" />
-    <meta property="og:title" content="Cooperativa Sociale Emmanuel Napoli" />
-    <meta property="og:description" content="Cooperativa Sociale Emmanuel Napoli: assistenza domiciliare ADI accreditata. Anziani e disabilità. ISO certificata. 5000+ assistiti." />
-    <meta property="og:image" content="https://cooperativaemmanuel.it/images/Logo.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Logo Cooperativa Sociale Emmanuel - Assistenza Domiciliare Napoli" />
-    <meta property="og:locale" content="it_IT" />
-
-    <!-- Twitter Card - OTTIMIZZATO -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@EmmanuelCoop" />
-    <meta name="twitter:creator" content="@EmmanuelCoop" />
-    <meta name="twitter:url" content="https://cooperativaemmanuel.it/" />
-    <meta name="twitter:title" content="Cooperativa Sociale Emmanuel Napoli" />
-    <meta name="twitter:description" content="Cooperativa Sociale Emmanuel Napoli: assistenza domiciliare ADI accreditata. Anziani e disabilità. ISO certificata." />
-    <meta name="twitter:image" content="https://cooperativaemmanuel.it/images/Logo.png" />
-    <meta name="twitter:image:alt" content="Logo Cooperativa Sociale Emmanuel" />
-
-    <!-- Schema.org markup POTENZIATO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Cooperativa Sociale Emmanuel",
-      "alternateName": ["Emmanuel Cooperativa", "Cooperativa Emmanuel Napoli", "Emmanuel ADI"],
-      "description": "Cooperativa Sociale Emmanuel: leader nell'assistenza domiciliare a Napoli e in Campania. Servizi ADI autorizzati, assistenza anziani e persone con disabilità. Certificazione ISO di qualità.",
-      "url": "https://cooperativaemmanuel.it/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cooperativaemmanuel.it/images/Logo.png",
-        "width": 512,
-        "height": 512
-      },
-      "image": "https://cooperativaemmanuel.it/images/Logo.png",
-      "telephone": "+39 081 7877064",
-      "email": "cooperativa.emmanuel@outlook.it",
-      "foundingDate": "2010",
-      "founder": {
-        "@type": "Person",
-        "name": "Luigi Borriello",
-        "jobTitle": "Presidente"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Napoli",
-        "addressRegion": "Campania",
-        "addressCountry": "IT",
-        "postalCode": "80100"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "40.8518",
-        "longitude": "14.2681"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Campania"
-      },
-      "medicalSpecialty": [
-        "Home Healthcare",
-        "Elderly Care", 
-        "Disability Support",
-        "Integrated Home Care",
-        "Physiotherapy",
-        "Nursing Care"
-      ],
-      "serviceType": [
-        "Assistenza Domiciliare Integrata (ADI)",
-        "Assistenza agli anziani",
-        "Supporto alle persone con disabilità",
-        "Fisioterapia domiciliare",
-        "Assistenza infermieristica",
-        "Supporto psicologico"
-      ],
-      "hasCredential": "Certificazione ISO di Qualità",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "numberOfEmployees": "50+",
-      "slogan": "Al servizio di chi ha più bisogno",
-      "knowsAbout": [
-        "Assistenza domiciliare",
-        "ADI Campania", 
-        "Assistenza anziani",
-        "Supporto disabilità",
-        "Fisioterapia domiciliare",
-        "Infermieristica domiciliare"
-      ],
-      "sameAs": [
-        "https://www.facebook.com/cooperativaemmanuel",
-        "https://www.linkedin.com/company/cooperativa-emmanuel"
-      ]
-    }
-    </script>
-
-    <!-- Schema.org LocalBusiness OTTIMIZZATO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Cooperativa Sociale Emmanuel",
-      "url": "https://cooperativaemmanuel.it/",
-      "logo": "https://cooperativaemmanuel.it/images/Logo.png",
-      "image": "https://cooperativaemmanuel.it/images/Logo.png",
-      "description": "Cooperativa Sociale Emmanuel: assistenza domiciliare a Napoli, servizi per anziani e disabilità. ADI accreditata Regione Campania.",
-      "telephone": "+39 081 7877064",
-      "email": "cooperativa.emmanuel@outlook.it",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Napoli",
-        "addressLocality": "Napoli",
-        "addressRegion": "Campania",
-        "postalCode": "80100",
-        "addressCountry": "IT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.8518,
-        "longitude": 14.2681
-      },
-      "openingHours": [
-        "Mo-Fr 09:00-18:00",
-        "Sa 09:00-13:00"
-      ],
-      "priceRange": "€€",
-      "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-      "currenciesAccepted": "EUR",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5"
-      }
-    }
-    </script>
-
-    <!-- Schema.org per Servizi -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Assistenza Domiciliare Integrata",
-      "provider": {
-        "@type": "Organization",
-        "name": "Cooperativa Sociale Emmanuel"
-      },
-      "areaServed": "Campania",
-      "serviceType": "Healthcare",
-      "description": "Servizi di assistenza domiciliare integrata (ADI) per anziani e persone con disabilità in Campania"
-    }
-    </script>
+    <!--app-head-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -191,17 +34,15 @@
     <link rel="preload" as="image" href="/images/closeup-support-hands.jpg">
     <link rel="preload" as="image" href="/images/Logo.png">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google Analytics: sostituire G-XXXXXXXXXX con l'ID reale e rimuovere i commenti
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        anonymize_ip: true,
-        cookie_flags: 'SameSite=None;Secure'
-      });
+      gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
     </script>
+    -->
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -220,7 +61,7 @@
     <meta name="msvalidate.01" content="INSERISCI_QUI_IL_CODICE_BING" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

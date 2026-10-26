@@ -47,6 +47,14 @@ const ADINapoliPage = () => {
       answer: 'Anziani con patologie croniche, persone con disabilità, pazienti post-operatori, malati cronici non autosufficienti, persone in cure palliative.'
     },
     {
+      question: 'L\'ADI a Napoli è gratuita?',
+      answer: 'Sì: l\'Assistenza Domiciliare Integrata erogata tramite l\'ASL è a carico del Servizio Sanitario Nazionale e gratuita per gli aventi diritto. La Cooperativa Emmanuel è ente accreditato dalla Regione Campania: dopo l\'autorizzazione dell\'ASL, le prestazioni di infermieri, fisioterapisti e OSS a domicilio non hanno alcun costo per la famiglia.'
+    },
+    {
+      question: 'Come si richiede un infermiere a domicilio tramite l\'ASL di Napoli?',
+      answer: 'Il medico di medicina generale (o il medico ospedaliero alla dimissione) compila la richiesta di ADI e la invia al Distretto sanitario dell\'ASL di residenza (ASL Napoli 1 Centro per la città, ASL Napoli 2 Nord e ASL Napoli 3 Sud per la provincia). Dopo la valutazione dell\'UVM viene definito il piano assistenziale e la famiglia può indicare la Cooperativa Emmanuel come ente erogatore.'
+    },
+    {
       question: 'Quale zone di Napoli servite?',
       answer: 'Copriamo Napoli centro e provincia: Vomero, Chiaia, Posillipo, Pozzuoli, Portici, Ercolano, Torre del Greco e altri comuni della Campania.'
     }
@@ -67,36 +75,58 @@ const ADINapoliPage = () => {
 
   const schemaService = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    'name': 'Assistenza Domiciliare Integrata (ADI) Napoli',
-    'provider': {
-      '@type': 'Organization',
-      'name': 'Cooperativa Sociale Emmanuel',
-      'telephone': '+39-081-7877064',
-      'url': 'https://cooperativaemmanuel.it'
-    },
-    'areaServed': 'Napoli, Campania, Italia',
-    'availableLanguage': 'it'
+    '@type': 'MedicalBusiness',
+    '@id': 'https://cooperativaemmanuel.it/adi-napoli#service',
+    'name': 'Assistenza Domiciliare Integrata (ADI) Napoli – Cooperativa Sociale Emmanuel',
+    'url': 'https://cooperativaemmanuel.it/adi-napoli',
+    'description': 'Assistenza Domiciliare Integrata a Napoli e provincia: infermieri, fisioterapisti e operatori socio-sanitari a domicilio. Ente accreditato dalla Regione Campania, servizio gratuito tramite ASL per gli aventi diritto.',
+    'telephone': '+39-081-7877064',
+    'email': 'cooperativa.emmanuel@outlook.it',
+    'image': 'https://cooperativaemmanuel.it/images/Logo.png',
+    'priceRange': 'Gratuito tramite ASL',
+    'address': { '@type': 'PostalAddress', 'addressLocality': 'Napoli', 'addressRegion': 'Campania', 'addressCountry': 'IT' },
+    'areaServed': ['Napoli', 'Pozzuoli', 'Portici', 'Ercolano', 'Torre del Greco', 'Giugliano in Campania', 'Casoria', 'Afragola', 'Acerra', 'Frattamaggiore'].map((name) => ({ '@type': 'City', 'name': name })),
+    'parentOrganization': { '@type': 'Organization', 'name': 'Cooperativa Sociale Emmanuel', 'url': 'https://cooperativaemmanuel.it' },
+    'hasOfferCatalog': {
+      '@type': 'OfferCatalog',
+      'name': 'Prestazioni ADI',
+      'itemListElement': ['Assistenza infermieristica domiciliare', 'Fisioterapia domiciliare', 'Assistenza socio-sanitaria (OSS)', 'Visite mediche specialistiche a domicilio'].map((name) => ({
+        '@type': 'Offer',
+        'itemOffered': { '@type': 'MedicalProcedure', 'name': name }
+      }))
+    }
+  };
+
+  const schemaBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://cooperativaemmanuel.it/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Servizi', 'item': 'https://cooperativaemmanuel.it/servizi' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'ADI Napoli', 'item': 'https://cooperativaemmanuel.it/adi-napoli' }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>ADI Napoli | Assistenza Domiciliare Integrata Certificata Regione Campania</title>
-        <meta name="description" content="ADI Napoli certificata dalla Regione Campania. Infermieri 24/7, fisioterapia, OSS qualificati. Assistenza domiciliare integrata accreditata. Contatta Emmanuel." />
-        <meta name="keywords" content="ADI Napoli, assistenza domiciliare integrata Napoli, assistenza domiciliare Napoli, cure domiciliari Napoli, infermiere Napoli" />
+        <title>ADI Napoli – Assistenza Domiciliare Integrata | Cooperativa Emmanuel</title>
+        <meta name="description" content="Assistenza Domiciliare Integrata (ADI) a Napoli accreditata Regione Campania: infermieri, fisioterapisti e OSS a domicilio, gratuita tramite ASL per gli aventi diritto. ☎ 081 7877064" />
+        <meta name="keywords" content="ADI Napoli, assistenza domiciliare integrata Napoli, assistenza domiciliare Napoli, ADI ASL Napoli, infermiere domicilio ASL Napoli, cure domiciliari Napoli, assistenza domiciliare anziani Napoli" />
         <link rel="canonical" href="https://cooperativaemmanuel.it/adi-napoli" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="ADI Napoli | Assistenza Domiciliare Integrata Certificata" />
-        <meta property="og:description" content="Servizi ADI a Napoli accreditati Regione Campania. Disponibilità 24 ore. Contatta la Cooperativa Emmanuel." />
+        <meta property="og:title" content="ADI Napoli – Assistenza Domiciliare Integrata | Cooperativa Emmanuel" />
+        <meta property="og:description" content="Assistenza Domiciliare Integrata a Napoli accreditata Regione Campania. Infermieri, fisioterapisti e OSS a casa tua, gratuita tramite ASL per gli aventi diritto." />
         <meta property="og:url" content="https://cooperativaemmanuel.it/adi-napoli" />
 
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaService)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaBreadcrumb)}</script>
       </Helmet>
 
       <PageHeader
+        manageMeta={false}
         title="Assistenza Domiciliare Integrata (ADI) a Napoli"
         subtitle="Servizi sanitari certificati dalla Regione Campania"
       />
@@ -104,12 +134,34 @@ const ADINapoliPage = () => {
       <main className="py-12 px-4 md:px-6 max-w-7xl mx-auto">
         <FadeInSection>
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">ADI Napoli: Assistenza Domiciliare Certificata</h1>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">ADI Napoli: Assistenza Domiciliare Certificata</h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
               L'Assistenza Domiciliare Integrata (ADI) è il servizio sanitario completo per anziani, persone con disabilità e pazienti in convalescenza che desiderano ricevere cure professionali a domicilio. La Cooperativa Sociale Emmanuel è accreditata dalla Regione Campania dal 2015.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
               I nostri team multidisciplinari garantiscono infermieri professionali, fisioterapisti e operatori socio-sanitari qualificati, disponibili 24 ore su 24. Con 185 persone assistite e 15 anni di esperienza, sappiamo come prendersi cura chi ha più bisogno.
+            </p>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="mb-16 bg-blue-50 rounded-lg p-8 md:p-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">ADI tramite ASL Napoli: gratuita per chi ne ha diritto</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              L'Assistenza Domiciliare Integrata è un servizio del Servizio Sanitario Nazionale: viene attivata dall'<strong>ASL</strong> su
+              richiesta del medico di famiglia o del medico ospedaliero e, per gli aventi diritto, <strong>non ha alcun costo per la famiglia</strong>.
+              La Cooperativa Emmanuel è <strong>ente accreditato dalla Regione Campania</strong> per l'erogazione dell'ADI e lavora con i Distretti
+              sanitari dell'<strong>ASL Napoli 1 Centro</strong> (città di Napoli), dell'<strong>ASL Napoli 2 Nord</strong> e dell'<strong>ASL Napoli 3 Sud</strong> (provincia).
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-6">
+              <li><strong>Richiesta del medico</strong>: il medico di medicina generale (o il reparto alla dimissione) compila la richiesta di ADI.</li>
+              <li><strong>Valutazione dell'ASL</strong>: l'Unità di Valutazione Multidimensionale (UVM) del Distretto valuta i bisogni e definisce il Piano Assistenziale Individuale.</li>
+              <li><strong>Scelta dell'ente erogatore</strong>: la famiglia può indicare la Cooperativa Emmanuel tra gli enti accreditati.</li>
+              <li><strong>Avvio a domicilio</strong>: infermieri, fisioterapisti e OSS iniziano le prestazioni previste dal piano, coordinandosi con il medico curante.</li>
+            </ol>
+            <p className="text-gray-700">
+              Se i requisiti per l'ADI non sono presenti, o nell'attesa dell'autorizzazione, è possibile attivare <Link to="/infermiere-domicilio-napoli" className="text-blue-700 underline font-medium">l'infermiere a domicilio in forma privata</Link> entro 24-48 ore.
+              Qui trovi la <Link to="/come-richiedere-adi" className="text-blue-700 underline font-medium">procedura completa per richiedere l'ADI in Campania</Link>.
             </p>
           </section>
         </FadeInSection>

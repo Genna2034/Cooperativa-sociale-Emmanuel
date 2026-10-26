@@ -9,7 +9,7 @@
   <!-- Homepage - Massima priorità -->
   <url>
     <loc>https://cooperativaemmanuel.it/</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://cooperativaemmanuel.it/servizi</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -84,9 +84,9 @@
 
   <url>
     <loc>https://cooperativaemmanuel.it/come-richiedere-adi</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
@@ -99,23 +99,23 @@
   <!-- Pagine SEO specializzate per keyword target -->
   <url>
     <loc>https://cooperativaemmanuel.it/adi-napoli</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cooperativaemmanuel.it/infermiere-domicilio-napoli</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cooperativaemmanuel.it/fisioterapia-domicilio-napoli</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
 
   <!-- Nuovi servizi educativi -->
