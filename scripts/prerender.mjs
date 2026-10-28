@@ -18,7 +18,9 @@ const routes = [
   '/fisioterapia-domicilio-napoli', '/micronido-albisola-superiore',
   '/educativa-domiciliare-ambito-n12', '/nido-san-gemini', '/adi-portici',
   '/sad-portici', '/sad-casoria', '/nido-de-baggis-isernia',
-  '/sosteniamo-il-quartiere', '/palmula-san-vitaliano'
+  '/sosteniamo-il-quartiere', '/palmula-san-vitaliano',
+  '/assistenza-educativa-specialistica-albisola-scuole', '/progettazione-terzo-settore',
+  '/sviluppo-app-software-gestionali'
 ];
 
 await build({

@@ -32,6 +32,9 @@ import NidoDeBaggisIserniaPage from './pages/NidoDeBaggisIserniaPage';
 import SosteniamoIlQuartierePage from './pages/SosteniamoIlQuartierePage';
 import PalmulaSanVitalianoPage from './pages/PalmulaSanVitalianoPage';
 import ProjectsPage from './pages/ProjectsPage';
+import AssistenzaEducativaAlbisolaPage from './pages/AssistenzaEducativaAlbisolaPage';
+import ProgettazioneTerzoSettorePage from './pages/ProgettazioneTerzoSettorePage';
+import SviluppoSoftwarePage from './pages/SviluppoSoftwarePage';
 
 
 const AppRoutes = () => (
@@ -65,6 +68,9 @@ const AppRoutes = () => (
         <Route path="/nido-de-baggis-isernia" element={<NidoDeBaggisIserniaPage />} />
         <Route path="/sosteniamo-il-quartiere" element={<SosteniamoIlQuartierePage />} />
         <Route path="/palmula-san-vitaliano" element={<PalmulaSanVitalianoPage />} />
+      <Route path="/assistenza-educativa-specialistica-albisola-scuole" element={<AssistenzaEducativaAlbisolaPage />} />
+      <Route path="/progettazione-terzo-settore" element={<ProgettazioneTerzoSettorePage />} />
+      <Route path="/sviluppo-app-software-gestionali" element={<SviluppoSoftwarePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>

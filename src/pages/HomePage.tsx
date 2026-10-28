@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Heart, Shield, Award, Stethoscope, BookOpen, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Users, Heart, Shield, Award, Stethoscope, BookOpen, HeartHandshake, Briefcase } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
 import BlogSection from '../components/BlogSection';
@@ -50,7 +50,8 @@ const HomePage = () => {
       description: 'ADI accreditata con la Regione Campania e SAD per i Comuni: cure sanitarie e supporto quotidiano a casa, per anziani e persone con disabilità.',
       items: ['Infermieri e fisioterapisti a domicilio', 'Operatori socio-sanitari', 'Piani di cura personalizzati'],
       link: '/come-richiedere-adi',
-      cta: 'Come richiedere l\'ADI'
+      cta: 'Come richiedere l\'ADI',
+      secondaryLink: undefined as { href: string; label: string } | undefined
     },
     {
       icon: BookOpen,
@@ -67,6 +68,15 @@ const HomePage = () => {
       items: ['Percorsi di inserimento sociale e lavorativo', 'Supporto psicologico e alle famiglie', 'Progetti culturali di comunità'],
       link: '/progetti',
       cta: 'Vedi i progetti'
+    },
+    {
+      icon: Briefcase,
+      title: 'Per enti e organizzazioni',
+      description: 'Mettiamo la nostra esperienza al servizio di cooperative, associazioni ed enti locali: progettazione sociale e strumenti digitali su misura.',
+      items: ['Progettazione per il terzo settore: bandi, gare, co-progettazione', 'Sviluppo di app e software gestionali', 'Consulenza e accompagnamento'],
+      link: '/progettazione-terzo-settore',
+      cta: 'Progettazione terzo settore',
+      secondaryLink: { href: '/sviluppo-app-software-gestionali', label: 'App e software gestionali' }
     }
   ];
 
@@ -263,19 +273,19 @@ const HomePage = () => {
                 Di cosa ci occupiamo
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Tre aree di intervento, un unico modo di lavorare: vicino alle persone e in rete con il territorio
+                Quattro aree di intervento, un unico modo di lavorare: vicino alle persone e in rete con il territorio
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceAreas.map((area, index) => (
               <FadeInSection key={index} direction="up" delay={index * 150}>
                 <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-8 h-full flex flex-col">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-full mb-5">
                     <area.icon className="h-7 w-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3">{area.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{area.title}</h3>
                   <p className="text-gray-600 mb-5">{area.description}</p>
                   <ul className="space-y-2 mb-6">
                     {area.items.map((item, idx) => (
@@ -285,12 +295,19 @@ const HomePage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to={area.link}
-                    className="mt-auto inline-flex items-center text-blue-600 font-medium hover:text-blue-700"
-                  >
-                    {area.cta} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <div className="mt-auto flex flex-col gap-2">
+                    <Link
+                      to={area.link}
+                      className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700"
+                    >
+                      {area.cta} <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                    {area.secondaryLink && (
+                      <Link to={area.secondaryLink.href} className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700">
+                        {area.secondaryLink.label} <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </FadeInSection>
             ))}

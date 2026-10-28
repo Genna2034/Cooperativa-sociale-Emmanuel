@@ -20,7 +20,9 @@ const Footer = () => {
     { label: 'Infermiere a domicilio Napoli', href: '/infermiere-domicilio-napoli' },
     { label: 'Fisioterapia domiciliare Napoli', href: '/fisioterapia-domicilio-napoli' },
     { label: 'Servizi educativi e infanzia', href: '/servizi' },
-    { label: 'Progetti e territori', href: '/progetti' }
+    { label: 'Progetti e territori', href: '/progetti' },
+    { label: 'Progettazione per il terzo settore', href: '/progettazione-terzo-settore' },
+    { label: 'Sviluppo app e software gestionali', href: '/sviluppo-app-software-gestionali' }
   ];
 
   return (

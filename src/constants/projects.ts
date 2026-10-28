@@ -97,6 +97,15 @@ export const PROJECTS: Project[] = [
     activationDate: '2026-03-02'
   },
   {
+    title: 'Assistenza Educativa Specialistica – Scuole di Albisola',
+    description: 'Educatori specializzati per l\'integrazione scolastica degli alunni con disabilità residenti nel Comune di Albisola Superiore.',
+    features: ['PEI e obiettivi personalizzati', 'Continuità dell\'educatore', 'Lavoro di rete scuola-famiglia'],
+    link: '/assistenza-educativa-specialistica-albisola-scuole',
+    area: 'educativo',
+    territory: 'Albisola Superiore e Albissola Marina (SV)',
+    activationDate: '2026-03-02'
+  },
+  {
     title: 'Micronido – Albisola Superiore',
     description: 'Servizio educativo individualizzato presso asilo nido comunale.',
     features: ['Educatore dedicato', 'Continuità garantita', 'Monitoraggio mensile'],

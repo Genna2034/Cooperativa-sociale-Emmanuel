@@ -217,6 +217,39 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Servizi per enti e organizzazioni */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeInSection direction="up">
+            <div className="text-center mb-12">
+              <Briefcase className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Servizi per enti e organizzazioni</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                L'esperienza maturata gestendo servizi sociali ed educativi, al servizio di cooperative, associazioni ed enti locali
+              </p>
+            </div>
+          </FadeInSection>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <FadeInSection direction="left">
+              <Link to="/progettazione-terzo-settore" className="group block bg-amber-50 rounded-xl p-8 border-t-4 border-amber-500 h-full hover:shadow-lg transition-all">
+                <Target className="h-10 w-10 text-amber-600 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-amber-700">Progettazione per il Terzo Settore</h3>
+                <p className="text-gray-600 mb-4">Analisi bandi, scrittura progetti, offerte tecniche per gare, partenariati, co-progettazione, gestione e rendicontazione.</p>
+                <span className="inline-flex items-center text-amber-700 font-medium">Scopri di più <ArrowRight className="ml-2 h-4 w-4" /></span>
+              </Link>
+            </FadeInSection>
+            <FadeInSection direction="right">
+              <Link to="/sviluppo-app-software-gestionali" className="group block bg-slate-50 rounded-xl p-8 border-t-4 border-slate-700 h-full hover:shadow-lg transition-all">
+                <Briefcase className="h-10 w-10 text-slate-700 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-slate-900">Sviluppo App e Software Gestionali</h3>
+                <p className="text-gray-600 mb-4">Gestionali per servizi sociali ed educativi, app per operatori e famiglie, siti e portali, automazioni e cruscotti, conformi GDPR.</p>
+                <span className="inline-flex items-center text-slate-800 font-medium">Scopri di più <ArrowRight className="ml-2 h-4 w-4" /></span>
+              </Link>
+            </FadeInSection>
+          </div>
+        </div>
+      </section>
+
       {/* Progetti e servizi territoriali */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
