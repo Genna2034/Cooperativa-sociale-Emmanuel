@@ -1,5 +1,5 @@
 import { r as reactExports, a as reactDomExports, u as useLocation, L as Link, R as React, b as Routes, c as Route, B as BrowserRouter } from "./vendor-YUcNgLQ_.js";
-import { X, M as Menu, P as Phone, a as Mail, H as Heart, b as MapPin, S as Settings, E as Eye, V as Volume2, c as MessageCircle, d as Send, e as ExternalLink, C as Calendar, A as ArrowRight, f as CheckCircle, g as AlertCircle, h as Shield, i as Award, U as Users, j as Stethoscope, B as BookOpen, k as HeartHandshake, l as Briefcase, m as Home, n as ChevronRight, T as Target, G as GraduationCap, Q as Quote, o as Plus, p as Star, q as Clock, r as User, s as Upload, F as FileText, t as Cookie, u as BarChart, v as ArrowLeft, w as Baby, x as Sparkles, y as TreePine, z as Sun, D as Music, I as Palette, J as Globe, K as Activity, L as TrendingUp, N as Handshake, O as Compass, R as Hammer, W as ChefHat, Y as Wrench, Z as LifeBuoy, _ as HeartPulse, $ as Monitor, a0 as Sprout, a1 as Dumbbell, a2 as Video, a3 as Printer, a4 as Landmark, a5 as Accessibility, a6 as Mic, a7 as Drama, a8 as Camera, a9 as Wheat, aa as Database, ab as PartyPopper, ac as HandHeart, ad as School, ae as Euro, af as FileSearch, ag as PenTool, ah as ClipboardCheck, ai as BarChart3, aj as Lightbulb, ak as Code2, al as Smartphone, am as Workflow, an as ShieldCheck } from "./icons-BdyXJS6H.js";
+import { X, M as Menu, P as Phone, a as Mail, H as Heart, b as MapPin, S as Settings, E as Eye, V as Volume2, c as MessageCircle, d as Send, e as ExternalLink, C as Calendar, A as ArrowRight, f as CheckCircle, g as AlertCircle, h as Shield, i as Award, U as Users, j as Stethoscope, B as BookOpen, k as HeartHandshake, l as Briefcase, m as Home, n as ChevronRight, G as GraduationCap, T as Target, Q as Quote, o as Plus, p as Star, q as Clock, r as User, s as Upload, F as FileText, t as Cookie, u as BarChart, v as ArrowLeft, w as Baby, x as Sparkles, y as TreePine, z as Sun, D as Music, I as Palette, J as Globe, K as Activity, L as TrendingUp, N as Handshake, O as Compass, R as Hammer, W as ChefHat, Y as Wrench, Z as LifeBuoy, _ as HeartPulse, $ as Monitor, a0 as Sprout, a1 as Dumbbell, a2 as Video, a3 as Printer, a4 as Landmark, a5 as Accessibility, a6 as Mic, a7 as Drama, a8 as Camera, a9 as Wheat, aa as Database, ab as PartyPopper, ac as HandHeart, ad as School, ae as Code2, af as Smartphone, ag as Workflow, ah as ShieldCheck } from "./icons-D9DNZKU-.js";
 import { H as Helmet, a as HelmetProvider } from "./helmet-CbYJNCLo.js";
 import { e as emailjs } from "./emailjs-kHGuofjF.js";
 (function polyfill() {
@@ -412,7 +412,6 @@ const Footer = () => {
     { label: "Fisioterapia domiciliare Napoli", href: "/fisioterapia-domicilio-napoli" },
     { label: "Servizi educativi e infanzia", href: "/servizi" },
     { label: "Progetti e territori", href: "/progetti" },
-    { label: "Progettazione per il terzo settore", href: "/progettazione-terzo-settore" },
     { label: "Sviluppo app e software gestionali", href: "/sviluppo-app-software-gestionali" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "bg-gray-900 text-gray-300 pt-16 pb-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 md:px-6", children: [
@@ -1684,12 +1683,12 @@ const HomePage = () => {
     },
     {
       icon: Briefcase,
-      title: "Per enti e organizzazioni",
-      description: "Mettiamo la nostra esperienza al servizio di cooperative, associazioni ed enti locali: progettazione sociale e strumenti digitali su misura.",
-      items: ["Progettazione per il terzo settore: bandi, gare, co-progettazione", "Sviluppo di app e software gestionali", "Consulenza e accompagnamento"],
-      link: "/progettazione-terzo-settore",
-      cta: "Progettazione terzo settore",
-      secondaryLink: { href: "/sviluppo-app-software-gestionali", label: "App e software gestionali" }
+      title: "App e software gestionali",
+      description: "Strumenti digitali su misura per cooperative, associazioni ed enti locali, progettati da chi i servizi sociali ed educativi li gestisce ogni giorno.",
+      items: ["Gestionali per servizi sociali ed educativi", "App per operatori e famiglie", "Siti, portali e automazioni"],
+      link: "/sviluppo-app-software-gestionali",
+      cta: "Scopri lo sviluppo software",
+      secondaryLink: void 0
     }
   ];
   const latestProjects = PROJECTS.slice(0, 4);
@@ -2187,28 +2186,17 @@ const ServicesPage = () => {
       /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(Briefcase, { className: "h-16 w-16 text-blue-600 mx-auto mb-4" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold text-gray-800 mb-4", children: "Servizi per enti e organizzazioni" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "L'esperienza maturata gestendo servizi sociali ed educativi, al servizio di cooperative, associazioni ed enti locali" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Strumenti digitali nati dall'esperienza diretta nei servizi sociali ed educativi" })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-8 max-w-5xl mx-auto", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "left", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/progettazione-terzo-settore", className: "group block bg-amber-50 rounded-xl p-8 border-t-4 border-amber-500 h-full hover:shadow-lg transition-all", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Target, { className: "h-10 w-10 text-amber-600 mb-4" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-gray-800 mb-3 group-hover:text-amber-700", children: "Progettazione per il Terzo Settore" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 mb-4", children: "Analisi bandi, scrittura progetti, offerte tecniche per gare, partenariati, co-progettazione, gestione e rendicontazione." }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center text-amber-700 font-medium", children: [
-            "Scopri di più ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-2 h-4 w-4" })
-          ] })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "right", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/sviluppo-app-software-gestionali", className: "group block bg-slate-50 rounded-xl p-8 border-t-4 border-slate-700 h-full hover:shadow-lg transition-all", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Briefcase, { className: "h-10 w-10 text-slate-700 mb-4" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-gray-800 mb-3 group-hover:text-slate-900", children: "Sviluppo App e Software Gestionali" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 mb-4", children: "Gestionali per servizi sociali ed educativi, app per operatori e famiglie, siti e portali, automazioni e cruscotti, conformi GDPR." }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center text-slate-800 font-medium", children: [
-            "Scopri di più ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-2 h-4 w-4" })
-          ] })
-        ] }) })
-      ] })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-2xl mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/sviluppo-app-software-gestionali", className: "group block bg-slate-50 rounded-xl p-8 border-t-4 border-slate-700 h-full hover:shadow-lg transition-all", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Briefcase, { className: "h-10 w-10 text-slate-700 mb-4" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-gray-800 mb-3 group-hover:text-slate-900", children: "Sviluppo App e Software Gestionali" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 mb-4", children: "Gestionali per servizi sociali ed educativi, app per operatori e famiglie, siti e portali, automazioni e cruscotti, conformi GDPR." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center text-slate-800 font-medium", children: [
+          "Scopri di più ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-2 h-4 w-4" })
+        ] })
+      ] }) }) })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 md:py-24 bg-gray-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 md:px-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4", children: [
@@ -7838,159 +7826,6 @@ const AssistenzaEducativaAlbisolaPage = () => {
     ] }) }) })
   ] });
 };
-const ProgettazioneTerzoSettorePage = () => {
-  const services = [
-    { icon: FileSearch, title: "Analisi di bandi e avvisi", text: "Monitoraggio delle opportunità (Comuni, Regioni, Ministeri, fondazioni, PNRR, fondi europei) e valutazione di ammissibilità e convenienza." },
-    { icon: PenTool, title: "Scrittura del progetto", text: "Idea progettuale, analisi del contesto e dei bisogni, obiettivi, attività, cronoprogramma, indicatori e piano economico." },
-    { icon: Users, title: "Costruzione del partenariato", text: "Individuazione dei partner, ATS/RTI, lettere di intenti, accordi di collaborazione con enti pubblici e terzo settore." },
-    { icon: ClipboardCheck, title: "Gare e co-progettazione", text: "Offerte tecniche per gare d'appalto di servizi sociali ed educativi, istanze di co-progettazione e accreditamento." },
-    { icon: BarChart3, title: "Gestione e monitoraggio", text: "Avvio, coordinamento, rendicontazione fisica e finanziaria, relazioni intermedie e finali, valutazione d'impatto." },
-    { icon: Lightbulb, title: "Consulenza strategica", text: "Accompagnamento di cooperative, associazioni, parrocchie e enti locali nella definizione di nuovi servizi e linee di sviluppo." }
-  ];
-  const areas = [
-    "Servizi educativi 0-6, asili nido e micronidi",
-    "Assistenza domiciliare e servizi per anziani e disabilità",
-    "Inclusione sociale e lavorativa, contrasto alla povertà educativa",
-    "Progetti culturali e di comunità per i piccoli comuni",
-    "Educativa territoriale e di strada, giovani a rischio",
-    "Welfare di comunità e co-programmazione con gli enti locali"
-  ];
-  const track = [
-    { title: "SosteniAMO il quartiere", text: "Città Metropolitana di Napoli – POC Legalità 2014-2020, RTI con Emmanuel mandataria", link: "/sosteniamo-il-quartiere" },
-    { title: "PALMULA. San Vitaliano si racconta", text: 'Avviso ministeriale "Cultura nei piccoli comuni", partner del Comune di San Vitaliano', link: "/palmula-san-vitaliano" },
-    { title: 'Asilo Nido Comunale "De Baggis"', text: "Gara per il servizio educativo per l'infanzia del Comune di Isernia", link: "/nido-de-baggis-isernia" }
-  ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Helmet, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Progettazione per il Terzo Settore – Bandi, gare e co-progettazione | Cooperativa Emmanuel" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { name: "description", content: "Progettazione sociale per cooperative, associazioni ed enti locali: analisi bandi, scrittura progetti, offerte tecniche per gare, partenariati, co-progettazione, rendicontazione. L'esperienza sul campo della Cooperativa Emmanuel al servizio del terzo settore." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { name: "keywords", content: "progettazione terzo settore, progettazione sociale, scrittura progetti bandi, europrogettazione sociale, offerta tecnica gara servizi sociali, co-progettazione, rendicontazione progetti, consulenza cooperative sociali, napoli campania" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "canonical", href: "https://cooperativaemmanuel.it/progettazione-terzo-settore" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:type", content: "website" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:title", content: "Progettazione per il Terzo Settore | Cooperativa Emmanuel" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:description", content: "Bandi, gare, partenariati e co-progettazione: accompagniamo enti del terzo settore e amministrazioni dalla idea alla rendicontazione." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:url", content: "https://cooperativaemmanuel.it/progettazione-terzo-settore" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("script", { type: "application/ld+json", children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Progettazione per il Terzo Settore",
-        "serviceType": "Progettazione sociale e consulenza",
-        "description": "Analisi bandi, scrittura progetti, offerte tecniche per gare, costruzione di partenariati, co-progettazione, gestione e rendicontazione per enti del terzo settore e amministrazioni pubbliche.",
-        "provider": { "@type": "Organization", "name": "Cooperativa Sociale Emmanuel", "url": "https://cooperativaemmanuel.it" },
-        "areaServed": { "@type": "Country", "name": "Italia" },
-        "audience": { "@type": "Audience", "audienceType": "Cooperative sociali, associazioni, enti locali, parrocchie, fondazioni" }
-      }) })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      PageHeader,
-      {
-        manageMeta: false,
-        title: "Progettazione per il Terzo Settore",
-        description: "Dall'idea alla rendicontazione: bandi, gare, partenariati e co-progettazione per enti del terzo settore e amministrazioni"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4 md:px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-5xl mx-auto", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-50 border-l-4 border-amber-500 p-6 rounded-lg mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Landmark, { className: "h-8 w-8 text-amber-600 mr-4 flex-shrink-0 mt-1" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-gray-800 mb-3", children: "Progettisti che gestiscono i servizi che progettano" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-700 leading-relaxed", children: [
-            "La Cooperativa Emmanuel partecipa da anni a gare, avvisi pubblici e co-progettazioni e gestisce direttamente i servizi che ne derivano: nidi, assistenza domiciliare, educativa territoriale, progetti culturali e di inclusione. Mettiamo questa esperienza a disposizione di ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "cooperative, associazioni, parrocchie, fondazioni ed enti locali" }),
-            " che vogliono trasformare un'idea in un progetto finanziabile e gestibile."
-          ] })
-        ] })
-      ] }) }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeInSection, { direction: "up", delay: 100, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-800 mb-6", children: "Cosa facciamo" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12", children: services.map((s, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gray-50 rounded-xl p-6 h-full", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(s.icon, { className: "h-8 w-8 text-amber-600 mb-3" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-bold text-gray-800 mb-2", children: s.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 text-sm leading-relaxed", children: s.text })
-        ] }, index)) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", delay: 200, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-8 mb-12", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-gray-800 mb-4", children: "Ambiti in cui lavoriamo" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-3", children: areas.map((item, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(CheckCircle, { className: "h-5 w-5 text-amber-600 mr-3 flex-shrink-0 mt-1" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-700", children: item })
-          ] }, index)) })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white border-2 border-amber-100 rounded-xl p-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-gray-800 mb-4", children: "Come lavoriamo" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("ol", { className: "space-y-4", children: [
-            ["Ascolto", "Un primo incontro gratuito per capire l'ente, i bisogni e le opportunità aperte."],
-            ["Fattibilità", "Verifica dei requisiti, dei tempi e della sostenibilità economica prima di iniziare a scrivere."],
-            ["Scrittura", "Redazione del progetto o dell'offerta tecnica, con il piano economico e gli allegati."],
-            ["Accompagnamento", "Supporto nella presentazione, nell'avvio e, se richiesto, nella gestione e rendicontazione."]
-          ].map(([title, text], index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex items-center justify-center rounded-full bg-amber-500 text-white h-7 w-7 text-sm font-bold mr-3 flex-shrink-0", children: index + 1 }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-gray-700", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("strong", { children: [
-                title,
-                "."
-              ] }),
-              " ",
-              text
-            ] })
-          ] }, index)) })
-        ] })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeInSection, { direction: "up", delay: 300, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-800 mb-6", children: "Progetti che abbiamo scritto e che gestiamo" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 gap-6 mb-12", children: track.map((t, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: t.link, className: "group bg-gray-50 rounded-xl p-6 hover:bg-amber-50 transition-colors", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Euro, { className: "h-6 w-6 text-amber-600 mb-3" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-bold text-gray-800 mb-2 group-hover:text-amber-700", children: t.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-600 mb-3", children: t.text }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-amber-700 text-sm font-medium inline-flex items-center", children: [
-            "Scopri ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-1 h-4 w-4" })
-          ] })
-        ] }, index)) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(FadeInSection, { direction: "up", delay: 400, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-xl p-8 md:p-12 text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold mb-4", children: "Hai un bando in scadenza o un'idea da sviluppare?" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-amber-100 mb-8 max-w-2xl mx-auto", children: "Raccontacela: il primo confronto è gratuito e senza impegno." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto text-left", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 backdrop-blur rounded-lg p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center mb-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-6 w-6 mr-3" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-bold", children: "Telefono" })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `tel:${CONTACT_INFO.phone}`, className: "text-xl font-bold hover:text-amber-200 transition-colors block", children: CONTACT_INFO.phone })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 backdrop-blur rounded-lg p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center mb-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-6 w-6 mr-3" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-bold", children: "Email" })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `mailto:${CONTACT_INFO.email}`, className: "text-lg hover:text-amber-200 transition-colors break-all", children: CONTACT_INFO.email })
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: "https://wa.me/390817877064?text=Ciao! Vorrei informazioni sul servizio di progettazione per il terzo settore",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "h-5 w-5 mr-2" }),
-                "Scrivici su WhatsApp"
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/contatti", className: "inline-flex items-center px-8 py-4 bg-white text-amber-700 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl", children: [
-            "Vai ai Contatti ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "ml-2 h-5 w-5" })
-          ] })
-        ] })
-      ] }) })
-    ] }) }) })
-  ] });
-};
 const SviluppoSoftwarePage = () => {
   const services = [
     { icon: Database, title: "Gestionali per servizi sociali ed educativi", text: "Cartella dell'utente, piani individualizzati (PAI/PEI), turni e timesheet degli operatori, presenze, diario degli interventi, rendicontazione verso Comuni e ASL." },
@@ -8156,7 +7991,6 @@ const AppRoutes = () => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { classNam
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/sosteniamo-il-quartiere", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SosteniamoIlQuartierePage, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/palmula-san-vitaliano", element: /* @__PURE__ */ jsxRuntimeExports.jsx(PalmulaSanVitalianoPage, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/assistenza-educativa-specialistica-albisola-scuole", element: /* @__PURE__ */ jsxRuntimeExports.jsx(AssistenzaEducativaAlbisolaPage, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/progettazione-terzo-settore", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ProgettazioneTerzoSettorePage, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/sviluppo-app-software-gestionali", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SviluppoSoftwarePage, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFoundPage, {}) })
   ] }) }),

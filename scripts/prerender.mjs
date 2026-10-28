@@ -19,8 +19,7 @@ const routes = [
   '/educativa-domiciliare-ambito-n12', '/nido-san-gemini', '/adi-portici',
   '/sad-portici', '/sad-casoria', '/nido-de-baggis-isernia',
   '/sosteniamo-il-quartiere', '/palmula-san-vitaliano',
-  '/assistenza-educativa-specialistica-albisola-scuole', '/progettazione-terzo-settore',
-  '/sviluppo-app-software-gestionali'
+  '/assistenza-educativa-specialistica-albisola-scuole', '/sviluppo-app-software-gestionali'
 ];
 
 await build({

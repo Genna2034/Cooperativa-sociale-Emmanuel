@@ -71,12 +71,12 @@ const HomePage = () => {
     },
     {
       icon: Briefcase,
-      title: 'Per enti e organizzazioni',
-      description: 'Mettiamo la nostra esperienza al servizio di cooperative, associazioni ed enti locali: progettazione sociale e strumenti digitali su misura.',
-      items: ['Progettazione per il terzo settore: bandi, gare, co-progettazione', 'Sviluppo di app e software gestionali', 'Consulenza e accompagnamento'],
-      link: '/progettazione-terzo-settore',
-      cta: 'Progettazione terzo settore',
-      secondaryLink: { href: '/sviluppo-app-software-gestionali', label: 'App e software gestionali' }
+      title: 'App e software gestionali',
+      description: 'Strumenti digitali su misura per cooperative, associazioni ed enti locali, progettati da chi i servizi sociali ed educativi li gestisce ogni giorno.',
+      items: ['Gestionali per servizi sociali ed educativi', 'App per operatori e famiglie', 'Siti, portali e automazioni'],
+      link: '/sviluppo-app-software-gestionali',
+      cta: 'Scopri lo sviluppo software',
+      secondaryLink: undefined
     }
   ];
 
