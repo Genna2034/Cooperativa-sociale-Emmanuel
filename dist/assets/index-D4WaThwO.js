@@ -1,5 +1,5 @@
 import { r as reactExports, a as reactDomExports, u as useLocation, L as Link, R as React, b as Routes, c as Route, B as BrowserRouter } from "./vendor-YUcNgLQ_.js";
-import { X, M as Menu, P as Phone, a as Mail, H as Heart, b as MapPin, S as Settings, E as Eye, V as Volume2, c as MessageCircle, d as Send, e as ExternalLink, C as Calendar, A as ArrowRight, f as CheckCircle, g as AlertCircle, h as Shield, i as Award, U as Users, j as Stethoscope, B as BookOpen, k as HeartHandshake, l as Briefcase, m as Home, n as ChevronRight, G as GraduationCap, T as Target, Q as Quote, o as Plus, p as Star, q as Clock, r as User, s as Upload, F as FileText, t as Cookie, u as BarChart, v as ArrowLeft, w as Baby, x as Sparkles, y as TreePine, z as Sun, D as Music, I as Palette, J as Globe, K as Activity, L as TrendingUp, N as Handshake, O as Compass, R as Hammer, W as ChefHat, Y as Wrench, Z as LifeBuoy, _ as HeartPulse, $ as Monitor, a0 as Sprout, a1 as Dumbbell, a2 as Video, a3 as Printer, a4 as Landmark, a5 as Accessibility, a6 as Mic, a7 as Drama, a8 as Camera, a9 as Wheat, aa as Database, ab as PartyPopper, ac as HandHeart, ad as School, ae as Code2, af as Smartphone, ag as Workflow, ah as ShieldCheck } from "./icons-D9DNZKU-.js";
+import { X, M as Menu, P as Phone, a as Mail, H as Heart, b as MapPin, S as Settings, E as Eye, V as Volume2, c as MessageCircle, d as Send, e as ExternalLink, C as Calendar, A as ArrowRight, f as CheckCircle, g as AlertCircle, h as Shield, i as Award, U as Users, j as Stethoscope, B as BookOpen, k as HeartHandshake, l as Briefcase, m as Home, n as ChevronRight, G as GraduationCap, T as Target, Q as Quote, o as Plus, p as Star, q as Clock, r as User, s as Upload, F as FileText, t as Cookie, u as BarChart, v as ArrowLeft, w as Baby, x as Sparkles, y as TreePine, z as Sun, D as Music, I as Palette, J as Globe, K as Activity, L as TrendingUp, N as Tv, O as Handshake, R as Compass, W as Hammer, Y as ChefHat, Z as Wrench, _ as LifeBuoy, $ as HeartPulse, a0 as Monitor, a1 as Sprout, a2 as Dumbbell, a3 as Video, a4 as Printer, a5 as Landmark, a6 as Accessibility, a7 as Mic, a8 as Drama, a9 as Camera, aa as Wheat, ab as Database, ac as PartyPopper, ad as HandHeart, ae as School, af as Code2, ag as Smartphone, ah as Workflow, ai as ShieldCheck } from "./icons-0KgTba_2.js";
 import { H as Helmet, a as HelmetProvider } from "./helmet-CbYJNCLo.js";
 import { e as emailjs } from "./emailjs-kHGuofjF.js";
 (function polyfill() {
@@ -7043,6 +7043,30 @@ const NidoDeBaggisIserniaPage = () => {
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-700", children: benefit })
           ] }, index)) })
         ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeInSection, { direction: "up", delay: 250, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-800 mb-6", children: "Dicono di noi" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "a",
+          {
+            href: "https://www.rainews.it/tgr/molise/video/2026/11/isernia-un-asilo-nido-comunale-nel-cuore-della-citta-49315c8a-255c-4581-974f-24c839060a55.html",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "group flex items-start bg-gray-900 text-white rounded-xl p-6 md:p-8 mb-12 hover:bg-gray-800 transition-colors",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Tv, { className: "h-10 w-10 text-purple-300 mr-5 flex-shrink-0 mt-1" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-wide text-purple-300 font-semibold mb-1", children: "TGR Molise – Rai News · Novembre 2026" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl md:text-2xl font-bold mb-2", children: '"Isernia, un asilo nido comunale nel cuore della città"' }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-3", children: "Il servizio video del TGR Molise dedicato all'asilo nido comunale di Isernia." }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center font-medium text-purple-200 group-hover:text-white", children: [
+                  "Guarda il servizio su rainews.it ",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "ml-2 h-4 w-4" })
+                ] })
+              ] })
+            ]
+          }
+        )
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeInSection, { direction: "up", delay: 300, children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-800 mb-6", children: "Riferimenti dell'affidamento" }),

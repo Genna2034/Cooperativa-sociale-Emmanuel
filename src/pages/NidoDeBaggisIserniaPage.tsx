@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Baby, Users, Heart, Phone, Mail, MessageCircle, ArrowRight, CheckCircle, BookOpen, Sun, FileText } from 'lucide-react';
+import { Baby, Users, Heart, Phone, Mail, MessageCircle, ArrowRight, CheckCircle, BookOpen, Sun, FileText, Tv, ExternalLink } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { CONTACT_INFO } from '../constants';
@@ -149,6 +149,26 @@ const NidoDeBaggisIserniaPage = () => {
                   ))}
                 </ul>
               </div>
+            </FadeInSection>
+
+            <FadeInSection direction="up" delay={250}>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Dicono di noi</h2>
+              <a
+                href="https://www.rainews.it/tgr/molise/video/2026/11/isernia-un-asilo-nido-comunale-nel-cuore-della-citta-49315c8a-255c-4581-974f-24c839060a55.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start bg-gray-900 text-white rounded-xl p-6 md:p-8 mb-12 hover:bg-gray-800 transition-colors"
+              >
+                <Tv className="h-10 w-10 text-purple-300 mr-5 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-purple-300 font-semibold mb-1">TGR Molise – Rai News · Novembre 2026</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">"Isernia, un asilo nido comunale nel cuore della città"</h3>
+                  <p className="text-gray-300 mb-3">Il servizio video del TGR Molise dedicato all'asilo nido comunale di Isernia.</p>
+                  <span className="inline-flex items-center font-medium text-purple-200 group-hover:text-white">
+                    Guarda il servizio su rainews.it <ExternalLink className="ml-2 h-4 w-4" />
+                  </span>
+                </div>
+              </a>
             </FadeInSection>
 
             <FadeInSection direction="up" delay={300}>

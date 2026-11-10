@@ -946,6 +946,16 @@ const TrendingUp = createLucideIcon("TrendingUp", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
+const Tv = createLucideIcon("Tv", [
+  ["rect", { width: "20", height: "15", x: "2", y: "7", rx: "2", ry: "2", key: "10ag99" }],
+  ["polyline", { points: "17 2 12 7 7 2", key: "11pgbg" }]
+]);
+/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
 const Upload = createLucideIcon("Upload", [
   ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
   ["polyline", { points: "17 8 12 3 7 8", key: "t8dd8p" }],
@@ -1083,7 +1093,7 @@ const X = createLucideIcon("X", [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ]);
 export {
-  Monitor as $,
+  HeartPulse as $,
   ArrowRight as A,
   BookOpen as B,
   Calendar as C,
@@ -1097,39 +1107,40 @@ export {
   Activity as K,
   TrendingUp as L,
   Menu as M,
-  Handshake as N,
-  Compass as O,
+  Tv as N,
+  Handshake as O,
   Phone as P,
   Quote as Q,
-  Hammer as R,
+  Compass as R,
   Settings as S,
   Target as T,
   Users as U,
   Volume2 as V,
-  ChefHat as W,
+  Hammer as W,
   X,
-  Wrench as Y,
-  LifeBuoy as Z,
-  HeartPulse as _,
+  ChefHat as Y,
+  Wrench as Z,
+  LifeBuoy as _,
   Mail as a,
-  Sprout as a0,
-  Dumbbell as a1,
-  Video as a2,
-  Printer as a3,
-  Landmark as a4,
-  Accessibility as a5,
-  Mic as a6,
-  Drama as a7,
-  Camera as a8,
-  Wheat as a9,
-  Database as aa,
-  PartyPopper as ab,
-  HandHeart as ac,
-  School as ad,
-  Code2 as ae,
-  Smartphone as af,
-  Workflow as ag,
-  ShieldCheck as ah,
+  Monitor as a0,
+  Sprout as a1,
+  Dumbbell as a2,
+  Video as a3,
+  Printer as a4,
+  Landmark as a5,
+  Accessibility as a6,
+  Mic as a7,
+  Drama as a8,
+  Camera as a9,
+  Wheat as aa,
+  Database as ab,
+  PartyPopper as ac,
+  HandHeart as ad,
+  School as ae,
+  Code2 as af,
+  Smartphone as ag,
+  Workflow as ah,
+  ShieldCheck as ai,
   MapPin as b,
   MessageCircle as c,
   Send as d,
