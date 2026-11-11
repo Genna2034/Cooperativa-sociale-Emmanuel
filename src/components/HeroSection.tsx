@@ -3,6 +3,7 @@ import { Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
+import { srcSetFor } from '../utils/imageSrcSet';
 
 const HeroSection = () => {
   return (
@@ -11,6 +12,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/closeup-support-hands.jpg"
+          srcSet={srcSetFor("/images/closeup-support-hands.jpg")}
+          sizes="100vw"
           alt="Cooperativa Sociale Emmanuel Napoli - Assistenza domiciliare"
           className="w-full h-full object-cover"
           loading="eager"

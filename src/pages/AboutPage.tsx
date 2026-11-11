@@ -4,6 +4,7 @@ import { Heart, Users, Award, Target, ArrowRight, MapPin, Calendar, Phone, Shiel
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { STATS, COOPERATIVE_PRINCIPLES, COOPERATIVE_ACTIVITIES } from '../constants';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const AboutPage = () => {
   const teamMembers = [
@@ -197,6 +198,8 @@ const AboutPage = () => {
                   <div className="mb-6">
                     <img 
                       src={area.image}
+                      srcSet={srcSetFor(area.image)}
+                      sizes={CARD_SIZES}
                       alt={area.title}
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
@@ -246,6 +249,8 @@ const AboutPage = () => {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
                   <img
                     src={member.image}
+                    srcSet={srcSetFor(member.image)}
+                    sizes={CARD_SIZES}
                     alt={member.name}
                     className="w-full h-64 object-contain bg-gray-50"
                   />
@@ -331,6 +336,8 @@ const AboutPage = () => {
                 <div className="text-center bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
                   <img 
                     src={value.image}
+                    srcSet={srcSetFor(value.image)}
+                    sizes={CARD_SIZES}
                     alt={value.title}
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />
@@ -399,6 +406,8 @@ const AboutPage = () => {
                   <div className="flex-grow bg-white rounded-lg shadow-md p-6 flex items-center gap-6">
                     <img 
                       src={milestone.image}
+                      srcSet={srcSetFor(milestone.image)}
+                      sizes={CARD_SIZES}
                       alt={milestone.title}
                       className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
                     />

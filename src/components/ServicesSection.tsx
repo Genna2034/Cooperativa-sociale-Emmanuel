@@ -2,6 +2,7 @@ import React from 'react';
 import { Stethoscope, Home } from 'lucide-react';
 import { ADI_SERVICES, EXTRA_SERVICES } from '../constants';
 import FadeInSection from './FadeInSection';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const ServicesSection = () => {
   return (
@@ -19,6 +20,8 @@ const ServicesSection = () => {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
               <img
                 src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
+                srcSet={srcSetFor("/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg")}
+                sizes={CARD_SIZES}
                 alt="Prestazioni ADI - Assistenza Domiciliare Integrata"
                 className="w-full h-48 object-cover"
                 loading="lazy"
@@ -54,6 +57,8 @@ const ServicesSection = () => {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600 transform transition-all hover:shadow-lg">
               <img
                 src="/images/medium-shot-women-posing-together.jpg"
+                srcSet={srcSetFor("/images/medium-shot-women-posing-together.jpg")}
+                sizes={CARD_SIZES}
                 alt="Servizi di assistenza ad anziani e persone con disabilità"
                 className="w-full h-48 object-cover"
                 loading="lazy"

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,6 +65,8 @@ const MobileNavigation = () => {
             <Link to="/" className="flex items-center">
               <img
                 src="/images/logo_emmanuel_new_ok.png"
+                srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+                sizes={CARD_SIZES}
                 alt="Cooperativa Sociale Emmanuel"
                 className={`object-contain transition-all duration-300 hover:scale-105 ${
                   isScrolled ? 'h-10 w-10' : 'h-12 w-12'
@@ -105,6 +108,8 @@ const MobileNavigation = () => {
             <div className="flex items-center">
               <img
                 src="/images/logo_emmanuel_new_ok.png"
+                srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+                sizes={CARD_SIZES}
                 alt="Emmanuel"
                 className="h-8 w-8 object-contain"
               />

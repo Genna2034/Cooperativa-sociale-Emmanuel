@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeInSection from './FadeInSection';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const PresidentSection = () => {
   return (
@@ -10,6 +11,8 @@ const PresidentSection = () => {
             <div>
               <img 
                 src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
+                srcSet={srcSetFor("/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg")}
+                sizes={CARD_SIZES}
                 alt="Assistenza domiciliare professionale"
                 className="rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               />

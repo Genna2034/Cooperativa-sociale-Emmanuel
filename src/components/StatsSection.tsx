@@ -1,6 +1,7 @@
 import React from 'react';
 import { STATS } from '../constants';
 import FadeInSection from './FadeInSection';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const StatsSection = () => {
   return (
@@ -35,21 +36,29 @@ const StatsSection = () => {
               <div className="grid grid-cols-2 gap-4">
                 <img 
                   src="/images/medium-shot-women-posing-together.jpg"
+                  srcSet={srcSetFor("/images/medium-shot-women-posing-together.jpg")}
+                  sizes={CARD_SIZES}
                   alt="Team professionale Emmanuel"
                   className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
                 />
                 <img 
                   src="/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"
+                  srcSet={srcSetFor("/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg")}
+                  sizes={CARD_SIZES}
                   alt="Assistenza domiciliare qualificata"
                   className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] mt-8"
                 />
                 <img 
                   src="/images/closeup-support-hands.jpg"
+                  srcSet={srcSetFor("/images/closeup-support-hands.jpg")}
+                  sizes={CARD_SIZES}
                   alt="Supporto e cura"
                   className="rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] -mt-8"
                 />
                 <img
                   src="/images/logo_emmanuel_new_ok.png"
+                  srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+                  sizes={CARD_SIZES}
                   alt="Logo Emmanuel"
                   className="rounded-lg shadow-xl w-full h-48 object-contain bg-white p-4 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
                 />

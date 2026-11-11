@@ -138,6 +138,18 @@ const EDUCATIONAL_SERVICES = [
   "Gestione di nidi e micronidi",
   "Partecipazione a procedure per gestione asili nido"
 ];
+const RESPONSIVE_PHOTOS = [
+  "/images/closeup-support-hands.jpg",
+  "/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg",
+  "/images/medium-shot-women-posing-together.jpg"
+];
+const WIDTHS = [640, 1024, 1600, 1920];
+const srcSetFor = (src) => {
+  if (!src || !RESPONSIVE_PHOTOS.includes(src)) return void 0;
+  const base = src.replace(/\.jpg$/, "");
+  return WIDTHS.map((w) => `${base}-${w}.webp ${w}w`).join(", ");
+};
+const CARD_SIZES = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const [isScrolled, setIsScrolled] = reactExports.useState(false);
@@ -183,6 +195,8 @@ const MobileNavigation = () => {
               "img",
               {
                 src: "/images/logo_emmanuel_new_ok.png",
+                srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+                sizes: CARD_SIZES,
                 alt: "Cooperativa Sociale Emmanuel",
                 className: `object-contain transition-all duration-300 hover:scale-105 ${isScrolled ? "h-10 w-10" : "h-12 w-12"}`
               }
@@ -220,6 +234,8 @@ const MobileNavigation = () => {
                 "img",
                 {
                   src: "/images/logo_emmanuel_new_ok.png",
+                  srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+                  sizes: CARD_SIZES,
                   alt: "Emmanuel",
                   className: "h-8 w-8 object-contain"
                 }
@@ -327,6 +343,8 @@ const Header = () => {
           "img",
           {
             src: "/images/logo_emmanuel_new_ok.png",
+            srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+            sizes: CARD_SIZES,
             alt: "Cooperativa Sociale Emmanuel Napoli",
             className: `object-contain transition-all duration-300 hover:scale-105 ${isScrolled ? "h-12 w-12" : "h-16 w-16"}`
           }
@@ -422,6 +440,8 @@ const Footer = () => {
             "img",
             {
               src: "/images/logo_emmanuel_new_ok.png",
+              srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+              sizes: CARD_SIZES,
               alt: "Logo Cooperativa Sociale Emmanuel Napoli",
               className: "h-12 w-12 object-contain transition-transform duration-300 hover:scale-110"
             }
@@ -497,6 +517,8 @@ const Footer = () => {
           "img",
           {
             src: "/images/logo_emmanuel_new_ok.png",
+            srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+            sizes: CARD_SIZES,
             alt: "Logo Cooperativa Sociale Emmanuel",
             className: "h-6 w-6 object-contain"
           }
@@ -892,6 +914,8 @@ const HeroSection = () => {
         "img",
         {
           src: "/images/closeup-support-hands.jpg",
+          srcSet: srcSetFor("/images/closeup-support-hands.jpg"),
+          sizes: "100vw",
           alt: "Cooperativa Sociale Emmanuel Napoli - Assistenza domiciliare",
           className: "w-full h-full object-cover",
           loading: "eager",
@@ -969,6 +993,8 @@ const StatsSection = () => {
         "img",
         {
           src: "/images/medium-shot-women-posing-together.jpg",
+          srcSet: srcSetFor("/images/medium-shot-women-posing-together.jpg"),
+          sizes: CARD_SIZES,
           alt: "Team professionale Emmanuel",
           className: "rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
         }
@@ -977,6 +1003,8 @@ const StatsSection = () => {
         "img",
         {
           src: "/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg",
+          srcSet: srcSetFor("/images/realistic-scene-with-health-worker-taking-care-elderly-patient.jpg"),
+          sizes: CARD_SIZES,
           alt: "Assistenza domiciliare qualificata",
           className: "rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] mt-8"
         }
@@ -985,6 +1013,8 @@ const StatsSection = () => {
         "img",
         {
           src: "/images/closeup-support-hands.jpg",
+          srcSet: srcSetFor("/images/closeup-support-hands.jpg"),
+          sizes: CARD_SIZES,
           alt: "Supporto e cura",
           className: "rounded-lg shadow-xl w-full h-48 object-cover transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] -mt-8"
         }
@@ -993,6 +1023,8 @@ const StatsSection = () => {
         "img",
         {
           src: "/images/logo_emmanuel_new_ok.png",
+          srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+          sizes: CARD_SIZES,
           alt: "Logo Emmanuel",
           className: "rounded-lg shadow-xl w-full h-48 object-contain bg-white p-4 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
         }
@@ -1238,6 +1270,8 @@ const BlogSection = () => {
         "img",
         {
           src: article.image,
+          srcSet: srcSetFor(article.image),
+          sizes: CARD_SIZES,
           alt: article.title,
           className: "w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
         }
@@ -1274,6 +1308,8 @@ const BlogSection = () => {
         "img",
         {
           src: "/images/medium-shot-women-posing-together.jpg",
+          srcSet: srcSetFor("/images/medium-shot-women-posing-together.jpg"),
+          sizes: CARD_SIZES,
           alt: "Newsletter",
           className: "w-full h-32 object-cover rounded-lg mb-6"
         }
@@ -1835,6 +1871,8 @@ const HomePage = () => {
               "img",
               {
                 src: feature.image,
+                srcSet: srcSetFor(feature.image),
+                sizes: CARD_SIZES,
                 alt: `${feature.title} - Cooperativa Sociale Emmanuel`,
                 className: "w-full h-32 object-cover rounded-lg mb-4",
                 loading: "lazy"
@@ -1911,6 +1949,8 @@ const HomePage = () => {
         "img",
         {
           src: "/images/closeup-support-hands.jpg",
+          srcSet: srcSetFor("/images/closeup-support-hands.jpg"),
+          sizes: CARD_SIZES,
           alt: "Inizia il tuo percorso con Emmanuel Accreditata",
           className: "w-full max-w-md mx-auto h-48 object-cover rounded-lg mb-8"
         }
@@ -2156,6 +2196,8 @@ const ServicesPage = () => {
             "img",
             {
               src: category.image,
+              srcSet: srcSetFor(category.image),
+              sizes: CARD_SIZES,
               alt: category.title,
               className: "w-full h-48 object-cover rounded-lg mb-4"
             }
@@ -2222,6 +2264,8 @@ const ServicesPage = () => {
           "img",
           {
             src: service.image,
+            srcSet: srcSetFor(service.image),
+            sizes: CARD_SIZES,
             alt: service.title,
             className: "w-full h-48 object-cover rounded-lg mb-6"
           }
@@ -2265,6 +2309,8 @@ const ServicesPage = () => {
           "img",
           {
             src: service.image,
+            srcSet: srcSetFor(service.image),
+            sizes: CARD_SIZES,
             alt: service.title,
             className: "w-full h-32 object-cover rounded-lg mb-4"
           }
@@ -2312,6 +2358,8 @@ const ServicesPage = () => {
           "img",
           {
             src: section.image,
+            srcSet: srcSetFor(section.image),
+            sizes: CARD_SIZES,
             alt: section.title,
             className: "w-full h-48 object-cover rounded-lg mb-6"
           }
@@ -2327,6 +2375,8 @@ const ServicesPage = () => {
           "img",
           {
             src: "/images/closeup-support-hands.jpg",
+            srcSet: srcSetFor("/images/closeup-support-hands.jpg"),
+            sizes: CARD_SIZES,
             alt: "Assistenza personalizzata",
             className: "w-full h-48 object-cover rounded-lg mb-6"
           }
@@ -2529,6 +2579,8 @@ const AboutPage = () => {
             "img",
             {
               src: area.image,
+              srcSet: srcSetFor(area.image),
+              sizes: CARD_SIZES,
               alt: area.title,
               className: "w-full h-48 object-cover rounded-lg mb-4"
             }
@@ -2556,6 +2608,8 @@ const AboutPage = () => {
           "img",
           {
             src: member.image,
+            srcSet: srcSetFor(member.image),
+            sizes: CARD_SIZES,
             alt: member.name,
             className: "w-full h-64 object-contain bg-gray-50"
           }
@@ -2610,6 +2664,8 @@ const AboutPage = () => {
           "img",
           {
             src: value.image,
+            srcSet: srcSetFor(value.image),
+            sizes: CARD_SIZES,
             alt: value.title,
             className: "w-full h-32 object-cover rounded-lg mb-4"
           }
@@ -2641,6 +2697,8 @@ const AboutPage = () => {
             "img",
             {
               src: milestone.image,
+              srcSet: srcSetFor(milestone.image),
+              sizes: CARD_SIZES,
               alt: milestone.title,
               className: "w-20 h-20 object-cover rounded-lg flex-shrink-0"
             }
@@ -2804,6 +2862,8 @@ const ReviewsSection = () => {
         "img",
         {
           src: review.image,
+          srcSet: srcSetFor(review.image),
+          sizes: CARD_SIZES,
           alt: "Testimonianza",
           className: "w-full h-32 object-cover rounded-lg mb-4"
         }
@@ -3612,6 +3672,8 @@ const CareersPage = () => {
         "img",
         {
           src: "/images/medium-shot-women-posing-together.jpg",
+          srcSet: srcSetFor("/images/medium-shot-women-posing-together.jpg"),
+          sizes: CARD_SIZES,
           alt: "Team Cooperativa Emmanuel",
           className: "rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px]"
         }
@@ -4143,6 +4205,8 @@ const NotFoundPage = () => {
           "img",
           {
             src: "/images/logo_emmanuel_new_ok.png",
+            srcSet: srcSetFor("/images/logo_emmanuel_new_ok.png"),
+            sizes: CARD_SIZES,
             alt: "Cooperativa Emmanuel",
             className: "h-20 w-20 mx-auto mb-6"
           }
@@ -4306,6 +4370,8 @@ const ADIProcessPage = () => {
           "img",
           {
             src: step.image,
+            srcSet: srcSetFor(step.image),
+            sizes: CARD_SIZES,
             alt: step.title,
             className: "w-full h-64 object-cover rounded-xl shadow-lg"
           }

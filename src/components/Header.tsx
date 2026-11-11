@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import MobileNavigation from './MobileNavigation';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,6 +59,8 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img
               src="/images/logo_emmanuel_new_ok.png"
+              srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+              sizes={CARD_SIZES}
               alt="Cooperativa Sociale Emmanuel Napoli"
               className={`object-contain transition-all duration-300 hover:scale-105 ${
                 isScrolled ? 'h-12 w-12' : 'h-16 w-16'

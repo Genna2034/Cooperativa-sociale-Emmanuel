@@ -3,6 +3,7 @@ import { Upload, FileText, User, Mail, Phone, Briefcase, GraduationCap, CheckCir
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { sendEmail } from '../services/emailService';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 interface CareerForm {
   firstName: string;
@@ -249,6 +250,8 @@ const CareersPage = () => {
             <FadeInSection direction="right" delay={200}>
               <img 
                 src="/images/medium-shot-women-posing-together.jpg"
+                srcSet={srcSetFor("/images/medium-shot-women-posing-together.jpg")}
+                sizes={CARD_SIZES}
                 alt="Team Cooperativa Emmanuel"
                 className="rounded-lg shadow-lg w-full h-auto object-cover max-h-[500px]"
               />

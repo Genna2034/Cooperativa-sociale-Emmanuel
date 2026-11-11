@@ -10,6 +10,7 @@ import AccreditationSection from '../components/AccreditationSection';
 import FadeInSection from '../components/FadeInSection';
 import ProjectCard from '../components/ProjectCard';
 import { PROJECTS } from '../constants/projects';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const HomePage = () => {
   const features = [
@@ -245,6 +246,8 @@ const HomePage = () => {
                 >
                   <img
                     src={feature.image}
+                    srcSet={srcSetFor(feature.image)}
+                    sizes={CARD_SIZES}
                     alt={`${feature.title} - Cooperativa Sociale Emmanuel`}
                     className="w-full h-32 object-cover rounded-lg mb-4"
                     loading="lazy"
@@ -355,6 +358,8 @@ const HomePage = () => {
           <FadeInSection direction="up">
             <img 
               src="/images/closeup-support-hands.jpg"
+              srcSet={srcSetFor("/images/closeup-support-hands.jpg")}
+              sizes={CARD_SIZES}
               alt="Inizia il tuo percorso con Emmanuel Accreditata"
               className="w-full max-w-md mx-auto h-48 object-cover rounded-lg mb-8"
             />

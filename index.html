@@ -28,11 +28,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Preload critical images -->
-    <link rel="preload" as="image" href="/images/closeup-support-hands.jpg">
-    <link rel="preload" as="image" href="/images/Logo.png">
+    <!-- Font caricato senza bloccare la visualizzazione della pagina -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Immagine del hero: il browser scarica subito la versione adatta allo schermo -->
+    <link rel="preload" as="image" type="image/webp"
+      href="/images/closeup-support-hands-1600.webp"
+      imagesrcset="/images/closeup-support-hands-640.webp 640w, /images/closeup-support-hands-1024.webp 1024w, /images/closeup-support-hands-1600.webp 1600w, /images/closeup-support-hands-1920.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high">
+    <link rel="preload" as="image" href="/images/logo_emmanuel_new_ok.png">
 
     <!-- Google Analytics: sostituire G-XXXXXXXXXX con l'ID reale e rimuovere i commenti
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>

@@ -6,6 +6,7 @@ import FadeInSection from '../components/FadeInSection';
 import { ADI_SERVICES, EXTRA_SERVICES, EDUCATIONAL_SERVICES } from '../constants';
 import ProjectCard from '../components/ProjectCard';
 import { PROJECTS } from '../constants/projects';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 // Classi esplicite: Tailwind non genera classi composte dinamicamente (es. `bg-${color}-50`)
 const COLOR_STYLES = {
@@ -173,6 +174,8 @@ const ServicesPage = () => {
                   <div className="mb-6">
                     <img 
                       src={category.image}
+                      srcSet={srcSetFor(category.image)}
+                      sizes={CARD_SIZES}
                       alt={category.title}
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
@@ -288,6 +291,8 @@ const ServicesPage = () => {
                 <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300 h-full">
                   <img 
                     src={service.image}
+                    srcSet={srcSetFor(service.image)}
+                    sizes={CARD_SIZES}
                     alt={service.title}
                     className="w-full h-48 object-cover rounded-lg mb-6"
                   />
@@ -359,6 +364,8 @@ const ServicesPage = () => {
                 <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 h-full">
                   <img 
                     src={service.image}
+                    srcSet={srcSetFor(service.image)}
+                    sizes={CARD_SIZES}
                     alt={service.title}
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />
@@ -438,6 +445,8 @@ const ServicesPage = () => {
                 <div className="bg-white rounded-xl shadow-md p-8">
                   <img 
                     src={section.image}
+                    srcSet={srcSetFor(section.image)}
+                    sizes={CARD_SIZES}
                     alt={section.title}
                     className="w-full h-48 object-cover rounded-lg mb-6"
                   />
@@ -462,6 +471,8 @@ const ServicesPage = () => {
               <div className="bg-white rounded-xl shadow-md p-8 max-w-3xl mx-auto">
                 <img 
                   src="/images/closeup-support-hands.jpg"
+                  srcSet={srcSetFor("/images/closeup-support-hands.jpg")}
+                  sizes={CARD_SIZES}
                   alt="Assistenza personalizzata"
                   className="w-full h-48 object-cover rounded-lg mb-6"
                 />

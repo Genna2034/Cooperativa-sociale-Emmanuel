@@ -3,6 +3,7 @@ import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FadeInSection from './FadeInSection';
 import { sendEmail } from '../services/emailService';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const HEALTH_ARTICLES = [
   {
@@ -106,6 +107,8 @@ const BlogSection = () => {
               <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <img 
                   src={article.image}
+                  srcSet={srcSetFor(article.image)}
+                  sizes={CARD_SIZES}
                   alt={article.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -153,6 +156,8 @@ const BlogSection = () => {
             <div className="bg-white rounded-xl p-8 shadow-md max-w-2xl mx-auto">
               <img 
                 src="/images/medium-shot-women-posing-together.jpg"
+                srcSet={srcSetFor("/images/medium-shot-women-posing-together.jpg")}
+                sizes={CARD_SIZES}
                 alt="Newsletter"
                 className="w-full h-32 object-cover rounded-lg mb-6"
               />

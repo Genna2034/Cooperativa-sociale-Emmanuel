@@ -1,5 +1,6 @@
 import React from 'react';
 import { DivideIcon as LucideIcon } from 'lucide-react';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 interface MobileCardProps {
   title: string;
@@ -32,6 +33,8 @@ const MobileCard: React.FC<MobileCardProps> = ({
         <div className="w-full h-48 overflow-hidden rounded-t-xl">
           <img 
             src={image}
+            srcSet={srcSetFor(image)}
+            sizes={CARD_SIZES}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             loading="lazy"

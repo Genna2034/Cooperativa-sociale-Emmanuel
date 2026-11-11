@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const NotFoundPage = () => {
   return (
@@ -17,6 +18,8 @@ const NotFoundPage = () => {
           <div className="mb-8">
             <img
               src="/images/logo_emmanuel_new_ok.png"
+              srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+              sizes={CARD_SIZES}
               alt="Cooperativa Emmanuel"
               className="h-20 w-20 mx-auto mb-6"
             />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Quote, Plus } from 'lucide-react';
 import FadeInSection from './FadeInSection';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 interface Review {
   id: number;
@@ -139,6 +140,8 @@ const ReviewsSection = () => {
                 {review.image && (
                   <img 
                     src={review.image}
+                    srcSet={srcSetFor(review.image)}
+                    sizes={CARD_SIZES}
                     alt="Testimonianza"
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />

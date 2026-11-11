@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import FadeInSection from '../components/FadeInSection';
 import { CONTACT_INFO } from '../constants';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const ADIProcessPage = () => {
   const processSteps = [
@@ -180,6 +181,8 @@ const ADIProcessPage = () => {
                   <div className="lg:w-1/2">
                     <img 
                       src={step.image}
+                      srcSet={srcSetFor(step.image)}
+                      sizes={CARD_SIZES}
                       alt={step.title}
                       className="w-full h-64 object-cover rounded-xl shadow-lg"
                     />

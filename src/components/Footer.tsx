@@ -3,6 +3,7 @@ import { Heart, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import FadeInSection from './FadeInSection';
+import { srcSetFor, CARD_SIZES } from '../utils/imageSrcSet';
 
 const Footer = () => {
   const footerLinks = [
@@ -34,6 +35,8 @@ const Footer = () => {
               <Link to="/" className="flex items-center gap-3 mb-6">
                 <img
                   src="/images/logo_emmanuel_new_ok.png"
+                  srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+                  sizes={CARD_SIZES}
                   alt="Logo Cooperativa Sociale Emmanuel Napoli"
                   className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110"
                 />
@@ -139,6 +142,8 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-gray-500 text-sm">
                 <img
                   src="/images/logo_emmanuel_new_ok.png"
+                  srcSet={srcSetFor("/images/logo_emmanuel_new_ok.png")}
+                  sizes={CARD_SIZES}
                   alt="Logo Cooperativa Sociale Emmanuel"
                   className="h-6 w-6 object-contain"
                 />
